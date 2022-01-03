@@ -1,0 +1,1 @@
+<p style="text-align: justify; margin-top: 15px;">Pedoman TKHT ini berlaku sejak 11 Juni 2012.</p>

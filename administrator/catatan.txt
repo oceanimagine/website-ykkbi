@@ -1,0 +1,32 @@
+Kolom NIK ubah jadi NRP / NIP
+
+yang bisa edit hapus hanya admin super untuk keseluruhan modul
+
+hanya agendaris yang bisa input rekam surat masuk dan keluar
+
+jenis disposisi nya apa
+
+pada saat baru input surat perihal semestinya kosong dulu
+
+pilih irlog ganti jadi pilih disposisi irlog
+
+sebagai pimpinan tidak boleh ada input file
+
+pilih file disposisi sebelum pilih atasan
+
+pilih atasan diganti jadi pilih file saja
+
+setelah edit dan input kembali ke list saja
+
+untuk pimpinan tidak ada lagi choose file
+
+tulisan rekam diganti jadi disposisi
+
+menu disposisi sebaiknya dihapus saja
+
+rekam surat masuk sebagai agendaris hanya memuat perihal, choose file, 
+tapi untuk ditujukan ke mana, pilih irlog, catatan irlog, catatan auditar, catataan kasubag tu tidak perlu ditampilkan
+
+di rekam surat masuk tidak ada tanggal surat keluar
+
+di rekam surat keluar bisa ada tanggal surat masuk dan surat keluar

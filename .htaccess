@@ -1,0 +1,50 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+RewriteRule ^home index.php
+
+# Profile
+RewriteRule ^profile index.php?module=profile&panelrightleft=true
+RewriteRule ^kegiatan index.php?module=profile-kegiatan&panelrightleft=true
+RewriteRule ^usaha-penunjang index.php?module=profile-usaha-penunjang&panelrightleft=true
+RewriteRule ^pengertian-umum-yayasan index.php?module=profile-pengertian-umum-yayasan&panelrightleft=true
+
+RewriteRule ^organisasi index.php?module=organisasi&panelrightleft=true
+RewriteRule ^sejarah index.php?module=sejarah&panelrightleft=true
+RewriteRule ^transformasi index.php?module=transformasi&panelrightleft=true
+
+RewriteRule ^tkht-rawatinap index.php?module=tkht-rawatinap&panelrightleft=true
+RewriteRule ^tkht-rawatjalan index.php?module=tkht-rawatjalan&panelrightleft=true
+RewriteRule ^tkht-dso index.php?module=tkht-dso&panelrightleft=true
+RewriteRule ^tkht-provider index.php?module=tkht-provider&panelrightleft=true
+
+RewriteRule ^bantuan-uang-duka index.php?module=bantuan-uang-duka&panelrightleft=true
+RewriteRule ^bantuan-bencana-alam index.php?module=bantuan-bencana-alam&panelrightleft=true
+RewriteRule ^bantuan-pendidikan index.php?module=bantuan-pendidikan&panelrightleft=true
+RewriteRule ^bantuan-pinjaman index.php?module=bantuan-pinjaman&panelrightleft=true
+
+RewriteRule ^call-center index.php?module=call-center&panelrightleft=true
+RewriteRule ^pengaduan index.php?module=pengaduan&panelrightleft=true
+
+# TKHT
+RewriteRule ^tkht index.php?module=tkht&panelrightleft=true
+RewriteRule ^ketentuan-umum-tkht index.php?module=tkht-ketentuan-umum&panelrightleft=true
+RewriteRule ^tujuan-prinsip-dasar-tkht index.php?module=tkht-tujuan-prinsip-dasar&panelrightleft=true
+RewriteRule ^penerima-tkht index.php?module=tkht-penerima&panelrightleft=true
+RewriteRule ^ruang-lingkup-tkht index.php?module=tkht-ruang-lingkup&panelrightleft=true
+RewriteRule ^obat-obatan-tkht index.php?module=tkht-obat-obatan&panelrightleft=true
+RewriteRule ^penggantian-biaya-tkht index.php?module=tkht-penggantian-biaya&panelrightleft=true
+RewriteRule ^pemberian-tkht-dalam-wilayah-kesehatan index.php?module=tkht-pemberian-dalam-wilayah-kesehatan&panelrightleft=true
+RewriteRule ^kewajiban-penerima-tkht index.php?module=tkht-kewajiban-penerima&panelrightleft=true
+RewriteRule ^sanksi-penyalahgunaan-tkht index.php?module=tkht-sanksi-penyalahgunaan&panelrightleft=true
+RewriteRule ^ketentuan-peralihan-tkht index.php?module=tkht-ketentuan-peralihan&panelrightleft=true
+RewriteRule ^penjelasan-tkht-menyeluruh index.php?module=tkht-penjelasan-menyeluruh&panelrightleft=true
+
+
+
+
+
+ErrorDocument 404 /ykkbi/index.php?module=404&panelrightleft=true
+
+</IfModule>
