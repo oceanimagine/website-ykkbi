@@ -1,6 +1,13 @@
 <?php
 
 $list_server = array(
+    "200.60.4.93" => array(
+        "host" => "localhost",
+        "user" => "root",
+        "pass" => "Ykkbi@2021",
+        "data" => "website_ykkbi",
+        "base" => "/ykkbi/"
+    ),
     "localhost" => array(
         "host" => "localhost",
         "user" => "root",
