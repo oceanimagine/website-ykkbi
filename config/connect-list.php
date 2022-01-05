@@ -2,7 +2,7 @@
 
 $list_server = array(
     "localhost" => array(
-        "host" => "localhost:3308",
+        "host" => "localhost",
         "user" => "root",
         "pass" => "YKKBI@2021",
         "data" => "website_ykkbi",

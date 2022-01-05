@@ -1,7 +1,7 @@
 <?php 
 
-include_once "config/connect-list.php";
-include_once "config/connect.php";
+include_once __DIR__ . "/config/connect-list.php";
+include_once __DIR__ . "/config/connect.php";
 info_server();
 session_start();
 $connect = mysqli_connect($host, $user, $pass, $data);

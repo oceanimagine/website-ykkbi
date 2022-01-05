@@ -41,6 +41,12 @@ html, body {
 #banner .carousel-indicators li span span {
     background: #5c5f9c !important;
 }
+
+#td_slider_b_selain_home > div > div {
+    min-height: 80vh;
+}
+
+
 @media only screen and (min-width: 992px) { 
     .main-menu>ul>li>a.active {
         color: #5c5f9c;
@@ -55,6 +61,12 @@ html, body {
     }
 }
 
+@media only screen and (min-width: 1970px) { 
+    .logo_footer {
+        padding-bottom: 32px;
+    }
+}
+
 @media (max-height: 500px) {
     .btn_mobile {
         top: 16px !important;
@@ -66,8 +78,8 @@ html, body {
     #logo_home h1 a {
         height: 35px !important;
     }
-    .header_sticky {
-        overflow: hidden;
+    .header_sticky {/*
+        overflow: hidden; */
     }
 } 
 #service .container-fluid .sub-service-wrapper {
@@ -183,7 +195,7 @@ p {
         width: 36px !important;
     }
     .btn_mobile {
-        top: 20px !important;
+        top: 18px !important;
     }
 }
 @media (max-width: 1100px){

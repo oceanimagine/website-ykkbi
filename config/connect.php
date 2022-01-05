@@ -11,6 +11,13 @@ $module_using_slider = array(
     "home"
 );
 
+if(!isset($list_server[$_SERVER['SERVER_NAME']])){
+    echo "<title>Something Wrong</title>\n";
+    echo "<style type='text/css'>html, body { font-family: consolas, monospace; }</style>";
+    echo "Your Connection Host is not Exists.\n";
+    exit();
+}
+
 $host = $list_server[$_SERVER['SERVER_NAME']]['host'];
 $user = $list_server[$_SERVER['SERVER_NAME']]['user'];
 $pass = $list_server[$_SERVER['SERVER_NAME']]['pass'];

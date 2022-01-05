@@ -1,8 +1,8 @@
-<header class="header_sticky" style="height: 10vh;/* overflow: hidden; */">
-        <div class="container-fluid">
-            <div class="header-bottom" style="padding-top: 0px;">
+<header class="header_sticky" style="height: 10vh;padding: 0px 0px;/* overflow: hidden; */">
+        <div class="container-fluid" style="height: 100%;">
+            <div class="header-bottom" style="padding-top: 0px; height: 100%;">
                 <!-- btn mobile -->
-                <a href="#menu" class="btn_mobile" style="top: 26px;">
+                <a href="#menu" class="btn_mobile" style="top: 24px;">
                     <div class="hamburger hamburger--spin" id="hamburger">
                         <div class="hamburger-box">
                             <div class="hamburger-inner"></div>
@@ -11,10 +11,10 @@
                 </a>
                 <!-- /btn_mobile-->
                 <!-- http://bootstrapessentials.com/fulldocs/components/navbar/navbar-submenu/ -->
-                <div class="row">
+                <div class="row" style="height: 100%;">
                     <div class="col-lg-2 col-6 header-bottom-left">
-                        <div id="logo_home">
-                            <table border="0">
+                        <div id="logo_home" style="height: 100%;">
+                            <table border="0" style="height: 100%;">
                                 <tr>
                                     <td>
                                         <h2 style="margin-bottom: 0px;"><a href="#" title="YKKBI">YKKBI</a></h2>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-lg-10 col-6 header-bottom-right">
                         <nav id="menu" class="main-menu" style="top: 0px;">
-                            <ul class="nav navbar-nav">
+                            <ul class="nav navbar-nav" style="margin-top: auto; margin-bottom: auto;">
                                 <li class="dropdown">
                                     <a href="home"
                                        class="uppercase <?php echo set_active("home"); ?>" >
