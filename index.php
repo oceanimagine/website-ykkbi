@@ -14,7 +14,9 @@ check_url_index_php();
     <head>
         
         <base href="<?php echo $base; ?>">
-        <meta http-equiv="refresh" content="4;url=javascript-testing" />
+        <noscript>
+            <meta http-equiv="refresh" content="4;url=javascript-testing" />
+        </noscript>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -152,10 +154,6 @@ check_url_index_php();
                         var href_h1 = document.getElementById("href_h1");
                         href_h1.style.height = "40px";
                     }
-                    window.stop();
-                    document.execCommand("Stop");
-                    var get_meta = document.getElementsByTagName("meta");
-                    get_meta[0].parentNode.removeChild(get_meta[0]);
                 },500);
                 $('body').on('submit', '#form-search', function (e) {
                     e.preventDefault();
