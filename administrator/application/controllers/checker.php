@@ -19,7 +19,7 @@ class Checker extends CI_Controller {
         $uri = parse_url($url);
         $dns = array("8.8.8.8","8.8.4.4");
         $txt = $this->check_internet();
-        if($txt){
+        if($txt && isset($uri['host'])){
             $rsl = dns_get_record($uri['host'], DNS_ALL, $dns);
             if(is_array($rsl) && sizeof($rsl) > 0){
                 $context = stream_context_create([

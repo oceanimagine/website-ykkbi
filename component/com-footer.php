@@ -19,44 +19,35 @@
             <div class="col-md-3 col-sm-6  col-xs-12">
                 <h4>Alamat Kami</h4>
                 <ul class="list-unstyled">
-                    <li class="mb-3">Gd.YKKBI, Jl. Deposito VI No. 12-14, Komplek Bidakara, Menteng Dalam, Tebet, RT.8/RW.8, Menteng Dalam, Kec. Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12870</li>
+                    <li class="mb-3"><?php echo $alamat; ?></li>
                     <li>
-                        <a href="tel:02183795333">(021) 83795333</a>
+                        <a href="tel:<?php echo str_replace(array(" ","(",")"), "", $no_telepon); ?>"><?php echo $no_telepon; ?></a>
                         <br>
-                        <a href="mailto:info@ykkbi.or.id">info@ykkbi.or.id</a>
+                        <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
                     </li>
                 </ul>
             </div>
             <div class="col-md-3 col-sm-6  col-xs-12">
                 <h4>Tentang Kami</h4>
                 <ul class="list-unstyled">
+                    <?php 
+                    for($i = 0; $i < sizeof($var_name_social_media); $i++){
+                        echo ${$var_name_social_media[$i]};
+                    }
+                    if(sizeof($var_name_social_media) == 0){
+                    ?>
                     <li>
                         <a href="#" target="_blank"
                            class="d-flex align-items-center" rel="noopener">
                             <span class="rounded-border">
                                 <span class="fa fa-youtube-play"></span>
                             </span>
-                            <span>Youtube</span>
+                            <span>No Social Media</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#" target="_blank"
-                           class="d-flex align-items-center" rel="noopener">
-                            <span class="rounded-border">
-                                <span class="fa fa-instagram"></span>
-                            </span>
-                            <span>Instagram</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank"
-                           class="d-flex align-items-center" rel="noopener">
-                            <span class="rounded-border">
-                                <span class="fa fa-facebook"></span>
-                            </span>
-                            <span>Facebook</span>
-                        </a>
-                    </li>
+                    <?php 
+                    }
+                    ?>
                 </ul>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12 logo_footer">

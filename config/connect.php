@@ -61,7 +61,57 @@ function set_active($module){
     return "";
 }
 
+function samakan($paramA, $paramB){
+    $param1 = (string) $paramA;
+    $param2 = (string) $paramB;
+    $result = "";
+    $selisih = strlen($param2) - strlen($param1);
+    for($i = 0; $i < $selisih; $i++){
+        $result = $result . "0";
+    }
+    return $result . $paramA;
+}
+
 function include_with_panel($module){
+    global $connect;
+    global $var_name;
+    for($i = 0; $i < sizeof($var_name); $i++){
+        global ${$var_name[$i]};
+    }
+    global $var_name;
+    for($i = 0; $i < sizeof($var_name); $i++){
+        global ${$var_name[$i]};
+    }
+    global $var_name_social_media;
+    for($i = 0; $i < sizeof($var_name_social_media); $i++){
+        global ${$var_name_social_media[$i]};
+    }
+    global $judul_sejarah;
+    global $isi_sejarah;
+    $judul_sejarah = $judul_sejarah;
+    $isi_sejarah = $isi_sejarah;
+    global $judul_transformasi;
+    global $isi_transformasi;
+    $judul_transformasi = $judul_transformasi;
+    $isi_transformasi = $isi_transformasi;
+    global $array_var_name_tkht_lainnya;
+    for($i = 0; $i < sizeof($array_var_name_tkht_lainnya); $i++){
+        $explode_dash = explode(" -- ", $array_var_name_tkht_lainnya[$i]);
+        global ${$explode_dash[0]};
+        global ${$explode_dash[1]};
+        ${$explode_dash[0]} = ${$explode_dash[0]};
+        ${$explode_dash[1]} = ${$explode_dash[1]};
+    }
+    global $array_var_name_tkht_bantuan;
+    for($i = 0; $i < sizeof($array_var_name_tkht_bantuan); $i++){
+        $explode_dash = explode(" -- ", $array_var_name_tkht_bantuan[$i]);
+        global ${$explode_dash[0]};
+        global ${$explode_dash[1]};
+        ${$explode_dash[0]} = ${$explode_dash[0]};
+        ${$explode_dash[1]} = ${$explode_dash[1]};
+    }
+    
+    $connect = $connect;
     $isi_panel = "";
     $isi_body = "";
     if(file_exists(__DIR__ . "/../component/com-inside-slider/slider-wrapper-right-left.php")){
@@ -102,18 +152,120 @@ function info_server(){
 
 /* Component Inside Module */
 function get_menu_inside_module($module){
+    global $connect;
+    global $var_name;
+    for($i = 0; $i < sizeof($var_name); $i++){
+        global ${$var_name[$i]};
+    }
+    global $var_name_social_media;
+    for($i = 0; $i < sizeof($var_name_social_media); $i++){
+        global ${$var_name_social_media[$i]};
+    }
+    global $judul_sejarah;
+    global $isi_sejarah;
+    $judul_sejarah = $judul_sejarah;
+    $isi_sejarah = $isi_sejarah;
+    global $judul_transformasi;
+    global $isi_transformasi;
+    $judul_transformasi = $judul_transformasi;
+    $isi_transformasi = $isi_transformasi;
+    global $array_var_name_tkht_lainnya;
+    for($i = 0; $i < sizeof($array_var_name_tkht_lainnya); $i++){
+        $explode_dash = explode(" -- ", $array_var_name_tkht_lainnya[$i]);
+        global ${$explode_dash[0]};
+        global ${$explode_dash[1]};
+        ${$explode_dash[0]} = ${$explode_dash[0]};
+        ${$explode_dash[1]} = ${$explode_dash[1]};
+    }
+    global $array_var_name_tkht_bantuan;
+    for($i = 0; $i < sizeof($array_var_name_tkht_bantuan); $i++){
+        $explode_dash = explode(" -- ", $array_var_name_tkht_bantuan[$i]);
+        global ${$explode_dash[0]};
+        global ${$explode_dash[1]};
+        ${$explode_dash[0]} = ${$explode_dash[0]};
+        ${$explode_dash[1]} = ${$explode_dash[1]};
+    }
+    $connect = $connect;
     if(file_exists(__DIR__ . "/../module/com-menu/menu-" . $module . ".php")){
         include_once __DIR__ . "/../module/com-menu/menu-" . $module . ".php";
     }
 }
 
 function get_tkht_inside_module($module){
+    global $connect;
+    global $var_name;
+    for($i = 0; $i < sizeof($var_name); $i++){
+        global ${$var_name[$i]};
+    }
+    global $var_name_social_media;
+    for($i = 0; $i < sizeof($var_name_social_media); $i++){
+        global ${$var_name_social_media[$i]};
+    }
+    global $judul_sejarah;
+    global $isi_sejarah;
+    $judul_sejarah = $judul_sejarah;
+    $isi_sejarah = $isi_sejarah;
+    global $judul_transformasi;
+    global $isi_transformasi;
+    $judul_transformasi = $judul_transformasi;
+    $isi_transformasi = $isi_transformasi;
+    global $array_var_name_tkht_lainnya;
+    for($i = 0; $i < sizeof($array_var_name_tkht_lainnya); $i++){
+        $explode_dash = explode(" -- ", $array_var_name_tkht_lainnya[$i]);
+        global ${$explode_dash[0]};
+        global ${$explode_dash[1]};
+        ${$explode_dash[0]} = ${$explode_dash[0]};
+        ${$explode_dash[1]} = ${$explode_dash[1]};
+    }
+    global $array_var_name_tkht_bantuan;
+    for($i = 0; $i < sizeof($array_var_name_tkht_bantuan); $i++){
+        $explode_dash = explode(" -- ", $array_var_name_tkht_bantuan[$i]);
+        global ${$explode_dash[0]};
+        global ${$explode_dash[1]};
+        ${$explode_dash[0]} = ${$explode_dash[0]};
+        ${$explode_dash[1]} = ${$explode_dash[1]};
+    }
+    $connect = $connect;
     if(file_exists(__DIR__ . "/../module/com-tkht/tkht-" . $module . ".php")){
         include_once __DIR__ . "/../module/com-tkht/tkht-" . $module . ".php";
     }
 }
 
 function get_home_inside_module($module){
+    global $connect;
+    global $var_name;
+    for($i = 0; $i < sizeof($var_name); $i++){
+        global ${$var_name[$i]};
+    }
+    global $var_name_social_media;
+    for($i = 0; $i < sizeof($var_name_social_media); $i++){
+        global ${$var_name_social_media[$i]};
+    }
+    global $judul_sejarah;
+    global $isi_sejarah;
+    $judul_sejarah = $judul_sejarah;
+    $isi_sejarah = $isi_sejarah;
+    global $judul_transformasi;
+    global $isi_transformasi;
+    $judul_transformasi = $judul_transformasi;
+    $isi_transformasi = $isi_transformasi;
+    global $array_var_name_tkht_lainnya;
+    for($i = 0; $i < sizeof($array_var_name_tkht_lainnya); $i++){
+        $explode_dash = explode(" -- ", $array_var_name_tkht_lainnya[$i]);
+        global ${$explode_dash[0]};
+        global ${$explode_dash[1]};
+        ${$explode_dash[0]} = ${$explode_dash[0]};
+        ${$explode_dash[1]} = ${$explode_dash[1]};
+    }
+    global $array_var_name_tkht_bantuan;
+    for($i = 0; $i < sizeof($array_var_name_tkht_bantuan); $i++){
+        $explode_dash = explode(" -- ", $array_var_name_tkht_bantuan[$i]);
+        global ${$explode_dash[0]};
+        global ${$explode_dash[1]};
+        ${$explode_dash[0]} = ${$explode_dash[0]};
+        ${$explode_dash[1]} = ${$explode_dash[1]};
+    }
+    $connect = $connect;
     if(file_exists(__DIR__ . "/../module/com-home/home-" . $module . ".php")){
         include_once __DIR__ . "/../module/com-home/home-" . $module . ".php";
     }
@@ -121,7 +273,76 @@ function get_home_inside_module($module){
 
 /* Component Inside */
 function get_component_slide_inside($module){
+    global $connect;
+    global $var_name;
+    for($i = 0; $i < sizeof($var_name); $i++){
+        global ${$var_name[$i]};
+    }
+    global $var_name_social_media;
+    for($i = 0; $i < sizeof($var_name_social_media); $i++){
+        global ${$var_name_social_media[$i]};
+    }
+    global $judul_sejarah;
+    global $isi_sejarah;
+    $judul_sejarah = $judul_sejarah;
+    $isi_sejarah = $isi_sejarah;
+    global $judul_transformasi;
+    global $isi_transformasi;
+    $judul_transformasi = $judul_transformasi;
+    $isi_transformasi = $isi_transformasi;
+    global $array_var_name_tkht_lainnya;
+    for($i = 0; $i < sizeof($array_var_name_tkht_lainnya); $i++){
+        $explode_dash = explode(" -- ", $array_var_name_tkht_lainnya[$i]);
+        global ${$explode_dash[0]};
+        global ${$explode_dash[1]};
+        ${$explode_dash[0]} = ${$explode_dash[0]};
+        ${$explode_dash[1]} = ${$explode_dash[1]};
+    }
+    global $array_var_name_tkht_bantuan;
+    for($i = 0; $i < sizeof($array_var_name_tkht_bantuan); $i++){
+        $explode_dash = explode(" -- ", $array_var_name_tkht_bantuan[$i]);
+        global ${$explode_dash[0]};
+        global ${$explode_dash[1]};
+        ${$explode_dash[0]} = ${$explode_dash[0]};
+        ${$explode_dash[1]} = ${$explode_dash[1]};
+    }
+    $connect = $connect;
     if(file_exists(__DIR__ . "/../component/com-inside-slider/slider-" . $module . ".php")){
         include_once __DIR__ . "/../component/com-inside-slider/slider-" . $module . ".php";
     }
+}
+
+function get_day($address){
+    $array_day = array(
+        "0" => "Minggu",
+        "1" => "Senin",
+        "2" => "Selasa",
+        "3" => "Rabu",
+        "4" => "Kamis",
+        "5" => "Jumat",
+        "6" => "Sabtu",
+    );
+    return $array_day[$address];
+}
+
+function get_month($address){
+    $array_month = array(
+        "01" => "Januari",
+        "02" => "Februari",
+        "03" => "Maret",
+        "04" => "April",
+        "05" => "Mei",
+        "06" => "Juni",
+        "07" => "Juli",
+        "08" => "Agustus",
+        "09" => "September",
+        "10" => "Oktober",
+        "11" => "November",
+        "12" => "Desember"
+    );
+    return $array_month[$address];
+}
+
+function validIdYoutube($id) {
+    return preg_match('/^[a-zA-Z0-9_-]{11}$/', $id) > 0;
 }

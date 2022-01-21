@@ -386,8 +386,8 @@ function get_url($param){
         <script src="js/jquery-ui.min.js"></script>
         <script src="js/time.js"></script>
         <!-- jQuery UI Clockpicker 1.11.4 -->
-        <script src="js/jquery-clockpicker.min.js"></script>
-        <script type="text/javascript" src="js/tinymce/js/tinymce/tinymce.min.js"></script>
+        <script src="js/jquery-clockpicker.min.js"></script><!-- 
+        <script type="text/javascript" src="js/tinymce/js/tinymce/tinymce.min.js"></script> -->
         <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
         <script>
             $.widget.bridge('uibutton', $.ui.button);

@@ -5,8 +5,8 @@ include_once __DIR__ . "/config/connect.php";
 info_server();
 session_start();
 $connect = mysqli_connect($host, $user, $pass, $data);
+include_once __DIR__ . "/config/connect-redaksi.php";
 check_url_index_php();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,8 +52,11 @@ check_url_index_php();
         <link href="assets/css/custom-ykkbi.css" rel="stylesheet">
 
     </head>
-
-    <body>
+    <noscript>
+        <font style="font-family: consolas, monospace;">Javascript Inactive.</font>
+    </noscript>
+    <body style="visibility: hidden;">
+        
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
@@ -135,6 +138,31 @@ check_url_index_php();
         <script src="assets/js/mycustome.js" async></script>
         <script async>
             $(document).ready(function () {
+                setTimeout(function(){
+                    document.body.style.visibility = "";
+                    window.onresize = function(){
+                        if(document.body.clientWidth === 1016 || document.body.clientWidth === 1146){
+                            var href_h2 = document.getElementById("href_h2");
+                            href_h2.style.width = "40px";
+                            href_h2.style.height = "40px";
+                            var href_h1 = document.getElementById("href_h1");
+                            href_h1.style.height = "40px";
+                        } else {
+                            var href_h2 = document.getElementById("href_h2");
+                            href_h2.style.width = "";
+                            href_h2.style.height = "";
+                            var href_h1 = document.getElementById("href_h1");
+                            href_h1.style.height = "56px";
+                        }
+                    };
+                    if(document.body.clientWidth === 1016 || document.body.clientWidth === 1146){
+                        var href_h2 = document.getElementById("href_h2");
+                        href_h2.style.width = "40px";
+                        href_h2.style.height = "40px";
+                        var href_h1 = document.getElementById("href_h1");
+                        href_h1.style.height = "40px";
+                    }
+                },500);
                 $('body').on('submit', '#form-search', function (e) {
                     e.preventDefault();
                     let search = $(this).find('input').val();
@@ -145,6 +173,12 @@ check_url_index_php();
                     console.log($(this).find('input').val());
                 });
             });
+            function refresh_captcha(){
+                var tempat_captcha = document.getElementById("tempat_captcha");
+                var rand = Math.random();
+                tempat_captcha.setAttribute("src","captcha?" + rand.toString());
+                
+            }
             window.onload = function(){
                 
                 var tombol_telepon = document.getElementById("tombol_telepon");
@@ -196,6 +230,7 @@ check_url_index_php();
                     kiri = "show";
                     kanan = "hide";
                 }, true);
+                
                 <?php if($module == "organisasi"){ ?>
                 OrgChart.templates.ana.plus = '<circle cx="15" cy="15" r="15" fill="#ffffff" stroke="#aeaeae" stroke-width="1"></circle>'
                     + '<text text-anchor="middle" style="font-size: 18px;cursor:pointer;" fill="#757575" x="15" y="22">{collapsed-children-count}</text>';

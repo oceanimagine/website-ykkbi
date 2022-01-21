@@ -10,7 +10,7 @@ $user = $db['default']['username'];
 $pass = $db['default']['password'];
 $data = $db['default']['database'];
 
-$nama_tabel = "tbl_hubungi_kami";
+$nama_tabel = "tbl_tkht_bantuan";
 $connect = mysqli_connect($host, $user, $pass, $data);
 
 $query_describe = mysqli_query($connect, "describe " . $nama_tabel);

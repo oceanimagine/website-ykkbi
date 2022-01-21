@@ -17,10 +17,10 @@
                             <table border="0" style="height: 100%;">
                                 <tr>
                                     <td>
-                                        <h2 style="margin-bottom: 0px;"><a href="#" title="YKKBI">YKKBI</a></h2>
+                                        <h2 style="margin-bottom: 0px;"><a href="#" title="YKKBI" id="href_h2">YKKBI</a></h2>
                                     </td>
                                     <td>
-                                        <h1><a href="#" title="YKKBI" style="height: 56px;">YKKBI</a></h1>
+                                        <h1><a href="#" title="YKKBI" style="height: 56px;" id="href_h1">YKKBI</a></h1>
                                     </td>
                                 </tr>
                             </table>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-lg-10 col-6 header-bottom-right">
                         <nav id="menu" class="main-menu" style="top: 0px;">
-                            <ul class="nav navbar-nav" style="margin-top: auto; margin-bottom: auto;">
+                            <ul class="nav navbar-nav" style="margin-top: auto; margin-bottom: auto; white-space: nowrap;">
                                 <li class="dropdown">
                                     <a href="home"
                                        class="uppercase <?php echo set_active("home"); ?>" >
@@ -48,7 +48,7 @@
                                         <li><a href="organisasi" style="border-right: 0.45px solid #fff;">Organisasi</a></li>
                                         <li><a href="sejarah" style="border-right: 0.45px solid #fff;">Sejarah YKKBI</a></li>
                                         <li><a href="transformasi" style="border-right: 0.45px solid #fff;">Transformasi YKKBI</a></li>
-                                        <li><a href="profile" style="border-right: 0.45px solid #fff;">Info YKKBI</a></li>
+                                        <li><a href="profile" style="border-right: 0.45px solid #fff;">Info Lainnya</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -62,7 +62,7 @@
                                     </a>
                                     <ul class="dropdown-submenu" style="top: 120%; border-top: 2px solid #5c5f9c;">
                                         <li>
-                                            <a href="#" style="border-right: 0.45px solid #fff;">TKHT</a>
+                                            <a href="#" style="border-right: 0.45px solid #fff;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">TKHT</a>
                                             <ul class="dropdown-submenu" style="top: 0; left: 100%; border-top: 0px solid #5c5f9c;">
                                                 <li><a href="tkht-rawatinap" style="border-right: 0.45px solid #fff;">Rawat Inap</a></li>
                                                 <li><a href="tkht-rawatjalan" style="border-right: 0.45px solid #fff;">Rawat Jalan</a></li>
@@ -71,7 +71,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#" style="border-right: 0.45px solid #fff;">BANTUAN</a>
+                                            <a href="#" style="border-right: 0.45px solid #fff;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">BANTUAN</a>
                                             <ul class="dropdown-submenu" style="top: 0; left: 100%; border-top: 0px solid #5c5f9c;">
                                                 <li><a href="bantuan-uang-duka" style="border-right: 0.45px solid #fff;">Uang Duka</a></li>
                                                 <li><a href="bantuan-bencana-alam" style="border-right: 0.45px solid #fff;">Bencana Alam</a></li>
@@ -79,7 +79,7 @@
                                                 <li><a href="bantuan-pinjaman" style="border-right: 0.45px solid #fff;">Pinjaman</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="tkht" style="border-right: 0.45px solid #fff;">Penjelasan TKHT</a></li>
+                                        <li><a href="tkht" style="border-right: 0.45px solid #fff;">Info Lainnya</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -106,10 +106,17 @@
                                         Publikasi <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-submenu" style="top: 120%; border-top: 2px solid #5c5f9c;">
-                                        <li><a href="#" style="border-right: 0.45px solid #fff;">Berita Terkini</a></li>
-                                        <li><a href="#" style="border-right: 0.45px solid #fff;">Dokumentasi Kegiatan</a></li>
-                                        <li><a href="#" style="border-right: 0.45px solid #fff;">Peraturan</a></li>
-                                        <li><a href="#" style="border-right: 0.45px solid #fff;">Laporan</a></li>
+                                        <li>
+                                            <a href="#" style="border-right: 0.45px solid #fff;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Berita Terkini</a>
+                                            <ul class="dropdown-submenu" style="top: 0; left: -100%; border-top: 0px solid #5c5f9c;">
+                                                <li><a href="artikel" style="border-right: 0.45px solid #fff;">Artikel</a></li>
+                                                <li><a href="video" style="border-right: 0.45px solid #fff;">Video</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="dokumentasi-kegiatan" style="border-right: 0.45px solid #fff;">Dokumentasi Kegiatan</a></li>
+                                        <li><a href="galeri" style="border-right: 0.45px solid #fff;">Galeri</a></li>
+                                        <li><a href="peraturan" style="border-right: 0.45px solid #fff;">Peraturan</a></li>
+                                        <li><a href="#" style="border-right: 0.45px solid #fff;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Laporan</a></li>
                                     </ul>
                                 </li> 
                                 <li>

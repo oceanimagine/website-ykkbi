@@ -1,6 +1,6 @@
 tinymce.init({
     selector: 'textarea#article_build',
-    plugins: 'print preview powerpaste casechange importcss tinydrive searchreplace autolink autosave save directionality advcode visualblocks visualchars fullscreen link media mediaembed template codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists checklist wordcount tinymcespellchecker a11ychecker textpattern noneditable help formatpainter permanentpen pageembed charmap tinycomments mentions quickbars linkchecker emoticons advtable export',
+    plugins: 'print preview importcss tinydrive searchreplace autolink autosave save directionality visualblocks visualchars fullscreen link media template codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount textpattern noneditable help charmap quickbars emoticons',
     // tinydrive_token_provider: 'URL_TO_YOUR_TOKEN_PROVIDER',
     // tinydrive_dropbox_app_key: 'YOUR_DROPBOX_APP_KEY',
     // tinydrive_google_drive_key: 'YOUR_GOOGLE_DRIVE_KEY',

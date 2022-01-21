@@ -10,7 +10,7 @@ $user = $db['default']['username'];
 $pass = $db['default']['password'];
 $data = $db['default']['database'];
 
-$nama_tabel = "tbl_hubungi_kami";
+$nama_tabel = "tbl_tkht_bantuan";
 $connect = mysqli_connect($host, $user, $pass, $data);
 
 $query_describe = mysqli_query($connect, "describe " . $nama_tabel);
@@ -27,6 +27,7 @@ if(mysqli_num_rows($query_describe) > 0){
     
     $comma = "";
     $select_column = "";
+    $column_first = "";
     while($hasil_describe = mysqli_fetch_array($query_describe)){
         if($column_first == ""){
             if(strtolower($hasil_describe['Key']) != strtolower("PRI") && strtolower(substr($hasil_describe['Type'], 0, strlen("varchar"))) == "varchar"){

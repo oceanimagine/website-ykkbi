@@ -2,13 +2,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12 contact-left">
-                <h2>Hubungi Kami</h2>
+                <h2><?php echo $judul_hubungi_kami_depan; ?></h2>
                 <ul class="list-unstyled">
-                    <li> Gd.YKKBI, Jl. Deposito VI No. 12-14, Komplek Bidakara, Menteng Dalam, Tebet, RT.8/RW.8, Menteng Dalam, Kec. Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12870
+                    <li><?php echo $alamat; ?>
                     </li>
-                    <li><a href="tel:02183795333">(021) 83795333</a>
+                    <li style="margin-bottom: 8px;"><a href="tel:<?php echo str_replace(array(" ","(",")"), "", $no_telepon); ?>"><?php echo $no_telepon; ?></a>
                     </li>
-                    <li><a href="mailto:info@yakestelkom.or.id">info@ykkbi.or.id</a>
+                    <li><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
                     </li>
                 </ul>
             </div>
@@ -29,9 +29,9 @@
                     </div>
                     <div class="form-group">
                         <div class="d-flex">
-                            <div class="mr-1" id="captchaImage" style="padding-top: 5px;"><img src="assets/img/IMAGECAPTCHA.jpg" /></div>
+                            <div class="mr-1" id="captchaImage" style="padding-top: 2px;"><img src="captcha" id="tempat_captcha" /></div>
                             <div class="mr-2" style="padding-top: 5px;">
-                                <a href="" id="refreshCaptchaContactUs">
+                                <a href="javascript: refresh_captcha();">
                                     <i class="fa fa-refresh" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <div class="form-group text-center ">
-                        <button class="btn btn-theme position-relative">
+                        <button class="btn btn-theme position-relative" style="width: 100%; padding: 10px">
                             KIRIM PESAN
                             <div id="spinnerContactUs"
                                  style="display:none;position:absolute;right:5px;bottom:8px;width:1.5rem;height:1.5rem;"

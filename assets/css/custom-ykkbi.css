@@ -320,7 +320,9 @@ html, body {
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
     box-shadow: 0 8px 18px -16px rgb(0 0 0 / 60%);
-    padding: 1.5rem !important;
+    /*
+    padding: 1.5rem !important; */
+    padding: 10px !important;
     width: 100%;
     border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 }

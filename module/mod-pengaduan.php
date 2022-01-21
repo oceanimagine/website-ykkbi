@@ -14,14 +14,14 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-sm-4 col-xs-12 contact-left">
-                        <h2>adukan ke kami</h2>
+                        <h2><?php echo $judul_pengaduan; ?></h2>
                         <ul class="list-unstyled">
                             <li> 
-                                <p style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <p><?php echo $deskripsi_pengaduan; ?></p><br />
                             </li>
-                            <li><a href="tel:02183795333">(021) 83795333</a>
+                            <li><a href="tel:<?php echo str_replace(array(" ","(",")"), "", $no_telepon); ?>"><?php echo $no_telepon; ?></a>
                             </li>
-                            <li><a href="mailto:info@yakestelkom.or.id">info@ykkbi.or.id</a>
+                            <li><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
                             </li>
                         </ul>
                     </div>
@@ -45,9 +45,9 @@
                             </div>
                             <div class="form-group">
                                 <div class="d-flex">
-                                    <div class="mr-1" id="captchaImage" style="padding-top: 5px;"><img src="assets/img/IMAGECAPTCHA.jpg" /></div>
+                                    <div class="mr-1" id="captchaImage" style="padding-top: 2px;"><img src="captcha" id="tempat_captcha" /></div>
                                     <div class="mr-2" style="padding-top: 5px;">
-                                        <a href="" id="refreshCaptchaContactUs">
+                                        <a href="javascript: refresh_captcha();">
                                             <i class="fa fa-refresh" aria-hidden="true"></i>
                                         </a>
                                     </div>
@@ -61,7 +61,7 @@
                                 </div>
                             </div>
                             <div class="form-group text-center ">
-                                <button class="btn btn-theme position-relative">
+                                <button class="btn btn-theme position-relative" style="width: 100%; padding: 10px">
                                     KIRIM ADUAN
                                     <div id="spinnerContactUs"
                                          style="display:none;position:absolute;right:5px;bottom:8px;width:1.5rem;height:1.5rem;"

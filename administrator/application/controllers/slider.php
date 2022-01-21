@@ -35,7 +35,7 @@ class slider extends CI_Controller {
     }
     
     public function edit($id){
-        if($this->input->post('judul')){
+        if(isset($_POST['judul'])){
             $_GET['id'] = $id;
             
             upload_file("photo_slider");
@@ -74,7 +74,7 @@ class slider extends CI_Controller {
     }
     
     public function add(){
-        if($this->input->post('judul')){
+        if(isset($_POST['judul'])){
             
             upload_file("photo_slider");
             $judul = $this->input->post('judul');

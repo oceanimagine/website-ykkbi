@@ -40,6 +40,7 @@ RewriteRule ^kewajiban-penerima-tkht index.php?module=tkht-kewajiban-penerima&pa
 RewriteRule ^sanksi-penyalahgunaan-tkht index.php?module=tkht-sanksi-penyalahgunaan&panelrightleft=true
 RewriteRule ^ketentuan-peralihan-tkht index.php?module=tkht-ketentuan-peralihan&panelrightleft=true
 RewriteRule ^penjelasan-tkht-menyeluruh index.php?module=tkht-penjelasan-menyeluruh&panelrightleft=true
+RewriteRule ^captcha other/captcha.php
 
 
 
