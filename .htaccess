@@ -42,6 +42,8 @@ RewriteRule ^ketentuan-peralihan-tkht index.php?module=tkht-ketentuan-peralihan&
 RewriteRule ^penjelasan-tkht-menyeluruh index.php?module=tkht-penjelasan-menyeluruh&panelrightleft=true
 RewriteRule ^captcha other/captcha.php
 
+RewriteRule ^javascript-testing other/test-js.php
+
 
 
 

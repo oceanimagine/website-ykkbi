@@ -12,7 +12,9 @@ check_url_index_php();
 <html lang="en">
 
     <head>
+        
         <base href="<?php echo $base; ?>">
+        <meta http-equiv="refresh" content="4;url=javascript-testing" />
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,22 +26,13 @@ check_url_index_php();
         <!-- Favicons-->
         <link rel="shortcut icon" href="assets/img/LOGOYKKBI.png" type="image/x-icon">
         <!-- BASE CSS -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-            rel="stylesheet">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-            rel="stylesheet">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet"
-              href="assets/css/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css"
-              href="assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" type="text/css" type="text/css"
-              href="assets/css/owl.transitions.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" type="text/css" type="text/css" href="assets/css/owl.transitions.min.css">
         <link href="assets/css/vendors.css" rel="stylesheet">
         <link href="assets/css/animate.css" rel="stylesheet">
         <link href="assets/css/menu.css" rel="stylesheet">
@@ -52,9 +45,6 @@ check_url_index_php();
         <link href="assets/css/custom-ykkbi.css" rel="stylesheet">
 
     </head>
-    <noscript>
-        <font style="font-family: consolas, monospace;">Javascript Inactive.</font>
-    </noscript>
     <body style="visibility: hidden;">
         
         <script src="assets/js/jquery.min.js"></script>
@@ -162,6 +152,10 @@ check_url_index_php();
                         var href_h1 = document.getElementById("href_h1");
                         href_h1.style.height = "40px";
                     }
+                    window.stop();
+                    document.execCommand("Stop");
+                    var get_meta = document.getElementsByTagName("meta");
+                    get_meta[0].parentNode.removeChild(get_meta[0]);
                 },500);
                 $('body').on('submit', '#form-search', function (e) {
                     e.preventDefault();
