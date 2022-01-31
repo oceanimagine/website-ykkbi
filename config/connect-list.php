@@ -8,6 +8,13 @@ $list_server = array(
         "data" => "website_ykkbi",
         "base" => "/ykkbi/"
     ),
+    "10.8.0.1" => array(
+        "host" => "localhost",
+        "user" => "root",
+        "pass" => "Ykkbi@2021",
+        "data" => "website_ykkbi",
+        "base" => "/ykkbi/"
+    ),
     "localhost" => array(
         "host" => "localhost",
         "user" => "root",
