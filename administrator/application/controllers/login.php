@@ -30,7 +30,7 @@ class Login extends CI_Controller {
                     'column_value' => array(
                         'id',
                         'nama_lengkap',
-                        'photo_admin',
+                        'photo_user_admin',
                         'nomor_karyawan',
                         'username'
                     ),
