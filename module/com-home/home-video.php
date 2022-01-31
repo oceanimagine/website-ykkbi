@@ -68,8 +68,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 text-center mt-3">
-                <a rel="noopener" href="#" target="_blank"
-                   class="btn btn-light-theme">SELENGKAPNYA</a>
+                <a rel="noopener" href="berita-video" class="btn btn-light-theme">SELENGKAPNYA</a>
             </div>
         </div>
     </div>

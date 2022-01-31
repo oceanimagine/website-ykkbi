@@ -248,7 +248,7 @@ check_url_index_php();
                           icon: OrgChart.icon.details(24, 24, '#aeaeae'),
                           text: "Details",
                           color: "white"
-                        },
+                        }/*,
                         edit: {
                           icon: OrgChart.icon.edit(24, 24, '#aeaeae'),
                           text: "Edit node",
@@ -269,7 +269,7 @@ check_url_index_php();
                           text: "Add C link(drag and drop)",
                           color: '#fff',
                           draggable: true
-                        }
+                        } */
                       },
                     menu: {
                         pdfPreview: {
@@ -332,19 +332,19 @@ check_url_index_php();
                             },
                         },
                         "seo-menu": {
-                            nodeMenu: {
+                            nodeMenu: {/*
                                 addSharholder: { text: "Add new sharholder", icon: OrgChart.icon.add(24, 24, "#7A7A7A"), onClick: addSharholder },
                                 addDepartment: { text: "Add new department", icon: OrgChart.icon.add(24, 24, "#7A7A7A"), onClick: addDepartment },
                                 addAssistant: { text: "Add new assitsant", icon: OrgChart.icon.add(24, 24, "#7A7A7A"), onClick: addAssistant },
-                                edit: { text: "Edit" },
+                                edit: { text: "Edit" }, */
                                 details: { text: "Details" },
                             }
                         },
                         "menu-without-add": {
                             nodeMenu: {
-                                details: { text: "Details" },
+                                details: { text: "Details" }/*,
                                 edit: { text: "Edit" },
-                                remove: { text: "Remove" }
+                                remove: { text: "Remove" } */
                             }
                         },
                         "department": {
@@ -361,7 +361,8 @@ check_url_index_php();
                         }
                     },
                     clinks: [
-                        { from: 11, to: 18 }
+                        { from: 11, to: 18 },
+                        { from: 1, to: 18 }
                     ]
                 });
 

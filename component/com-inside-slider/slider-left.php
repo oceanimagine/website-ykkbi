@@ -19,11 +19,11 @@
 
         </div>
     </div>
-    <div id="accordion2" class="myaccordion" style="height: 63vh;">
+    <div id="accordion2" class="myaccordion" style="height: 53vh; background-color: #ffffff;">
         <?php 
         $query_call_center = mysqli_query($connect, "SELECT * FROM `tbl_call_center`");
         if(mysqli_num_rows($query_call_center) > 0){
-            $height_vh = 63 / mysqli_num_rows($query_call_center);
+            $height_vh = 53 / mysqli_num_rows($query_call_center);
             $increment = 0;
             while($hasil_call_center = mysqli_fetch_array($query_call_center)){
                 ?>
@@ -81,7 +81,7 @@
             <table border="0" style="width: 100%;width: 100%; border-radius: 10.8px;">
                 <tbody><tr>
                     <td style="width: 10%;padding: 0px;text-align: center;background-color: white;" id="footer_td">
-                        <img height="auto" src="assets/img/LOGOYKKBI.png" alt="logo-footer" style="height: 27vh;">
+                        <img height="auto" src="assets/img/LOGOYKKBI.png" alt="logo-footer" style="height: 37vh;">
                     </td>
                 </tr>
             </tbody></table>

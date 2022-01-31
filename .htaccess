@@ -40,13 +40,21 @@ RewriteRule ^kewajiban-penerima-tkht index.php?module=tkht-kewajiban-penerima&pa
 RewriteRule ^sanksi-penyalahgunaan-tkht index.php?module=tkht-sanksi-penyalahgunaan&panelrightleft=true
 RewriteRule ^ketentuan-peralihan-tkht index.php?module=tkht-ketentuan-peralihan&panelrightleft=true
 RewriteRule ^penjelasan-tkht-menyeluruh index.php?module=tkht-penjelasan-menyeluruh&panelrightleft=true
+
+# Artikel
+RewriteRule ^berita-artikel index.php?module=artikel&panelrightleft=true
+
+# Video
+RewriteRule ^berita-video index.php?module=video&panelrightleft=true
+
+# Dokumentasi Kegiatan
+RewriteRule ^dokumentasi-kegiatan index.php?module=dokumentasi-kegiatan&panelrightleft=true
+
+# Galeri
+RewriteRule ^galeri index.php?module=galeri&panelrightleft=true
+
 RewriteRule ^captcha other/captcha.php
-
 RewriteRule ^javascript-testing other/test-js.php
-
-
-
-
 
 ErrorDocument 404 /ykkbi/index.php?module=404&panelrightleft=true
 

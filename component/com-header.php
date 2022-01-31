@@ -109,8 +109,8 @@
                                         <li>
                                             <a href="#" style="border-right: 0.45px solid #fff;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Berita Terkini</a>
                                             <ul class="dropdown-submenu" style="top: 0; left: -100%; border-top: 0px solid #5c5f9c;">
-                                                <li><a href="artikel" style="border-right: 0.45px solid #fff;">Artikel</a></li>
-                                                <li><a href="video" style="border-right: 0.45px solid #fff;">Video</a></li>
+                                                <li><a href="berita-artikel" style="border-right: 0.45px solid #fff;">Artikel</a></li>
+                                                <li><a href="berita-video" style="border-right: 0.45px solid #fff;">Video</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="dokumentasi-kegiatan" style="border-right: 0.45px solid #fff;">Dokumentasi Kegiatan</a></li>

@@ -193,7 +193,7 @@
 
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 text-center mt-3">
-                <a href="#" class="btn btn-light-theme">SELENGKAPNYA</a>
+                <a href="berita-artikel" class="btn btn-light-theme">SELENGKAPNYA</a>
             </div>
         </div>
     </div>

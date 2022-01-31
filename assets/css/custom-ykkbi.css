@@ -82,6 +82,9 @@ html, body {
         overflow: hidden; */
     }
 } 
+*:focus {
+    outline: none;
+}
 #service .container-fluid .sub-service-wrapper {
     background: #3b3c8c; /*
     background: #378ff6; */
