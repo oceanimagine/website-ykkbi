@@ -19,18 +19,25 @@
 
         </div>
     </div>
-    <div id="accordion2" class="myaccordion" style="height: 450px; background-color: #ffffff;">
+    <?php 
+    
+    $default_height = isset($_GET['module']) && $_GET['module'] != "" ? "63vh" : "450px";
+    
+    ?>
+    <div id="accordion2" class="myaccordion" style="height: <?php echo $default_height; ?>; background-color: #ffffff;">
         <?php 
         $query_call_center = mysqli_query($connect, "SELECT * FROM `tbl_call_center`");
         if(mysqli_num_rows($query_call_center) > 0){
-            $height_vh = 450 / mysqli_num_rows($query_call_center);
+            $default_height = isset($_GET['module']) && $_GET['module'] != "" ? 63 : 450;
+            $default_satuan = isset($_GET['module']) && $_GET['module'] != "" ? "vh" : "px";
+            $height_vh = $default_height / mysqli_num_rows($query_call_center);
             $increment = 0;
             while($hasil_call_center = mysqli_fetch_array($query_call_center)){
                 ?>
                 <div class="card">
                     <div class="card-header" style="overflow: auto;">
                         <h5 class="mb-0">
-                            <button style="white-space: nowrap; text-align: left; font-size: 14px; /* height: 77px; */ height: <?php echo $height_vh; ?>px;" class="btn btn-link" data-toggle="collapse" data-target="#collapsediv<?php echo $increment; ?>" aria-expanded="true" aria-controls="collapseOne">
+                            <button style="white-space: nowrap; text-align: left; font-size: 14px; /* height: 77px; */ height: <?php echo $height_vh . $default_satuan; ?>;" class="btn btn-link" data-toggle="collapse" data-target="#collapsediv<?php echo $increment; ?>" aria-expanded="true" aria-controls="collapseOne">
                                 <img width="25px" height="auto" src="assets/img/PHONEICON.png" alt="icon-map" style="width: 24px !important;margin-bottom: 2.5px;">
                                 &nbsp;<?php echo $hasil_call_center['judul_call_center']; ?>
                             </button>
@@ -75,17 +82,17 @@
             <?php 
         }
         ?>
-    </div><?php /*
+    </div><?php if(isset($_GET['module']) && $_GET['module'] != ""){ ?>
     <div style="width: 100%;">
         <div class="logo-footer" style="vertical-align: middle; width:  100%;" align="center">
             <table border="0" style="width: 100%;width: 100%; border-radius: 10.8px;">
                 <tbody><tr>
                     <td style="width: 10%;padding: 0px;text-align: center;background-color: white;" id="footer_td">
-                        <img height="auto" src="assets/img/LOGOYKKBI.png" alt="logo-footer" style="height: 37vh;">
+                        <img height="auto" src="assets/img/LOGOYKKBI.png" alt="logo-footer" style="height: 27vh;">
                     </td>
                 </tr>
             </tbody></table>
 
         </div>
-    </div> */ ?>
+    </div><?php } ?>
 </div>
