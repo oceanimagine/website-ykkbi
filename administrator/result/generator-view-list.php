@@ -10,7 +10,7 @@ $user = $db['default']['username'];
 $pass = $db['default']['password'];
 $data = $db['default']['database'];
 
-$nama_tabel = "tbl_tkht_bantuan";
+$nama_tabel = "tbl_laporan";
 $connect = mysqli_connect($host, $user, $pass, $data);
 
 $query_describe = mysqli_query($connect, "describe " . $nama_tabel);
@@ -98,7 +98,7 @@ if(mysqli_num_rows($query_describe) > 0){
                             <tr>
                                 <th>No</th>
                                 <?php while($hasil_describe = mysqli_fetch_array($query_describe)){ ?>
-                                <?php if($hasil_describe['Field'] != "timestamp" && strtolower($hasil_describe['Type']) != "text"){ 
+                                <?php if($hasil_describe['Field'] != "timestamp" && strtolower($hasil_describe['Type']) != "text" && strtolower(substr($hasil_describe['Field'], 0, strlen("google_drive_pdf"))) != "google_drive_pdf"){ 
                                 if(substr($hasil_describe['Field'], 0, strlen("id_")) == "id_"){
                                     $hasil_describe['Field'] = substr($hasil_describe['Field'], 3);
                                 }    

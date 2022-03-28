@@ -77,6 +77,31 @@ function get_url($param){
         <![endif]-->
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyB6Jrhaxw4AHqPPFlgdmAyVIuxCHUVfpA0&libraries=places"></script>
         <style type="text/css">
+            /* width */
+            ::-webkit-scrollbar {
+                width: 8px;
+                height: 4px;
+            }
+            /* Track */
+            ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px #3b3c8c; 
+                border-radius: 0px;
+            }
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #3b3c8c; 
+                border-radius: 0px;
+            }
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #3b3c8c; 
+            }
+
+            /* Firefox Scrollbar */
+            html, body {
+                scrollbar-color: #3b3c8c grey;
+                scrollbar-width: thin;
+            }
             html, body {
                 -webkit-touch-callout: none;
                 -webkit-user-select: none;

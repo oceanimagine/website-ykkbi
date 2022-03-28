@@ -90,6 +90,25 @@ hr {
 #tree > svg {
     background-color: #f1f1f1;
 }
+g[data-n-id="it-team"] > image {
+    display: none;
+}
+div[class="boc-edit-form-instruments"] {
+    display: none;
+}
+div[class="boc-edit-form-header"] {
+    height:244px;
+}
+div[class="boc-edit-form-avatar"] > svg {
+    padding-bottom: 14px;
+    padding-right: 6px;
+}/*
+svg text {
+    background: red;
+    border-radius: 5px;
+    border: 2px solid blue;
+    padding: 5px;
+} */
 </style>
 <div class="container" style="padding-right: 0px; padding-left: 0px; z-index: 0; position: relative; min-height: 80vh;">
     <div class="row" style="margin-right: 0px; margin-left: 0px;">

@@ -3,7 +3,7 @@
         margin-bottom: 0px;
     }
 </style>
-<div style="height: 100vh; min-height: 513px; overflow: auto; background-color: #f1f1f1; position: fixed; width:inherit; top: 0px;  box-shadow: -4px 0 14px 2px grey, 4px 0 14px 2px grey;" class="panel-left-right">
+<div style="height: 100vh; min-height: 500px; overflow: auto; background-color: #f1f1f1; position: fixed; width:inherit; top: 0px;  box-shadow: -4px 0 14px 2px grey, 4px 0 14px 2px grey;" class="panel-left-right">
     <div style="width: 100%; height: 10vh; background-color: #3b3c8c;">
         <div class="logo-footer" style="display: table-cell; vertical-align: middle; height: 10vh;" align="center">
             <table border='0' style="width: 100%; width: 80%; background-color: white; border-radius: 10.8px;">
@@ -19,18 +19,18 @@
 
         </div>
     </div>
-    <div id="accordion2" class="myaccordion" style="height: 53vh; background-color: #ffffff;">
+    <div id="accordion2" class="myaccordion" style="height: 450px; background-color: #ffffff;">
         <?php 
         $query_call_center = mysqli_query($connect, "SELECT * FROM `tbl_call_center`");
         if(mysqli_num_rows($query_call_center) > 0){
-            $height_vh = 53 / mysqli_num_rows($query_call_center);
+            $height_vh = 450 / mysqli_num_rows($query_call_center);
             $increment = 0;
             while($hasil_call_center = mysqli_fetch_array($query_call_center)){
                 ?>
                 <div class="card">
                     <div class="card-header" style="overflow: auto;">
                         <h5 class="mb-0">
-                            <button style="white-space: nowrap; text-align: left; font-size: 14px; /* height: 77px; */ height: <?php echo $height_vh; ?>vh;" class="btn btn-link" data-toggle="collapse" data-target="#collapsediv<?php echo $increment; ?>" aria-expanded="true" aria-controls="collapseOne">
+                            <button style="white-space: nowrap; text-align: left; font-size: 14px; /* height: 77px; */ height: <?php echo $height_vh; ?>px;" class="btn btn-link" data-toggle="collapse" data-target="#collapsediv<?php echo $increment; ?>" aria-expanded="true" aria-controls="collapseOne">
                                 <img width="25px" height="auto" src="assets/img/PHONEICON.png" alt="icon-map" style="width: 24px !important;margin-bottom: 2.5px;">
                                 &nbsp;<?php echo $hasil_call_center['judul_call_center']; ?>
                             </button>
@@ -75,7 +75,7 @@
             <?php 
         }
         ?>
-    </div>
+    </div><?php /*
     <div style="width: 100%;">
         <div class="logo-footer" style="vertical-align: middle; width:  100%;" align="center">
             <table border="0" style="width: 100%;width: 100%; border-radius: 10.8px;">
@@ -87,5 +87,5 @@
             </tbody></table>
 
         </div>
-    </div>
+    </div> */ ?>
 </div>

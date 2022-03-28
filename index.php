@@ -226,7 +226,8 @@ check_url_index_php();
                 <?php if($module == "organisasi"){ ?>
                 OrgChart.templates.ana.plus = '<circle cx="15" cy="15" r="15" fill="#ffffff" stroke="#aeaeae" stroke-width="1"></circle>'
                     + '<text text-anchor="middle" style="font-size: 18px;cursor:pointer;" fill="#757575" x="15" y="22">{collapsed-children-count}</text>';
-
+                
+                
                 OrgChart.templates.itTemplate = Object.assign({}, OrgChart.templates.ana);
                 OrgChart.templates.itTemplate.nodeMenuButton = "";
                 OrgChart.templates.itTemplate.nodeCircleMenuButton = {
@@ -280,10 +281,10 @@ check_url_index_php();
                         csv: { text: "Save as CSV" }
                     },
                     nodeMenu: {
-                        details: { text: "Details" },
+                        details: { text: "Details" }/*,
                         edit: { text: "Edit" },
                         add: { text: "Add" },
-                        remove: { text: "Remove" }
+                        remove: { text: "Remove" } */
                     },
                     align: OrgChart.ORIENTATION,
                     toolbar: {
@@ -350,9 +351,10 @@ check_url_index_php();
                         "department": {
                             template: "group",
                             nodeMenu: {
+                                /*
                                 addManager: { text: "Add new manager", icon: OrgChart.icon.add(24, 24, "#7A7A7A"), onClick: addManager },
                                 remove: { text: "Remove department" },
-                                edit: { text: "Edit department" },
+                                edit: { text: "Edit department" }, */
                                 nodePdfPreview: { text: "Export department to PDF", icon: OrgChart.icon.pdf(24, 24, "#7A7A7A"), onClick: nodePdfPreview }
                             }
                         },
@@ -361,7 +363,7 @@ check_url_index_php();
                         }
                     },
                     clinks: [
-                        { from: 11, to: 18 },
+                        { from: 11, to: 18, label : 'TEST' },
                         { from: 1, to: 18 }
                     ]
                 });
@@ -420,7 +422,7 @@ check_url_index_php();
                 chart.load([
                     { id: "top-management", tags: ["top-management"] },
                     { id: "hr-team", pid: "top-management", tags: ["hr-team", "department"], name: "HR department" },
-                    { id: "it-team", pid: "top-management", tags: ["it-team", "department"], name: "IT department" },
+                    { id: "it-team", pid: "top-management", tags: ["it-team", "department"], name: "IT department", img: "https://cdn.balkan.app/shared/anim/1.gif" },
                     { id: "sales-team", pid: "top-management", tags: ["sales-team", "department"], name: "Sales department" },
 
                     { id: 1, stpid: "top-management", name: "Nicky Phillips", title: "CEO", img: "https://cdn.balkan.app/shared/anim/1.gif", tags: ["seo-menu"] },
