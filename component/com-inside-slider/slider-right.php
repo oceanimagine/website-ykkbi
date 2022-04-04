@@ -6,8 +6,8 @@
 <div style="height: 100vh; min-height: 500px; overflow: auto; background-color: #f1f1f1; position: fixed; width:inherit; top: 0px;  box-shadow: -4px 0 14px 2px grey, 4px 0 14px 2px grey;" class="panel-left-right">
     <div style="width: 100%; height: 10vh; background-color: #3b3c8c;">
         <div class="logo-footer" style="display: table-cell; vertical-align: middle; height: 10vh;" align="center">
-            <table border='0' style="width: 100%; width: 80%; background-color: white; border-radius: 10.8px;">
-                <tr>
+            <table border="0" style="width: 100%; width: 80%; background-color: white; border-radius: 10.8px;">
+                <tbody><tr>
                     <td style="width: 10%; padding: 5px;" id="footer_td">
                         <img width="100%" height="auto" src="assets/img/LOGOYKKBI.png" alt="logo-footer" style="width: 100%;">
                     </td>
@@ -15,7 +15,7 @@
                         <img width="100%" height="auto" src="assets/img/LOGOWHITE.PNG" alt="logo-footer">
                     </td>
                 </tr>
-            </table>
+            </tbody></table>
 
         </div>
     </div>
@@ -24,64 +24,121 @@
     $default_height = isset($_GET['module']) && $_GET['module'] != "" ? "63vh" : "450px";
     
     ?>
-    <div id="accordion2" class="myaccordion" style="height: <?php echo $default_height; ?>; background-color: #ffffff;">
-        <?php 
-        $query_call_center = mysqli_query($connect, "SELECT * FROM `tbl_call_center`");
-        if(mysqli_num_rows($query_call_center) > 0){
-            $default_height = isset($_GET['module']) && $_GET['module'] != "" ? 63 : 450;
-            $default_satuan = isset($_GET['module']) && $_GET['module'] != "" ? "vh" : "px";
-            $height_vh = $default_height / mysqli_num_rows($query_call_center);
-            $increment = 0;
-            while($hasil_call_center = mysqli_fetch_array($query_call_center)){
-                ?>
-                <div class="card">
-                    <div class="card-header" style="overflow: auto;">
-                        <h5 class="mb-0">
-                            <button style="white-space: nowrap; text-align: left; font-size: 14px; /* height: 77px; */ height: <?php echo $height_vh . $default_satuan; ?>;" class="btn btn-link" data-toggle="collapse" data-target="#collapsediv<?php echo $increment; ?>" aria-expanded="true" aria-controls="collapseOne">
-                                <img width="25px" height="auto" src="assets/img/PHONEICON.png" alt="icon-map" style="width: 24px !important;margin-bottom: 2.5px;">
-                                &nbsp;<?php echo $hasil_call_center['judul_call_center']; ?>
-                            </button>
-                        </h5>
-                    </div>
-                    <!-- collapse show -->
-                    <div id="collapsediv<?php echo $increment; ?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordion2">
-                        <div class="card-body" style="padding: 1rem !important;">
-                            <ul style="margin: 0px; padding: 0px; white-space: nowrap; margin-left: 30px; list-style: circle;">
-                                <li style="margin-bottom: 2px;"><?php echo $hasil_call_center['nomor_call_center']; ?></li>
-                                <?php if($hasil_call_center['keterangan'] != ""){ ?>
-                                <li style="margin-bottom: 2px;"><?php echo $hasil_call_center['keterangan']; ?></li>
-                                <?php } ?>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <?php
-                $increment++;
-            }
-        } else {
-            ?>
-            <div class="card">
-                <div class="card-header" style="overflow: auto;">
-                    <h5 class="mb-0">
-                        <button style="white-space: nowrap; text-align: left; font-size: 14px; height: 77px;" class="btn btn-link" data-toggle="collapse" data-target="#collapsekanan01" aria-expanded="true" aria-controls="collapseOne">
-                            <img width="25px" height="auto" src="assets/img/PHONEICON.png" alt="icon-map" style="width: 24px !important;margin-bottom: 2.5px;">
-                            &nbsp;Emergency
-                        </button>
-                    </h5>
-                </div>
-                <!-- collapse show -->
-                <div id="collapsekanan01" class="collapse" aria-labelledby="headingOne" data-parent="#accordion2">
-                    <div class="card-body" style="padding: 1rem !important;">
-                        <ul style="margin: 0px; padding: 0px; white-space: nowrap; margin-left: 30px; list-style: circle;">
-                            <li style="margin-bottom: 2px;">081511509590</li>
-                            <li style="margin-bottom: 2px;">Di Luar Jam Kerja</li>
-                        </ul>
-                    </div>
-                </div>
+    <div style="padding: 40px; background-color: #fafafa; height: <?php echo $default_height; ?>; overflow: auto;">
+        <div style="margin-bottom: 10px!important;">
+            <font style="font-weight: 700; font-size: 20px; color: #f77b04!important;">DOKUMEN TERBARU</font>
+        </div>
+        
+        <!-- 01 -->
+        <div style="padding: 10px; border-radius: 10px; margin-bottom: 0; border-bottom: 1px solid #eee;">
+            <div style="color: #f77b04!important; font-family: poppins; color: #f77b04 !important;">
+                <b>PERATURAN PAJAK</b>
             </div>
-            <?php 
-        }
-        ?>
+            <div style="margin: 5px 0; margin-top: 10px!important; font-size: 14px; font-weight: 700;margin: 3px 0;">
+                <a href="#" style="font-size: 14px; color: #08294c;">Instruksi Presiden 1 TAHUN 2022</a>
+            </div>
+            <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;">1 Juni 2022</span>
+        </div>
+        
+        <!-- 02 -->
+        <div style="padding: 10px; border-radius: 10px; margin-bottom: 0; border-bottom: 1px solid #eee;">
+            <div style="color: #f77b04!important; font-family: poppins; color: #f77b04 !important;">
+                <b>P3B</b>
+            </div>
+            <div style="margin: 5px 0; margin-top: 10px!important; font-size: 14px; font-weight: 700;margin: 3px 0;">
+                <a href="#" style="font-size: 14px; color: #08294c;">Perjanjian Penghindaran Pajak Berganda: United Arab Emirates</a>
+            </div>
+            <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;">1 Juni 2022</span>
+        </div>
+        
+        <!-- 03 -->
+        <div style="padding: 10px; border-radius: 10px; margin-bottom: 0; border-bottom: 1px solid #eee;">
+            <div style="color: #f77b04!important; font-family: poppins; color: #f77b04 !important;">
+                <b>PUTUSAN PENGADILAN PAJAK</b>
+            </div>
+            <div style="margin: 5px 0; margin-top: 10px!important; font-size: 14px; font-weight: 700;margin: 3px 0;">
+                <a href="#" style="font-size: 14px; color: #08294c;">Putusan Pengadilan Pajak PUT-003674.99/2020/PP/M.XB Tahun 2021</a>
+            </div>
+            <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;">1 Juni 2022</span>
+        </div>
+        
+        <!-- 04 -->
+        <div style="padding: 10px; border-radius: 10px; margin-bottom: 0; border-bottom: 1px solid #eee;">
+            <div style="color: #f77b04!important; font-family: poppins; color: #f77b04 !important;">
+                <b>PUTUSAN MAHKAMAH AGUNG</b>
+            </div>
+            <div style="margin: 5px 0; margin-top: 10px!important; font-size: 14px; font-weight: 700;margin: 3px 0;">
+                <a href="#" style="font-size: 14px; color: #08294c;">Putusan Mahkamah Agung 1690/B/PK/PJK/2017</a>
+            </div>
+            <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;">1 Juni 2022</span>
+        </div>
+        
+        <!-- 05 -->
+        <div style="padding: 10px; border-radius: 10px; margin-bottom: 0; border-bottom: 1px solid #eee;">
+            <div style="color: #f77b04!important; font-family: poppins; color: #f77b04 !important;">
+                <b>GLOSARIUM</b>
+            </div>
+            <div style="margin: 5px 0; margin-top: 10px!important; font-size: 14px; font-weight: 700;margin: 3px 0;">
+                <a href="#" style="font-size: 14px; color: #08294c;">Laporan Realisasi Impor dan Perolehan</a>
+            </div>
+            <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;">1 Juni 2022</span>
+        </div>
+        
+        <!-- 06 -->
+        <div style="padding: 10px; border-radius: 10px; margin-bottom: 0; border-bottom: 1px solid #eee;">
+            <div style="color: #f77b04!important; font-family: poppins; color: #f77b04 !important;">
+                <b>REKAP ATURAN</b>
+            </div>
+            <div style="margin: 5px 0; margin-top: 10px!important; font-size: 14px; font-weight: 700;margin: 3px 0;">
+                <a href="#" style="font-size: 14px; color: #08294c;">Rekap Aturan Pajak atas Kawasan Perdagangan Bebas</a>
+            </div>
+            <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;">1 Juni 2022</span>
+        </div>
+        
+        <!-- 07 -->
+        <div style="padding: 10px; border-radius: 10px; margin-bottom: 0; border-bottom: 1px solid #eee;">
+            <div style="color: #f77b04!important; font-family: poppins; color: #f77b04 !important;">
+                <b>DOWNLOAD FORMULIR</b>
+            </div>
+            <div style="margin: 5px 0; margin-top: 10px!important; font-size: 14px; font-weight: 700;margin: 3px 0;">
+                <a href="#" style="font-size: 14px; color: #08294c;">Formulir Permohonan Surat Keterangan PP 23 Tahun 2018</a>
+            </div>
+            <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;">1 Juni 2022</span>
+        </div>
+        
+        <!-- 08 -->
+        <div style="padding: 10px; border-radius: 10px; margin-bottom: 0; border-bottom: 1px solid #eee;">
+            <div style="color: #f77b04!important; font-family: poppins; color: #f77b04 !important;">
+                <b>BUKU PAJAK</b>
+            </div>
+            <div style="margin: 5px 0; margin-top: 10px!important; font-size: 14px; font-weight: 700;margin: 3px 0;">
+                <a href="#" style="font-size: 14px; color: #08294c;">Basic Guidelines of Tax Procedures</a>
+            </div>
+            <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;">1 Juni 2022</span>
+        </div>
+        
+        <!-- 09 -->
+        <div style="padding: 10px; border-radius: 10px; margin-bottom: 0; border-bottom: 1px solid #eee;">
+            <div style="color: #f77b04!important; font-family: poppins; color: #f77b04 !important;">
+                <b>ILUSTRASI KASUS</b>
+            </div>
+            <div style="margin: 5px 0; margin-top: 10px!important; font-size: 14px; font-weight: 700;margin: 3px 0;">
+                <a href="#" style="font-size: 14px; color: #08294c;">Ilustrasi Kasus Perhitungan Pajak Bumi dan Bangunan (PBB)</a>
+            </div>
+            <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;">1 Juni 2022</span>
+        </div>
+        
+        <!-- 10 -->
+        <div style="padding: 10px; border-radius: 10px; margin-bottom: 0; border-bottom: 1px solid #eee;">
+            <div style="color: #f77b04!important; font-family: poppins; color: #f77b04 !important;">
+                <b>UU PERPAPAJAKAN KONSOLIDASI</b>
+            </div>
+            <div style="margin: 5px 0; margin-top: 10px!important; font-size: 14px; font-weight: 700;margin: 3px 0;">
+                <a href="#" style="font-size: 14px; color: #08294c;">UU Penagihan Pajak dengan Surat Paksa (PPSP) Konsolidasi</a>
+            </div>
+            <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;">1 Juni 2022</span>
+        </div>
+        
     </div><?php if(isset($_GET['module']) && $_GET['module'] != ""){ ?>
     <div style="width: 100%;">
         <div class="logo-footer" style="vertical-align: middle; width:  100%;" align="center">

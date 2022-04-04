@@ -24,6 +24,11 @@ html, body {
     scrollbar-width: thin;
 }
 
+div {
+    scrollbar-width: thin;
+    scrollbar-color: #3b3c8c grey;
+}
+
 .card-header {
     scrollbar-width: thin;
 }

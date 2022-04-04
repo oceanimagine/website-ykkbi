@@ -24,7 +24,7 @@
     $default_height = isset($_GET['module']) && $_GET['module'] != "" ? "63vh" : "450px";
     
     ?>
-    <div id="accordion2" class="myaccordion" style="height: <?php echo $default_height; ?>; background-color: #ffffff;">
+    <div id="accordion2" class="myaccordion" style="height: <?php echo $default_height; ?>; background-color: #ffffff; overflow: auto;">
         <?php 
         $query_call_center = mysqli_query($connect, "SELECT * FROM `tbl_call_center`");
         if(mysqli_num_rows($query_call_center) > 0){

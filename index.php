@@ -28,6 +28,7 @@ check_url_index_php();
         <!-- Favicons-->
         <link rel="shortcut icon" href="assets/img/LOGOYKKBI.png" type="image/x-icon">
         <!-- BASE CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
