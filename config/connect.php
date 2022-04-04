@@ -29,6 +29,8 @@ $GLOBALS['host'] = $host;
 $GLOBALS['user'] = $user;
 $GLOBALS['pass'] = $pass;
 $GLOBALS['data'] = $data;
+$logo_mode_right = false;
+$logo_mode_left  = true;
 
 /* Additional Function */
 function check_url_index_php(){
@@ -275,6 +277,8 @@ function get_home_inside_module($module){
 function get_component_slide_inside($module){
     global $connect;
     global $var_name;
+    global $logo_mode_right;
+    global $logo_mode_left;
     for($i = 0; $i < sizeof($var_name); $i++){
         global ${$var_name[$i]};
     }
@@ -307,6 +311,8 @@ function get_component_slide_inside($module){
         ${$explode_dash[1]} = ${$explode_dash[1]};
     }
     $connect = $connect;
+    $logo_mode_right = $logo_mode_right;
+    $logo_mode_left  = $logo_mode_left;
     if(file_exists(__DIR__ . "/../component/com-inside-slider/slider-" . $module . ".php")){
         include_once __DIR__ . "/../component/com-inside-slider/slider-" . $module . ".php";
     }

@@ -2,8 +2,8 @@
     <tr>
         <td id="td_slider_a_selain_home" style="vertical-align: top;">
             <?php 
-
-            get_component_slide_inside("left");
+            
+            get_component_slide_inside("right");
 
             ?>
         </td>
@@ -12,8 +12,8 @@
         </td>
         <td id="td_slider_c_selain_home" style="vertical-align: top;">
             <?php 
-
-            get_component_slide_inside("right");
+            
+            get_component_slide_inside("left");
 
             ?>
         </td>

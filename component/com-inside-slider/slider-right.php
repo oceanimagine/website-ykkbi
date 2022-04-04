@@ -22,6 +22,9 @@
     <?php 
     
     $default_height = isset($_GET['module']) && $_GET['module'] != "" ? "63vh" : "450px";
+    if(isset($logo_mode_right) && !$logo_mode_right){
+        $default_height = "90vh";
+    }
     
     ?>
     <div style="padding: 40px; background-color: #fafafa; height: <?php echo $default_height; ?>; overflow: auto;">
@@ -139,7 +142,7 @@
             <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;">1 Juni 2022</span>
         </div>
         
-    </div><?php if(isset($_GET['module']) && $_GET['module'] != ""){ ?>
+    </div><?php if((isset($_GET['module']) && $_GET['module'] != "") && (isset($logo_mode_right) && $logo_mode_right)){ ?>
     <div style="width: 100%;">
         <div class="logo-footer" style="vertical-align: middle; width:  100%;" align="center">
             <table border="0" style="width: 100%;width: 100%; border-radius: 10.8px;">
