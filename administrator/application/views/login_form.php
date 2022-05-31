@@ -20,8 +20,8 @@
     <body>
         <div class="login-box">
             <div class="login-box-body">
-                <p class="login-box-msg"><img src="image/LOGOYKKBI.JPG" style="width:200px;"></p>
-                <p style="text-align: center;">USERNAME : YKKBI<br />PASSWORD : YKKBI<br /><a href="../../../../">Home</a></p>
+                <p class="login-box-msg"><img src="image/LOGOYKKBI.JPG" style="width:200px;"></p><?php /*
+                <p style="text-align: center;">USERNAME : YKKBI<br />PASSWORD : YKKBI<br /><a href="../../../../">Home</a></p> */ ?>
                 <form method="POST">
                     <div id="alert_message" class="alert alert-danger">Username atau password salah.</div>
                     <div class="form-group has-feedback">

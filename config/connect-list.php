@@ -20,7 +20,7 @@ $list_server = array(
         "user" => "root",
         "pass" => "YKKBI@2021",
         "data" => "website_ykkbi",
-        "base" => "/ykkbi/"
+        "base" => "/project-ykkbi-website/"
     ),
     "ykkbi.appazzura.net" => array(
         "host" => "localhost",
