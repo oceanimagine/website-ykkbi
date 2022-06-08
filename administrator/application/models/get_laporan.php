@@ -27,12 +27,12 @@ class get_laporan extends CI_Model {
             $clouse = " where judul_laporan like '%" . $sSearch . "%' ";
         }
 
-        $sql_total = "select id, judul_laporan from tbl_laporan" . $clouse . "";
+        $sql_total = "select id, judul_laporan, status from tbl_laporan" . $clouse . "";
 
         $query_total = $this->db->query($sql_total);
         $total = $query_total->num_rows();
 
-        $sql = "select id, judul_laporan from tbl_laporan".$clouse." order by id asc limit $iDisplayStart , $iDisplayLength";
+        $sql = "select id, judul_laporan, status from tbl_laporan".$clouse." order by id asc limit $iDisplayStart , $iDisplayLength";
 
         $page = ($iDisplayStart / $iDisplayLength);
 

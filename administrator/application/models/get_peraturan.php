@@ -27,12 +27,12 @@ class get_peraturan extends CI_Model {
             $clouse = " where judul_peraturan like '%" . $sSearch . "%' ";
         }
 
-        $sql_total = "select id, judul_peraturan from tbl_peraturan" . $clouse . "";
+        $sql_total = "select id, judul_peraturan, status from tbl_peraturan" . $clouse . "";
 
         $query_total = $this->db->query($sql_total);
         $total = $query_total->num_rows();
 
-        $sql = "select id, judul_peraturan from tbl_peraturan".$clouse." order by id asc limit $iDisplayStart , $iDisplayLength";
+        $sql = "select id, judul_peraturan, status from tbl_peraturan".$clouse." order by id asc limit $iDisplayStart , $iDisplayLength";
 
         $page = ($iDisplayStart / $iDisplayLength);
 

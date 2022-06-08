@@ -40,13 +40,15 @@ class peraturan extends CI_Controller {
             
             $judul_peraturan = $this->input->post('judul_peraturan');
             $google_drive_pdf = $this->input->post('google_drive_pdf');
+            $status = $this->input->post('status');
             $this->get_peraturan->process(array(
                 'action' => 'update',
                 'table' => 'tbl_peraturan',
                 'column_value' => array(
                     
                     'judul_peraturan' => $judul_peraturan,
-                    'google_drive_pdf' => $google_drive_pdf
+                    'google_drive_pdf' => $google_drive_pdf,
+                    'status' => $status
                 ),
                 'where' => 'id = \''.$id.'\''
             ));
@@ -57,15 +59,31 @@ class peraturan extends CI_Controller {
             'table' => 'tbl_peraturan',
             'column_value' => array(
                 
+                'id'
+            ),
+            'where' => 'status = \'publish\''
+        ));
+        $jumlah_publish = $this->num_rows;
+        $data = $jumlah_publish > 0 ? $this->all : array((object) array("id" => 0));
+        $this->get_peraturan->process(array(
+            'action' => 'select',
+            'table' => 'tbl_peraturan',
+            'column_value' => array(
+                'id',
                 'judul_peraturan',
-                'google_drive_pdf'
+                'google_drive_pdf',
+                'status'
             ),
             'where' => 'id = \''.$id.'\''
         ));
         $this->layout->loadView('peraturan_form', array(
             
             'judul_peraturan' => $this->row->{'judul_peraturan'},
-            'google_drive_pdf' => $this->row->{'google_drive_pdf'}
+            'google_drive_pdf' => $this->row->{'google_drive_pdf'},
+            'id_data' => $data[0]->id,
+            'id_edit' => $id,
+            'status' => $this->row->{'status'},
+            'jumlah_publish' => $jumlah_publish
         ));
     }
     
@@ -74,18 +92,32 @@ class peraturan extends CI_Controller {
             
             $judul_peraturan = $this->input->post('judul_peraturan');
             $google_drive_pdf = $this->input->post('google_drive_pdf');
+            $status = $this->input->post('status');
             $this->get_peraturan->process(array(
                 'action' => 'insert',
                 'table' => 'tbl_peraturan',
                 'column_value' => array(
                     
                     'judul_peraturan' => $judul_peraturan,
-                    'google_drive_pdf' => $google_drive_pdf
+                    'google_drive_pdf' => $google_drive_pdf,
+                    'status' => $status
                 )
             ));
             redirect('peraturan/add');
         }
-        $this->layout->loadView('peraturan_form');
+        $this->get_peraturan->process(array(
+            'action' => 'select',
+            'table' => 'tbl_peraturan',
+            'column_value' => array(
+                
+                'id'
+            ),
+            'where' => 'status = \'publish\''
+        ));
+        $jumlah_publish = $this->num_rows;
+        $this->layout->loadView('peraturan_form', array(
+            'jumlah_publish' => $jumlah_publish
+        ));
     }
     
     public function index() {

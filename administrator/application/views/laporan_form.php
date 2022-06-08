@@ -42,7 +42,23 @@
                     <input type="text" id="google_drive_pdf" class="form-control" name="google_drive_pdf" placeholder="Google Drive Pdf" value="<?php echo isset($google_drive_pdf) ? $google_drive_pdf : ""; ?>">
                 </div>
             </div>
-                                                                                                                                    
+                    
+            <div class="form-group">
+                <label for="status" class="col-lg-2 control-label">Status</label>
+                <div class="col-lg-10">
+                    <select name="status" id="status" class="form-control">
+                        <?php if($jumlah_publish == 0 || (isset($id_data) && isset($id_edit) && $id_data == $id_edit)){ ?>
+                        <option value="">PILIH STATUS</option>
+                                                
+                        <option value="publish" <?php echo isset($status) && $status == 'publish' ? ' selected' : ''; ?>>publish</option>                        
+                        <option value="no publish" <?php echo isset($status) && $status == 'no publish' ? ' selected' : ''; ?>>no publish</option>      
+                        <?php } else { ?>
+                        <option value="no publish">no publish</option>   
+                        <?php } ?>
+                    </select>
+                </div>
+            </div>
+            
             <div class="box-footer"></div>
             
             <div class="form-group">

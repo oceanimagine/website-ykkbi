@@ -40,13 +40,15 @@ class laporan extends CI_Controller {
             
             $judul_laporan = $this->input->post('judul_laporan');
             $google_drive_pdf = $this->input->post('google_drive_pdf');
+            $status = $this->input->post('status');
             $this->get_laporan->process(array(
                 'action' => 'update',
                 'table' => 'tbl_laporan',
                 'column_value' => array(
                     
                     'judul_laporan' => $judul_laporan,
-                    'google_drive_pdf' => $google_drive_pdf
+                    'google_drive_pdf' => $google_drive_pdf,
+                    'status' => $status
                 ),
                 'where' => 'id = \''.$id.'\''
             ));
@@ -57,15 +59,31 @@ class laporan extends CI_Controller {
             'table' => 'tbl_laporan',
             'column_value' => array(
                 
+                'id'
+            ),
+            'where' => 'status = \'publish\''
+        ));
+        $jumlah_publish = $this->num_rows;
+        $data = $jumlah_publish > 0 ? $this->all : array((object) array("id" => 0));
+        $this->get_laporan->process(array(
+            'action' => 'select',
+            'table' => 'tbl_laporan',
+            'column_value' => array(
+                'id',
                 'judul_laporan',
-                'google_drive_pdf'
+                'google_drive_pdf',
+                'status'
             ),
             'where' => 'id = \''.$id.'\''
         ));
         $this->layout->loadView('laporan_form', array(
             
             'judul_laporan' => $this->row->{'judul_laporan'},
-            'google_drive_pdf' => $this->row->{'google_drive_pdf'}
+            'google_drive_pdf' => $this->row->{'google_drive_pdf'},
+            'id_data' => $data[0]->id,
+            'status' => $this->row->{'status'},
+            'id_edit' => $id,
+            'jumlah_publish' => $jumlah_publish
         ));
     }
     
@@ -74,18 +92,32 @@ class laporan extends CI_Controller {
             
             $judul_laporan = $this->input->post('judul_laporan');
             $google_drive_pdf = $this->input->post('google_drive_pdf');
+            $status = $this->input->post('status');
             $this->get_laporan->process(array(
                 'action' => 'insert',
                 'table' => 'tbl_laporan',
                 'column_value' => array(
                     
                     'judul_laporan' => $judul_laporan,
-                    'google_drive_pdf' => $google_drive_pdf
+                    'google_drive_pdf' => $google_drive_pdf,
+                    'status' => $status
                 )
             ));
             redirect('laporan/add');
         }
-        $this->layout->loadView('laporan_form');
+        $this->get_laporan->process(array(
+            'action' => 'select',
+            'table' => 'tbl_laporan',
+            'column_value' => array(
+                
+                'id'
+            ),
+            'where' => 'status = \'publish\''
+        ));
+        $jumlah_publish = $this->num_rows;
+        $this->layout->loadView('laporan_form', array(
+            'jumlah_publish' => $jumlah_publish
+        ));
     }
     
     public function index() {

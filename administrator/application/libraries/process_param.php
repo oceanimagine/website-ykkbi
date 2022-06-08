@@ -51,6 +51,7 @@ class process_param {
         $hasil = $this->model->kueri($query);
         $this->CI->row = $hasil->row();
         $this->CI->all = $hasil->result();
+        $this->CI->num_rows = sizeof($this->CI->all);
         for($i = 0; isset($GLOBALS['all_models']) && is_array($GLOBALS['all_models']) && $i < sizeof($GLOBALS['all_models']); $i++){
             if(is_object($GLOBALS['all_models'][$i])){
                 $GLOBALS['all_models'][$i]->row = $hasil->row();

@@ -116,7 +116,8 @@
                                         <li><a href="dokumentasi-kegiatan" style="border-right: 0.45px solid #fff;">Dokumentasi Kegiatan</a></li>
                                         <li><a href="galeri" style="border-right: 0.45px solid #fff;">Galeri</a></li>
                                         <li><a href="peraturan" style="border-right: 0.45px solid #fff;">Peraturan</a></li>
-                                        <li><a href="#" style="border-right: 0.45px solid #fff;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Laporan</a></li>
+                                        <li><a href="laporan" style="border-right: 0.45px solid #fff;">Laporan</a></li>
+                                        <!--  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" -->
                                     </ul>
                                 </li> 
                                 <li>

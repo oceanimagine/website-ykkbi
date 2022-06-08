@@ -45,6 +45,25 @@ if(mysqli_num_rows($query_sejarah) > 0){
     $isi_sejarah = $hasil_sejarah['isi_sejarah'];
 }
 
+/* Peraturan */
+$query_peraturan = mysqli_query($connect, "select * from tbl_peraturan where status = 'publish'");
+$judul_peraturan = "Undefined";
+$google_drive_pdf = "Undefined";
+if(mysqli_num_rows($query_peraturan) > 0){
+    $hasil_peraturan = mysqli_fetch_array($query_peraturan);
+    $judul_peraturan = $hasil_peraturan['judul_peraturan'];
+    $google_drive_pdf = $hasil_peraturan['google_drive_pdf'];
+}
+
+/* Laporan */
+$query_laporan = mysqli_query($connect, "select * from tbl_laporan where status = 'publish'");
+$judul_laporan = "Undefined";
+if(mysqli_num_rows($query_laporan) > 0){
+    $hasil_laporan = mysqli_fetch_array($query_laporan);
+    $judul_laporan = $hasil_laporan['judul_laporan'];
+    $google_drive_pdf = $hasil_laporan['google_drive_pdf'];
+}
+
 /* Transformasi */
 $query_transformasi = mysqli_query($connect, "select * from tbl_tentang_transformasi where status = 'publish'");
 $judul_transformasi = "Undefined";

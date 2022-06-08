@@ -96,6 +96,12 @@ function include_with_panel($module){
     global $isi_transformasi;
     $judul_transformasi = $judul_transformasi;
     $isi_transformasi = $isi_transformasi;
+    global $judul_peraturan;
+    global $judul_laporan;
+    global $google_drive_pdf;
+    $judul_peraturan = $judul_peraturan;
+    $judul_laporan = $judul_laporan;
+    $google_drive_pdf = $google_drive_pdf;
     global $array_var_name_tkht_lainnya;
     for($i = 0; $i < sizeof($array_var_name_tkht_lainnya); $i++){
         $explode_dash = explode(" -- ", $array_var_name_tkht_lainnya[$i]);

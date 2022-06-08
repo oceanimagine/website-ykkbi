@@ -60,7 +60,8 @@
                                 <th>No</th>
                                                                                                 
                                 <th>Id</th>                                                                                                
-                                <th>Judul Peraturan</th>                                                                                                                                                                                                
+                                <th>Judul Peraturan</th>         
+                                <th>Status</th>   
                                 <th>Action</th>
                             </tr>
                         </thead>

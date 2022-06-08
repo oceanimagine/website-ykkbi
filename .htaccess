@@ -27,6 +27,9 @@ RewriteRule ^bantuan-pinjaman index.php?module=bantuan-pinjaman&panelrightleft=t
 RewriteRule ^call-center index.php?module=call-center&panelrightleft=true
 RewriteRule ^pengaduan index.php?module=pengaduan&panelrightleft=true
 
+RewriteRule ^peraturan index.php?module=peraturan&panelrightleft=true
+RewriteRule ^laporan index.php?module=laporan&panelrightleft=true
+
 # TKHT
 RewriteRule ^tkht index.php?module=tkht&panelrightleft=true
 RewriteRule ^ketentuan-umum-tkht index.php?module=tkht-ketentuan-umum&panelrightleft=true
