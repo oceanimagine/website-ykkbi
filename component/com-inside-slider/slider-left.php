@@ -3,7 +3,7 @@
         margin-bottom: 0px;
     }
 </style>
-<div style="height: 100vh; min-height: 500px; overflow: auto; background-color: #f1f1f1; position: fixed; width:inherit; top: 0px;  box-shadow: -4px 0 14px 2px grey, 4px 0 14px 2px grey;" class="panel-left-right">
+<div style="height: 100vh; min-height: 500px; overflow: auto; background-color: #fafafa; position: fixed; width:inherit; top: 0px; overflow: hidden; /* box-shadow: -4px 0 14px 2px grey, 4px 0 14px 2px grey; */" class="panel-left-right">
     <div style="width: 100%; height: 10vh; background-color: #3b3c8c;">
         <div class="logo-footer" style="display: table-cell; vertical-align: middle; height: 10vh;" align="center">
             <table border='0' style="width: 100%; width: 80%; background-color: white; border-radius: 10.8px;">
@@ -27,7 +27,7 @@
     }
     
     ?>
-    <div id="accordion2" class="myaccordion" style="height: <?php echo $default_height; ?>; background-color: #ffffff; overflow: auto;">
+    <div id="accordion2" class="myaccordion" style="height: <?php echo $default_height; ?>;  background-color: #fafafa; overflow: auto; margin-top: 10px;">
         <?php 
         $query_call_center = mysqli_query($connect, "SELECT * FROM `tbl_call_center`");
         if(mysqli_num_rows($query_call_center) > 0){
@@ -38,7 +38,7 @@
             while($hasil_call_center = mysqli_fetch_array($query_call_center)){
                 ?>
                 <div class="card">
-                    <div class="card-header" style="overflow: auto;">
+                    <div class="card-header" style="overflow: auto; background-color: #fafafa;">
                         <h5 class="mb-0">
                             <button style="white-space: nowrap; text-align: left; font-size: 14px; /* height: 77px; */ height: <?php echo $height_vh . $default_satuan; ?>;" class="btn btn-link" data-toggle="collapse" data-target="#collapsediv<?php echo $increment; ?>" aria-expanded="true" aria-controls="collapseOne">
                                 <img width="25px" height="auto" src="assets/img/PHONEICON.png" alt="icon-map" style="width: 24px !important;margin-bottom: 2.5px;">

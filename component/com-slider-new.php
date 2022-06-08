@@ -1,4 +1,4 @@
-<div align="center" style="width: 100%; overflow: hidden; box-shadow: 0 8px 10px rgb(182 182 182 / 75%); z-index: 2; position: relative;">
+<div align="center" style="width: 100%; overflow: hidden; box-shadow: 0 8px 10px rgb(182 182 182 / 75%); z-index: 2; position: relative; margin-top: 10px; background-color: #fafafa;">
     <!-- https://getbootstrap.com/docs/4.0/components/collapse/ -->
     <!-- https://colorlib.com/wp/template/accordion-02/ -->
     <!-- https://freefrontend.com/bootstrap-accordions/ -->
@@ -13,7 +13,7 @@
                 ?>
             </td>
             <td id="td_slider_b">
-                <section class="u-align-center u-clearfix u-valign-middle u-section-2" id="sec-33aa" style="height: 448px; width: 100%; min-height: 350px; box-shadow: -4px 0 14px 2px grey, 4px 0 14px 2px grey; z-index: 99;">
+                <section class="u-align-center u-clearfix u-valign-middle u-section-2" id="sec-33aa" style="height: 448px; width: 100%; min-height: 350px; /* box-shadow: -4px 0 14px 2px grey, 4px 0 14px 2px grey; */ z-index: 99;">
                     <div id="carousel-bd35" data-interval="5000" data-u-ride="carousel" class="u-carousel u-expanded-width u-slider u-slider-1" style="height: 100%;">
                         <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1" style="width: 100%; bottom: 55px; top: 68vh;">
                             <?php  

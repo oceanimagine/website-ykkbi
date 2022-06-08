@@ -3,7 +3,7 @@
         margin-bottom: 0px;
     }
 </style>
-<div style="height: 100vh; min-height: 500px; overflow: auto; background-color: #f1f1f1; position: fixed; width:inherit; top: 0px;  box-shadow: -4px 0 14px 2px grey, 4px 0 14px 2px grey;" class="panel-left-right">
+<div style="height: 100vh; min-height: 500px; overflow: auto; background-color: #fafafa; position: fixed; width:inherit; top: 0px; overflow: hidden; /* box-shadow: -4px 0 14px 2px grey, 4px 0 14px 2px grey; */" class="panel-left-right">
     <div style="width: 100%; height: 10vh; background-color: #3b3c8c;">
         <div class="logo-footer" style="display: table-cell; vertical-align: middle; height: 10vh;" align="center">
             <table border="0" style="width: 100%; width: 80%; background-color: white; border-radius: 10.8px;">
@@ -27,7 +27,7 @@
     }
     
     ?>
-    <div style="padding: 40px; background-color: #fafafa; height: <?php echo $default_height; ?>; overflow: auto;">
+    <div style="padding: 40px; background-color: #fafafa; height: <?php echo $default_height; ?>; overflow: auto; margin-top: 10px;">
         <div style="margin-bottom: 10px!important;">
             <font style="font-weight: 700; font-size: 20px; color: #f77b04!important;">DOKUMEN TERBARU</font>
         </div>
