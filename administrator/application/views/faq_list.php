@@ -59,8 +59,7 @@
                             <tr>
                                 <th>No</th>
                                                                                                 
-                                <th>Id</th>                                                                                                
-                                <th>Judul</th>                                                                                                
+                                <th>Id</th>                                                                                               
                                 <th>Pertanyaan</th>                                                                                                                                                                                                
                                 <th>Action</th>
                             </tr>

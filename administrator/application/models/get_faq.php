@@ -27,12 +27,12 @@ class get_faq extends CI_Model {
             $clouse = " where judul like '%" . $sSearch . "%' ";
         }
 
-        $sql_total = "select id, judul, pertanyaan from tbl_faq" . $clouse . "";
+        $sql_total = "select id, pertanyaan from tbl_faq" . $clouse . "";
 
         $query_total = $this->db->query($sql_total);
         $total = $query_total->num_rows();
 
-        $sql = "select id, judul, pertanyaan from tbl_faq".$clouse." order by id asc limit $iDisplayStart , $iDisplayLength";
+        $sql = "select id, pertanyaan from tbl_faq".$clouse." order by id asc limit $iDisplayStart , $iDisplayLength";
 
         $page = ($iDisplayStart / $iDisplayLength);
 

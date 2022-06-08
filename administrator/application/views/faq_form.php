@@ -27,13 +27,6 @@
 <body>
     <form class="form-horizontal" method="POST" enctype="multipart/form-data">
         <div class="box-body">
-                                                                        
-            <div class="form-group">
-                <label for="judul" class="col-lg-2 control-label">Judul</label>
-                <div class="col-lg-10">
-                    <input type="text" id="judul" class="form-control" name="judul" placeholder="Judul" value="<?php echo isset($judul) ? $judul : ""; ?>">
-                </div>
-            </div>
                                                                                                                         
             <div class="form-group">
                 <label for="pertanyaan" class="col-lg-2 control-label">Pertanyaan</label>

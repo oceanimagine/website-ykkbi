@@ -27,7 +27,7 @@
     }
     
     ?>
-    <div style="padding: 40px; background-color: #fafafa; height: <?php echo $default_height; ?>; overflow: auto; margin-top: 10px;">
+    <div style="padding: 40px; background-color: #fafafa; height: <?php echo $default_height; ?>; overflow: auto; <?php if((isset($_GET['module']) && $_GET['module'] != "") && (isset($logo_mode_left) && $logo_mode_left)){} else { ?> margin-top: 10px; <?php } ?>">
         <div style="margin-bottom: 10px!important;">
             <font style="font-weight: 700; font-size: 20px; color: #f77b04!important;">DOKUMEN TERBARU</font>
         </div>

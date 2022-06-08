@@ -30,6 +30,8 @@ RewriteRule ^pengaduan index.php?module=pengaduan&panelrightleft=true
 RewriteRule ^peraturan index.php?module=peraturan&panelrightleft=true
 RewriteRule ^laporan index.php?module=laporan&panelrightleft=true
 
+RewriteRule ^faq index.php?module=faq&panelrightleft=true
+
 # TKHT
 RewriteRule ^tkht index.php?module=tkht&panelrightleft=true
 RewriteRule ^ketentuan-umum-tkht index.php?module=tkht-ketentuan-umum&panelrightleft=true

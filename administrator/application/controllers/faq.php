@@ -35,10 +35,9 @@ class faq extends CI_Controller {
     }
     
     public function edit($id){
-        if($this->input->post('judul')){
+        if($this->input->post('pertanyaan')){
             $_GET['id'] = $id;
             
-            $judul = $this->input->post('judul');
             $pertanyaan = $this->input->post('pertanyaan');
             $jawaban = $this->input->post('jawaban');
             $this->get_faq->process(array(
@@ -46,7 +45,6 @@ class faq extends CI_Controller {
                 'table' => 'tbl_faq',
                 'column_value' => array(
                     
-                    'judul' => $judul,
                     'pertanyaan' => $pertanyaan,
                     'jawaban' => $jawaban
                 ),
@@ -59,7 +57,6 @@ class faq extends CI_Controller {
             'table' => 'tbl_faq',
             'column_value' => array(
                 
-                'judul',
                 'pertanyaan',
                 'jawaban'
             ),
@@ -67,16 +64,14 @@ class faq extends CI_Controller {
         ));
         $this->layout->loadView('faq_form', array(
             
-            'judul' => $this->row->{'judul'},
             'pertanyaan' => $this->row->{'pertanyaan'},
             'jawaban' => $this->row->{'jawaban'}
         ));
     }
     
     public function add(){
-        if($this->input->post('judul')){
+        if($this->input->post('pertanyaan')){
             
-            $judul = $this->input->post('judul');
             $pertanyaan = $this->input->post('pertanyaan');
             $jawaban = $this->input->post('jawaban');
             $this->get_faq->process(array(
@@ -84,7 +79,6 @@ class faq extends CI_Controller {
                 'table' => 'tbl_faq',
                 'column_value' => array(
                     
-                    'judul' => $judul,
                     'pertanyaan' => $pertanyaan,
                     'jawaban' => $jawaban
                 )

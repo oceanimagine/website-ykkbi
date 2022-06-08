@@ -27,7 +27,7 @@
     }
     
     ?>
-    <div id="accordion2" class="myaccordion" style="height: <?php echo $default_height; ?>;  background-color: #fafafa; overflow: auto; margin-top: 10px;">
+    <div id="accordion2" class="myaccordion" style="height: <?php echo $default_height; ?>;  background-color: #fafafa; overflow: auto; <?php if((isset($_GET['module']) && $_GET['module'] != "") && (isset($logo_mode_left) && $logo_mode_left)){} else { ?> margin-top: 10px; <?php } ?>">
         <?php 
         $query_call_center = mysqli_query($connect, "SELECT * FROM `tbl_call_center`");
         if(mysqli_num_rows($query_call_center) > 0){
