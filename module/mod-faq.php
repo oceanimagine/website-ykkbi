@@ -76,7 +76,7 @@
                                                         </div>
                                                         <div class="desc-article" style="margin-top: 10px; padding-right: 10px; padding-left: 10px;">
                                                             <span class="d-block mb-2" style="margin-bottom: 0px !important;">
-                                                                <?php echo $hasil_faq['jawaban']; ?>
+                                                                <?php echo str_replace("{{RELATIVE_PATH}}", $GLOBALS['base_administrator'], $hasil_faq['jawaban']); ?>
                                                             </span>
                                                             <span class="text-secondary small"><?php echo $all_day; ?></span>
                                                         </div>

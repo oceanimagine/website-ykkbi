@@ -42,7 +42,7 @@ $isi_sejarah = "Undefined";
 if(mysqli_num_rows($query_sejarah) > 0){
     $hasil_sejarah = mysqli_fetch_array($query_sejarah);
     $judul_sejarah = $hasil_sejarah['judul'];
-    $isi_sejarah = $hasil_sejarah['isi_sejarah'];
+    $isi_sejarah = str_replace("{{RELATIVE_PATH}}", $GLOBALS['base_administrator'], $hasil_sejarah['isi_sejarah']);
 }
 
 /* Peraturan */
@@ -71,7 +71,7 @@ $isi_transformasi = "Undefined";
 if(mysqli_num_rows($query_transformasi) > 0){
     $hasil_transformasi = mysqli_fetch_array($query_transformasi);
     $judul_transformasi = $hasil_transformasi['judul'];
-    $isi_transformasi = $hasil_transformasi['isi_transformasi'];
+    $isi_transformasi = str_replace("{{RELATIVE_PATH}}", $GLOBALS['base_administrator'], $hasil_transformasi['isi_transformasi']);
 }
 
 /* TKHT Lainnya */
@@ -80,7 +80,7 @@ $array_var_name_tkht_lainnya = array();
 if(mysqli_num_rows($query_tkht_lainnya) > 0){
     while($hasil_tkht_lainnya = mysqli_fetch_array($query_tkht_lainnya)){
         ${'judul_' . $hasil_tkht_lainnya['tipe_tkht']} = $hasil_tkht_lainnya['judul'];
-        ${'isi_' . $hasil_tkht_lainnya['tipe_tkht']} = $hasil_tkht_lainnya['isi_tkht_lainnya'];
+        ${'isi_' . $hasil_tkht_lainnya['tipe_tkht']} = str_replace("{{RELATIVE_PATH}}", $GLOBALS['base_administrator'], $hasil_tkht_lainnya['isi_tkht_lainnya']);
         $array_var_name_tkht_lainnya[] = 'judul_' . $hasil_tkht_lainnya['tipe_tkht'] . " -- " . 'isi_' . $hasil_tkht_lainnya['tipe_tkht'];
     }
 }
@@ -91,7 +91,7 @@ $array_var_name_tkht_bantuan = array();
 if(mysqli_num_rows($query_tkht_bantuan) > 0){
     while($hasil_tkht_bantuan = mysqli_fetch_array($query_tkht_bantuan)){
         ${'judul_' . $hasil_tkht_bantuan['tipe_tkht']} = $hasil_tkht_bantuan['judul'];
-        ${'isi_' . $hasil_tkht_bantuan['tipe_tkht']} = $hasil_tkht_bantuan['isi_tkht_bantuan'];
+        ${'isi_' . $hasil_tkht_bantuan['tipe_tkht']} = str_replace("{{RELATIVE_PATH}}", $GLOBALS['base_administrator'], $hasil_tkht_bantuan['isi_tkht_bantuan']);
         $array_var_name_tkht_bantuan[] = 'judul_' . $hasil_tkht_bantuan['tipe_tkht'] . " -- " . 'isi_' . $hasil_tkht_bantuan['tipe_tkht'];
     }
 }

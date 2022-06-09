@@ -1,3 +1,4 @@
+/* 
 tinymce.init({
     selector: 'textarea#article_build',
     plugins: 'print preview importcss tinydrive searchreplace autolink autosave save directionality visualblocks visualchars fullscreen link media template codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount textpattern noneditable help charmap quickbars emoticons',
@@ -57,6 +58,41 @@ tinymce.init({
     content_css: 'default',
     mentions_selector: '.mymention',
     mentions_item_type: 'profile'
+}); */
+
+var tinymce = typeof tinymce !== "undefined" ? tinymce : {};
+var disabled_textarea = typeof disabled_textarea !== "undefined" ? disabled_textarea : {};
+tinymce.init({
+    selector: "textarea#article_build",
+    
+    // ===========================================
+    // INCLUDE THE PLUGIN
+    // ===========================================
+
+    plugins: [
+        "advlist autolink lists link charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste jbimages"
+    ],
+
+    // ===========================================
+    // PUT PLUGIN'S BUTTON on the toolbar
+    // ===========================================
+
+    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
+
+    // ===========================================
+    // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
+    // ===========================================
+
+    relative_urls: false,
+    setup: function (ed) {
+        ed.on('init', function(args) {
+            if(typeof disabled_textarea !== "undefined" && typeof disabled_textarea[args.target.id] !== "undefined" && disabled_textarea[args.target.id]){
+                ed.setMode("readonly");
+            }
+        });
+    }
 });
 
 var mulai_label = typeof mulai_label === "undefined" ? 1 : mulai_label;

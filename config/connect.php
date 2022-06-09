@@ -29,8 +29,27 @@ $GLOBALS['host'] = $host;
 $GLOBALS['user'] = $user;
 $GLOBALS['pass'] = $pass;
 $GLOBALS['data'] = $data;
+$GLOBALS['tinymce_base'] = $GLOBALS['base_administrator'] . "application/layout/lite/js/tinymce/js/tinymce/plugins/jbimages/images";
 $logo_mode_right = false;
 $logo_mode_left  = true;
+
+/* Code for Relative Path for Tinymce */
+$key_post = array_keys($_POST);
+for($i = 0; $i < sizeof($key_post); $i++){
+    if(substr($key_post[$i], 0, strlen("isi_")) == "isi_" || substr($key_post[$i], 0, strlen("deskripsi_")) == "deskripsi_" || $key_post[$i] == "jawaban"){
+        $address_string = 0;
+        $hasil_string = "";
+        while(isset($_POST[$key_post[$i]]{$address_string})){
+            if(substr($_POST[$key_post[$i]], $address_string, strlen($GLOBALS['tinymce_base'])) == $GLOBALS['tinymce_base']){
+                $hasil_string = $hasil_string . "{{RELATIVE_PATH}}";
+                $address_string = $address_string + strlen($GLOBALS['base_administrator']);
+            }
+            $hasil_string = $hasil_string . $_POST[$key_post[$i]]{$address_string};
+            $address_string++;
+        }
+        $_POST[$key_post[$i]] = $hasil_string;
+    }
+}
 
 /* Additional Function */
 function check_url_index_php(){

@@ -50,6 +50,17 @@ class process_param {
         $this->call_debug($query);
         $hasil = $this->model->kueri($query);
         $this->CI->row = $hasil->row();
+        
+        /* Relative Path for Tinymce */
+        $array_convert = (array) $this->CI->row;
+        $keys = array_keys($array_convert);
+        for($i = 0; $i < sizeof($keys); $i++){
+            if(substr($keys[$i], 0, strlen("isi_")) == "isi_" || substr($keys[$i], 0, strlen("deskripsi_")) == "deskripsi_" || $keys[$i] == "jawaban"){
+                $array_convert[$keys[$i]] = str_replace("{{RELATIVE_PATH}}", $GLOBALS['base_administrator'], $array_convert[$keys[$i]]);
+                $this->CI->row->{$keys[$i]} = $array_convert[$keys[$i]];
+            }
+        }
+        
         $this->CI->all = $hasil->result();
         $this->CI->num_rows = sizeof($this->CI->all);
         for($i = 0; isset($GLOBALS['all_models']) && is_array($GLOBALS['all_models']) && $i < sizeof($GLOBALS['all_models']); $i++){
