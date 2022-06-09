@@ -74,6 +74,16 @@ if(mysqli_num_rows($query_transformasi) > 0){
     $isi_transformasi = str_replace("{{RELATIVE_PATH}}", $GLOBALS['base_administrator'], $hasil_transformasi['isi_transformasi']);
 }
 
+/* Pengurus */
+$query_tentang_pengurus = mysqli_query($connect, "select * from tbl_tentang_profile_pengurus where status = 'publish'");
+$judul_tentang_pengurus = "Undefined";
+$isi_tentang_pengurus = "Undefined";
+if(mysqli_num_rows($query_tentang_pengurus) > 0){
+    $hasil_tentang_pengurus = mysqli_fetch_array($query_tentang_pengurus);
+    $judul_tentang_pengurus = $hasil_tentang_pengurus['judul'];
+    $isi_tentang_pengurus = str_replace("{{RELATIVE_PATH}}", $GLOBALS['base_administrator'], $hasil_tentang_pengurus['isi_profile_pengurus']);
+}
+
 /* TKHT Lainnya */
 $query_tkht_lainnya = mysqli_query($connect, "select * from tbl_tkht_lainnya where status = 'publish'");
 $array_var_name_tkht_lainnya = array();

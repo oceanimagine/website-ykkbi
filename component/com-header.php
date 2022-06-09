@@ -48,7 +48,7 @@
                                         <li><a href="organisasi" style="border-right: 0.45px solid #fff;">Organisasi</a></li>
                                         <li><a href="sejarah" style="border-right: 0.45px solid #fff;">Sejarah YKKBI</a></li>
                                         <li><a href="transformasi" style="border-right: 0.45px solid #fff;">Transformasi YKKBI</a></li>
-                                        <li><a href="profile" style="border-right: 0.45px solid #fff;">Profile Pengurus</a></li>
+                                        <li><a href="profile-pengurus" style="border-right: 0.45px solid #fff;">Profile Pengurus</a></li>
                                     </ul>
                                 </li>
                                 <li>

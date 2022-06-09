@@ -59,6 +59,17 @@ class tentang_transformasi extends CI_Controller {
             'table' => 'tbl_tentang_transformasi',
             'column_value' => array(
                 
+                'id'
+            ),
+            'where' => 'status = \'publish\''
+        ));
+        $jumlah_publish = $this->num_rows;
+        $data = $jumlah_publish > 0 ? $this->all : array((object) array("id" => 0));
+        $this->get_tentang_transformasi->process(array(
+            'action' => 'select',
+            'table' => 'tbl_tentang_transformasi',
+            'column_value' => array(
+                
                 'judul',
                 'isi_transformasi',
                 'status'
@@ -69,7 +80,10 @@ class tentang_transformasi extends CI_Controller {
             
             'judul' => $this->row->{'judul'},
             'isi_transformasi' => $this->row->{'isi_transformasi'},
-            'status' => $this->row->{'status'}
+            'status' => $this->row->{'status'},
+            'id_data' => $data[0]->id,
+            'id_edit' => $id,
+            'jumlah_publish' => $jumlah_publish
         ));
     }
     
@@ -91,7 +105,19 @@ class tentang_transformasi extends CI_Controller {
             ));
             redirect('tentang_transformasi/add');
         }
-        $this->layout->loadView('tentang_transformasi_form');
+        $this->get_tentang_transformasi->process(array(
+            'action' => 'select',
+            'table' => 'tbl_tentang_transformasi',
+            'column_value' => array(
+                
+                'id'
+            ),
+            'where' => 'status = \'publish\''
+        ));
+        $jumlah_publish = $this->num_rows;
+        $this->layout->loadView('tentang_transformasi_form', array(
+            'jumlah_publish' => $jumlah_publish
+        ));
     }
     
     public function index() {

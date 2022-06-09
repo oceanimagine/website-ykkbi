@@ -5,7 +5,7 @@ RewriteEngine On
 RewriteRule ^home index.php
 
 # Profile
-RewriteRule ^profile index.php?module=profile&panelrightleft=true
+RewriteRule ^test-profile index.php?module=profile&panelrightleft=true
 RewriteRule ^kegiatan index.php?module=profile-kegiatan&panelrightleft=true
 RewriteRule ^usaha-penunjang index.php?module=profile-usaha-penunjang&panelrightleft=true
 RewriteRule ^pengertian-umum-yayasan index.php?module=profile-pengertian-umum-yayasan&panelrightleft=true
@@ -31,6 +31,8 @@ RewriteRule ^peraturan index.php?module=peraturan&panelrightleft=true
 RewriteRule ^laporan index.php?module=laporan&panelrightleft=true
 
 RewriteRule ^faq index.php?module=faq&panelrightleft=true
+
+RewriteRule ^profile-pengurus index.php?module=profile-pengurus&panelrightleft=true
 
 # TKHT
 RewriteRule ^tkht index.php?module=tkht&panelrightleft=true

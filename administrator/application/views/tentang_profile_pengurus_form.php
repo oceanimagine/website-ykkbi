@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Tentang Sejarah Form</title>
+    <title>Tentang Profile Pengurus Form</title>
     <style type="text/css">
         html, body {
             font-family: consolas, monospace;
@@ -38,9 +38,9 @@
                                                                                                                                      
             
             <div class="form-group">
-                <label for="article_build" class="col-lg-2 control-label">Isi Sejarah</label>
+                <label for="article_build" class="col-lg-2 control-label">Isi Profile Pengurus</label>
                 <div class="col-lg-10">
-                    <textarea id="article_build" class="form-control" name="isi_sejarah" placeholder="Isi Sejarah"><?php echo isset($isi_sejarah) ? $isi_sejarah : ""; ?></textarea>
+                    <textarea id="article_build" class="form-control" name="isi_profile_pengurus" placeholder="Isi Profile Pengurus"><?php echo isset($isi_profile_pengurus) ? $isi_profile_pengurus : ""; ?></textarea>
                 </div>
             </div>
             
@@ -64,10 +64,10 @@
             
             <div class="form-group">
                 <div class="col-lg-6 col-md-6" style="margin-bottom: 40px;">
-                    <button style="width: 100%;" type="submit" class="btn btn-info pull-right bg-light-blue-gradient" name="input_tentang_sejarah" value="Input Tentang Sejarah">Input Tentang Sejarah</button>
+                    <button style="width: 100%;" type="submit" class="btn btn-info pull-right bg-light-blue-gradient" name="input_tentang_profile_pengurus" value="Input Tentang Profile Pengurus">Input Tentang Profile Profile</button>
                 </div>
                 <div class="col-lg-6 col-md-6">
-                    <button style="width: 100%;" type="button" class="btn btn-default bg-aqua-gradient" onclick="move_url('tentang_sejarah');">Lihat Data</button>
+                    <button style="width: 100%;" type="button" class="btn btn-default bg-aqua-gradient" onclick="move_url('tentang_profile_pengurus');">Lihat Data</button>
                 </div>
             </div>
         </div>

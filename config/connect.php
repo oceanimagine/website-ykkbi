@@ -121,6 +121,10 @@ function include_with_panel($module){
     $judul_peraturan = $judul_peraturan;
     $judul_laporan = $judul_laporan;
     $google_drive_pdf = $google_drive_pdf;
+    global $judul_tentang_pengurus;
+    global $isi_tentang_pengurus;
+    $judul_tentang_pengurus = $judul_tentang_pengurus;
+    $isi_tentang_pengurus = $isi_tentang_pengurus;
     global $array_var_name_tkht_lainnya;
     for($i = 0; $i < sizeof($array_var_name_tkht_lainnya); $i++){
         $explode_dash = explode(" -- ", $array_var_name_tkht_lainnya[$i]);

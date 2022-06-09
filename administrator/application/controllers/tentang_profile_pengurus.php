@@ -4,34 +4,34 @@
  * https://stackoverflow.com/questions/17059987/changing-from-msql-to-mysqli-real-escape-string-link
  */
 
-class tentang_sejarah extends CI_Controller {
+class tentang_profile_pengurus extends CI_Controller {
     
     public $layout;
     
     public function __construct() {
         parent::__construct();
-        $this->load->model('get_tentang_sejarah');
+        $this->load->model('get_tentang_profile_pengurus');
         $this->layout = new layout('lite');
         Privilege::admin();
     }
 
-    public function get_tentang_sejarah() {
-        $this->get_tentang_sejarah->get_data();
+    public function get_tentang_profile_pengurus() {
+        $this->get_tentang_profile_pengurus->get_data();
     }
 
     public function script_table(){
-        return $this->layout->loadjs("tentang_sejarah/get_tentang_sejarah");
+        return $this->layout->loadjs("tentang_profile_pengurus/get_tentang_profile_pengurus");
     }
     
     public function hapus($id){
         $_GET['id'] = $id;
         
-        $this->get_tentang_sejarah->process(array(
+        $this->get_tentang_profile_pengurus->process(array(
             'action' => 'delete',
-            'table' => 'tbl_tentang_sejarah',
+            'table' => 'tbl_tentang_profile_pengurus',
             'where' => 'id = \''.$id.'\''
         ));
-        redirect('tentang_sejarah');
+        redirect('tentang_profile_pengurus');
     }
     
     public function edit($id){
@@ -39,24 +39,24 @@ class tentang_sejarah extends CI_Controller {
             $_GET['id'] = $id;
             
             $judul = $this->input->post('judul');
-            $isi_sejarah = $this->input->post('isi_sejarah');
+            $isi_profile_pengurus = $this->input->post('isi_profile_pengurus');
             $status = $this->input->post('status');
-            $this->get_tentang_sejarah->process(array(
+            $this->get_tentang_profile_pengurus->process(array(
                 'action' => 'update',
-                'table' => 'tbl_tentang_sejarah',
+                'table' => 'tbl_tentang_profile_pengurus',
                 'column_value' => array(
                     
                     'judul' => $judul,
-                    'isi_sejarah' => $isi_sejarah,
+                    'isi_profile_pengurus' => $isi_profile_pengurus,
                     'status' => $status
                 ),
                 'where' => 'id = \''.$id.'\''
             ));
-            redirect('tentang_sejarah/edit/'.$id.'');
+            redirect('tentang_profile_pengurus/edit/'.$id.'');
         }
-        $this->get_tentang_sejarah->process(array(
+        $this->get_tentang_profile_pengurus->process(array(
             'action' => 'select',
-            'table' => 'tbl_tentang_sejarah',
+            'table' => 'tbl_tentang_profile_pengurus',
             'column_value' => array(
                 
                 'id'
@@ -65,21 +65,21 @@ class tentang_sejarah extends CI_Controller {
         ));
         $jumlah_publish = $this->num_rows;
         $data = $jumlah_publish > 0 ? $this->all : array((object) array("id" => 0));
-        $this->get_tentang_sejarah->process(array(
+        $this->get_tentang_profile_pengurus->process(array(
             'action' => 'select',
-            'table' => 'tbl_tentang_sejarah',
+            'table' => 'tbl_tentang_profile_pengurus',
             'column_value' => array(
                 
                 'judul',
-                'isi_sejarah',
+                'isi_profile_pengurus',
                 'status'
             ),
             'where' => 'id = \''.$id.'\''
         ));
-        $this->layout->loadView('tentang_sejarah_form', array(
+        $this->layout->loadView('tentang_profile_pengurus_form', array(
             
             'judul' => $this->row->{'judul'},
-            'isi_sejarah' => $this->row->{'isi_sejarah'},
+            'isi_profile_pengurus' => $this->row->{'isi_profile_pengurus'},
             'status' => $this->row->{'status'},
             'id_data' => $data[0]->id,
             'id_edit' => $id,
@@ -91,23 +91,23 @@ class tentang_sejarah extends CI_Controller {
         if($this->input->post('judul')){
             
             $judul = $this->input->post('judul');
-            $isi_sejarah = $this->input->post('isi_sejarah');
+            $isi_profile_pengurus = $this->input->post('isi_profile_pengurus');
             $status = $this->input->post('status');
-            $this->get_tentang_sejarah->process(array(
+            $this->get_tentang_profile_pengurus->process(array(
                 'action' => 'insert',
-                'table' => 'tbl_tentang_sejarah',
+                'table' => 'tbl_tentang_profile_pengurus',
                 'column_value' => array(
                     
                     'judul' => $judul,
-                    'isi_sejarah' => $isi_sejarah,
+                    'isi_profile_pengurus' => $isi_profile_pengurus,
                     'status' => $status
                 )
             ));
-            redirect('tentang_sejarah/add');
+            redirect('tentang_profile_pengurus/add');
         }
-        $this->get_tentang_sejarah->process(array(
+        $this->get_tentang_profile_pengurus->process(array(
             'action' => 'select',
-            'table' => 'tbl_tentang_sejarah',
+            'table' => 'tbl_tentang_profile_pengurus',
             'column_value' => array(
                 
                 'id'
@@ -115,14 +115,14 @@ class tentang_sejarah extends CI_Controller {
             'where' => 'status = \'publish\''
         ));
         $jumlah_publish = $this->num_rows;
-        $this->layout->loadView('tentang_sejarah_form', array(
+        $this->layout->loadView('tentang_profile_pengurus_form', array(
             'jumlah_publish' => $jumlah_publish
         ));
     }
     
     public function index() {
         $this->layout->loadView(
-            'tentang_sejarah_list',
+            'tentang_profile_pengurus_list',
             array(
                 "hasil" => "abcd",
                 "script" => $this->script_table()
