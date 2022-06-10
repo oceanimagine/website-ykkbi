@@ -54,7 +54,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="desc-video">
-                                    <a href="#" target="_blank" rel="noopener" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                    <a href="video-<?php echo str_replace($GLOBALS['search'],$GLOBALS['replace'], strtolower($hasil_video['judul_video'])); ?>" rel="noopener" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
                                         <?php echo $hasil_video['judul_video']; ?>                            
                                     </a>
                                 </div>

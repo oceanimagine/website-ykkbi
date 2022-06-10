@@ -125,6 +125,24 @@ function include_with_panel($module){
     global $isi_tentang_pengurus;
     $judul_tentang_pengurus = $judul_tentang_pengurus;
     $isi_tentang_pengurus = $isi_tentang_pengurus;
+    global $judul_besar;
+    global $judul_kecil;
+    $judul_besar = $judul_besar;
+    $judul_kecil = $judul_kecil;
+    global $judul_artikel;
+    global $isi_artikel;
+    global $photo_artikel;
+    $judul_artikel = $judul_artikel;
+    $isi_artikel = $isi_artikel;
+    $photo_artikel = $photo_artikel;
+    global $judul_video;
+    global $deskripsi_singkat;
+    global $photo_video;
+    global $id_link_youtube;
+    $judul_video = $judul_video;
+    $deskripsi_singkat = $deskripsi_singkat;
+    $photo_video = $photo_video;
+    $id_link_youtube = $id_link_youtube;
     global $array_var_name_tkht_lainnya;
     for($i = 0; $i < sizeof($array_var_name_tkht_lainnya); $i++){
         $explode_dash = explode(" -- ", $array_var_name_tkht_lainnya[$i]);
@@ -378,6 +396,8 @@ function get_month($address){
     return $array_month[$address];
 }
 
+# https://stackoverflow.com/questions/2742813/how-to-validate-youtube-video-ids
+# https://stackoverflow.com/questions/4521514/htaccess-rewrite-only-if-first-part-of-path-is-numeric
 function validIdYoutube($id) {
     return preg_match('/^[a-zA-Z0-9_-]{11}$/', $id) > 0;
 }

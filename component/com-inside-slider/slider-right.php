@@ -31,18 +31,42 @@
         <div style="margin-bottom: 10px!important;">
             <font style="font-weight: 700; font-size: 20px; color: #f77b04!important;">DOKUMEN TERBARU</font>
         </div>
+        <?php 
+        $query_dokumen = mysqli_query($connect, "SELECT * FROM `tbl_dokumen_ykkbi` where status = 'publish' order by timestamp desc limit 0, 30");
+        $jumlah_dokumen = mysqli_num_rows($query_dokumen);
+        if($jumlah_dokumen > 0){
+            while($hasil_dokumen = mysqli_fetch_array($query_dokumen)){
+                $timestamp_ = $hasil_dokumen['timestamp'];
+                $explode_timestamp_ = explode(" ", $timestamp_);
+                $waktu_aktif = (isset($explode_timestamp_[1]) ? substr($explode_timestamp_[1], 0, 5) : "00:00") . " WIB";
+                $tanggal = strtotime($explode_timestamp_[0]);
+                $explode_tanggal = explode("-", $explode_timestamp_[0]);
+                if(sizeof($explode_tanggal) == 3){
+                    $tanggal_active = $explode_tanggal[2] . " " . get_month($explode_tanggal[1]) . " " . $explode_tanggal[0];
+                }
+                $day = date('w', $tanggal);
+                $nama_hari = get_day($day);
+
+                $all_day = $nama_hari . ", " . $tanggal_active . " " . $waktu_aktif;
+                $judul_besar = $hasil_dokumen['judul_besar'];
+                $judul_kecil = $hasil_dokumen['judul_kecil'];
+                ?>
+                <!-- 01 -->
+                <div style="padding: 10px; border-radius: 10px; margin-bottom: 0; border-bottom: 1px solid #eee;">
+                    <div style="color: #f77b04!important; font-family: poppins; color: #f77b04 !important;">
+                        <b><?php echo $judul_besar; ?></b>
+                    </div>
+                    <div style="margin: 5px 0; margin-top: 10px!important; font-size: 14px; font-weight: 700;margin: 3px 0;">
+                        <a href="dokumen-detail-<?php echo $hasil_dokumen['id']; ?>" style="font-size: 14px; color: #08294c;"><?php echo $judul_kecil; ?></a>
+                    </div>
+                    <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;"><?php echo $all_day; ?></span>
+                </div>
+                <?php
+            }
+        }
+        ?>
         
-        <!-- 01 -->
-        <div style="padding: 10px; border-radius: 10px; margin-bottom: 0; border-bottom: 1px solid #eee;">
-            <div style="color: #f77b04!important; font-family: poppins; color: #f77b04 !important;">
-                <b>PERATURAN PAJAK</b>
-            </div>
-            <div style="margin: 5px 0; margin-top: 10px!important; font-size: 14px; font-weight: 700;margin: 3px 0;">
-                <a href="#" style="font-size: 14px; color: #08294c;">Instruksi Presiden 1 TAHUN 2022</a>
-            </div>
-            <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;">1 Juni 2022</span>
-        </div>
-        
+        <?php /*
         <!-- 02 -->
         <div style="padding: 10px; border-radius: 10px; margin-bottom: 0; border-bottom: 1px solid #eee;">
             <div style="color: #f77b04!important; font-family: poppins; color: #f77b04 !important;">
@@ -141,7 +165,7 @@
             </div>
             <span style="color: #737373; font-weight: 700; margin-top: 0!important; font-size: .8em; font-weight: 700;">1 Juni 2022</span>
         </div>
-        
+        */ ?>
     </div><?php if((isset($_GET['module']) && $_GET['module'] != "") && (isset($logo_mode_right) && $logo_mode_right)){ ?>
     <div style="width: 100%;">
         <div class="logo-footer" style="vertical-align: middle; width:  100%;" align="center">

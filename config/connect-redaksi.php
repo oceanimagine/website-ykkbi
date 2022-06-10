@@ -1,5 +1,9 @@
 <?php
 
+/* Code for Replace and Search URL */
+$GLOBALS['search'] = array("#","-"," ");
+$GLOBALS['replace'] = array("TP","TS","-");
+
 /* Redaksi Lainnya */
 $query_redaksi = mysqli_query($connect, "select * from tbl_informasi_lainnya");
 if(mysqli_num_rows($query_redaksi) > 0){
@@ -62,6 +66,56 @@ if(mysqli_num_rows($query_laporan) > 0){
     $hasil_laporan = mysqli_fetch_array($query_laporan);
     $judul_laporan = $hasil_laporan['judul_laporan'];
     $google_drive_pdf = $hasil_laporan['google_drive_pdf'];
+}
+
+/* Dokumen Detail */
+$judul_besar = "Undefined";
+$judul_kecil = "Undefined";
+if(isset($_GET['iddokumen']) && $_GET['iddokumen'] != "" && is_numeric($_GET['iddokumen'])){
+    $iddokumen = mysqli_real_escape_string($connect, $_GET['iddokumen']);
+    $query_dokumen = mysqli_query($connect, "select * from tbl_dokumen_ykkbi where status = 'publish' and id = '".$iddokumen."'");
+    if(mysqli_num_rows($query_dokumen) > 0){
+        $hasil_dokumen = mysqli_fetch_array($query_dokumen);
+        $judul_besar = $hasil_dokumen['judul_besar'];
+        $judul_kecil = $hasil_dokumen['judul_kecil'];
+        $google_drive_pdf = $hasil_dokumen['google_drive_pdf'];
+    }
+}
+
+/* Artikel Detail */
+$judul_artikel = "Undefined";
+$isi_artikel = "Undefined";
+$photo_artikel = "";
+if(isset($_GET['judulartikel']) && $_GET['judulartikel'] != ""){
+    $judulartikel = mysqli_real_escape_string($connect, $_GET['judulartikel']);
+    $query_artikel = mysqli_query($connect, "select * from tbl_artikel where LOWER(judul_artikel) = '". str_replace(array_reverse($GLOBALS['replace']),array_reverse($GLOBALS['search']), $judulartikel)."'");
+    if(mysqli_num_rows($query_artikel) > 0){
+        $hasil_artikel = mysqli_fetch_array($query_artikel);
+        if($hasil_artikel['photo_artikel'] != "" && file_exists("upload/photo_artikel/" . $hasil_artikel['photo_artikel'])){
+            $photo_artikel = "upload/photo_artikel/" . $hasil_artikel['photo_artikel'];
+        }
+        $judul_artikel = $hasil_artikel['judul_artikel'];
+        $isi_artikel = $hasil_artikel['isi_artikel'];
+    }
+}
+
+/* Video Detail */
+$judul_video = "Undefined";
+$deskripsi_singkat = "Undefined";
+$photo_video = "";
+$id_link_youtube = "";
+if(isset($_GET['judulvideo']) && $_GET['judulvideo'] != ""){
+    $judulvideo = mysqli_real_escape_string($connect, $_GET['judulvideo']);
+    $query_video = mysqli_query($connect, "select * from tbl_video where LOWER(judul_video) = '". str_replace(array_reverse($GLOBALS['replace']),array_reverse($GLOBALS['search']), $judulvideo)."'");
+    if(mysqli_num_rows($query_video) > 0){
+        $hasil_video = mysqli_fetch_array($query_video);
+        if($hasil_video['photo_video'] != "" && file_exists("upload/photo_video/" . $hasil_video['photo_video'])){
+            $photo_video = "upload/photo_video/" . $hasil_video['photo_video'];
+        }
+        $id_link_youtube = $hasil_video['id_link_youtube'];
+        $judul_video = $hasil_video['judul_video'];
+        $deskripsi_singkat = $hasil_video['deskripsi_singkat'];
+    }
 }
 
 /* Transformasi */

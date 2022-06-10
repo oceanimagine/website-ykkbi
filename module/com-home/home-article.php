@@ -65,7 +65,7 @@
                             ?>
                             <!--  -->
                             <div class="<?php echo $class_; ?> col-xs-12">
-                                <a href="#">
+                                <a href="artikel-<?php echo str_replace($GLOBALS['search'], $GLOBALS['replace'], strtolower($hasil_artikel['judul_artikel'])); ?>">
                                     <div class="card">
                                         <div class="card-header" <?php echo $style; ?>>
                                             <div class="image-wrapper" style="text-align: center;">
