@@ -1,5 +1,5 @@
 .u-section-2 {
-    min-height: 639px;
+    /* min-height: 639px; */
 }
 .u-section-2 .u-slider-1 {
     min-height: 639px;
@@ -114,7 +114,7 @@
 }
 @media (max-width: 767px) {
     .u-section-2 {
-        min-height: 513px;
+        /* min-height: 513px; */
     }
     .u-section-2 .u-slider-1 {
         min-height: 513px;
@@ -144,7 +144,7 @@
 }
 @media (max-width: 575px) {
     .u-section-2 {
-        min-height: 446px;
+        /* min-height: 446px; */
     }
     .u-section-2 .u-slider-1 {
         min-height: 446px;
