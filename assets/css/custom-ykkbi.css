@@ -217,6 +217,10 @@ p {
         display: none;
         width: 25% !important;
     }
+    #article {
+        width: 75% !important;
+        margin-left: 25% !important;
+    }
     #tombol_telepon { 
         display: initial !important;
         cursor: pointer;
@@ -297,6 +301,10 @@ p {
     #td_slider_c {
         display: none;
         width: 50% !important;
+    }
+    #article {
+        width: 80% !important;
+        margin: auto !important;
     }
 }
 @media (max-width: 800px){

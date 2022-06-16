@@ -1,5 +1,5 @@
 <footer style="position: relative; z-index: 99;">
-    <div class="container">
+    <div class="container" style="padding: 0 0; max-width: 80%;">
         <div class="row">
             <div class="col-md-3 col-sm-6  col-xs-12">
                 <h4>Tentang Kami</h4>

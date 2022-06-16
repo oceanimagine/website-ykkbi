@@ -4,7 +4,7 @@
     }
 </style>
 <section id="video" style="position: relative; z-index: 99;">
-    <div class="container">
+    <div class="container" style="padding: 0 0; max-width: 80%;">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <h2 class="title-section mb-3">
@@ -46,7 +46,7 @@
                     }
                     ?>
                     <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="card" style="min-height: 278px;">
+                        <div class="card" style="min-height: 278px; margin-bottom: 20px;">
                             <div class="card-header" <?php echo $style; ?>>
                                 <div id="iframe_0" class="image-wrapper">
                                     <?php echo $img_src; ?>

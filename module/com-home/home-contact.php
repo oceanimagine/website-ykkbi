@@ -1,7 +1,7 @@
 <section id="contact" style="position: relative; z-index: 99;">
-    <div class="container">
+    <div class="container" style="padding: 0 0; max-width: 80%;">
         <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12 contact-left">
+            <div class="col-md-6 col-sm-6 col-xs-12 contact-left" style="padding-left: 0px;">
                 <h2><?php echo $judul_hubungi_kami_depan; ?></h2>
                 <ul class="list-unstyled">
                     <li><?php echo $alamat; ?>
@@ -12,7 +12,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-6 col-sm-6 col-xs-12 contact-right">
+            <div class="col-md-6 col-sm-6 col-xs-12 contact-right" style="padding-left: 0px; padding-right: 0px;">
                 <form id="contact-us">
                     <div class="form-group">
                         <input id="name" type="text" class="form-control" placeholder="Masukan Nama">
