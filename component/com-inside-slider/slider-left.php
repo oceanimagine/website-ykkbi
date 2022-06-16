@@ -4,16 +4,16 @@
         font-size: .8em !important;
     }
 </style>
-<div style="height: 100vh; min-height: 500px; overflow: auto; background-color: #fafafa; position: fixed; width:inherit; top: 0px; overflow: hidden; /* box-shadow: -4px 0 14px 2px grey, 4px 0 14px 2px grey; */" class="panel-left-right">
-    <div style="width: 100%; height: 10vh; background-color: #3b3c8c;">
-        <div class="logo-footer" style="display: table-cell; vertical-align: middle; height: 10vh;" align="center">
-            <table border="0" style="width: 100%; width: 80%; background-color: white; border-radius: 10.8px;">
+<div id="div-left-contact-a" style="height: 100vh; min-height: 500px; overflow: auto; background-color: #fafafa; position: fixed; width:inherit; top: 0px; overflow: hidden; /* box-shadow: -4px 0 14px 2px grey, 4px 0 14px 2px grey; */" class="panel-left-right">
+    <div id="div-left-contact-b" style="width: 100%; height: 10vh; background-color: #3b3c8c;">
+        <div id="div-left-contact-c" class="logo-footer" style="display: table-cell; vertical-align: middle; height: 10vh;" align="center">
+            <table id="div-left-contact-g" border="0" style="width: 100%; width: 80%; background-color: white; border-radius: 10.8px;">
                 <tbody><tr>
                     <td style="width: 10%; padding: 5px;" id="footer_td">
-                        <img width="100%" height="auto" src="assets/img/LOGOYKKBI.png" alt="logo-footer" style="width: 100%;">
+                        <img id="div-left-contact-d" width="100%" height="auto" src="assets/img/LOGOYKKBI.png" alt="logo-footer" style="width: 100%;">
                     </td>
-                    <td style="width: 40%; padding: 5px;">
-                        <img width="100%" height="auto" src="assets/img/LOGOWHITE.PNG" alt="logo-footer">
+                    <td id="div-left-contact-f" style="width: 40%; padding: 5px;">
+                        <img id="div-left-contact-e" width="100%" height="auto" src="assets/img/LOGOWHITE.PNG" alt="logo-footer">
                     </td>
                 </tr>
             </tbody></table>

@@ -164,6 +164,9 @@ footer {
 .header-top-left {
     opacity: 1;
 }
+#td_slider_b_selain_home > div > div > div > div > div > div {
+    overflow-y: auto;
+}
 @media only screen and (max-width: 991px){
     .btn_mobile {
         top: 78px;
@@ -224,6 +227,9 @@ p {
     #tombol_telepon { 
         display: initial !important;
         cursor: pointer;
+    }
+    #tombol_telepon_b { 
+        display: none !important;
     }
     #td_slider_a_selain_home {
         width: 25% !important;
@@ -305,6 +311,36 @@ p {
     #article {
         width: 80% !important;
         margin: auto !important;
+    }
+    #div-left-contact-a {
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 9999;
+    }
+    #div-left-contact-b {
+        overflow: hidden;
+    }
+    #div-left-contact-c {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    #div-left-contact-d {
+        width: 55px !important;
+        height: 55px;
+    }
+    #div-left-contact-g {
+        width: 70% !important;
+    }
+    #div-left-contact-f {
+        width: 100% !important;
+    }
+    #tombol_telepon { 
+        display: none !important;
+    }
+    #tombol_telepon_b { 
+        display: initial !important;
+        cursor: pointer;
     }
 }
 @media (max-width: 800px){

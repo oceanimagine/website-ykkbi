@@ -99,6 +99,9 @@ check_url_index_php();
             <div id="tombol_telepon" style="width: 85px; height: 74px; position: fixed; bottom: 0; right: 0; z-index: 9999; display: none;">
                 <img src="assets/img/LOGOTELEPONKANANBAWAH.png" style="width: 78px; margin-left: -4px;margin-top: -4px;">
             </div>
+            <div id="tombol_telepon_b" style="width: 85px; height: 74px; position: fixed; bottom: 0; right: 0; z-index: 9999; display: none;">
+                <img src="assets/img/LOGOTELEPONKANANBAWAH.png" style="width: 78px; margin-left: -4px;margin-top: -4px;">
+            </div>
             
             <button onclick="topFunction()" id="buttonToTop" title="Kembali ke atas">
                 <span class="fa fa-arrow-left"></span>
@@ -172,20 +175,40 @@ check_url_index_php();
                 tempat_captcha.setAttribute("src","captcha?" + rand.toString());
                 
             }
+            
+            var kiri_b = "show";
+            var kanan_b = "hide";
+            function adapt(){
+                console.log("HALLO");
+                if(window.innerWidth <= 800){
+                    if(document.getElementById("td_slider_b_selain_home")){
+                        document.getElementById("td_slider_b_selain_home").removeAttribute("style");
+                        kiri_b = "show";
+                        kanan_b = "hide";
+                    }
+                }
+            };
+            
+            window.addEventListener('resize', adapt);
+            
             window.onload = function(){
                 
                 var tombol_telepon = document.getElementById("tombol_telepon");
+                var tombol_telepon_b = document.getElementById("tombol_telepon_b");
                 var kiri = "show";
                 var kanan = "hide";
                 if(document.getElementById("td_slider_a")){
                     var td_slider_a = document.getElementById("td_slider_a");
                     var td_slider_c = document.getElementById("td_slider_c");
                 }
-                if(document.getElementById("td_slider_a_selain_home")){
-                    var td_slider_a_selain_home = document.getElementById("td_slider_a_selain_home");
-                    var td_slider_c_selain_home = document.getElementById("td_slider_c_selain_home");
-                }
                 tombol_telepon.onclick = function(){
+                    if(document.getElementById("td_slider_a_selain_home")){
+                        var td_slider_a_selain_home = document.getElementById("td_slider_a_selain_home");
+                        var td_slider_c_selain_home = document.getElementById("td_slider_c_selain_home");
+                    }
+                    console.log("A");
+                    console.log(td_slider_a_selain_home);
+                    console.log(td_slider_c_selain_home);
                     if(kiri === "show"){
                         if(document.getElementById("td_slider_a")){
                             td_slider_a.style.display = "none";
@@ -209,6 +232,36 @@ check_url_index_php();
                         }
                         kiri = "show";
                         kanan = "hide";
+                    }
+                };
+                tombol_telepon_b.onclick = function(){
+                    if(document.getElementById("td_slider_a_selain_home")){
+                        var td_slider_a_selain_home = document.getElementById("td_slider_b_selain_home");
+                        var td_slider_c_selain_home = document.getElementById("td_slider_c_selain_home");
+                    }
+                    if(kiri_b === "show"){
+                        if(document.getElementById("td_slider_a")){
+                            td_slider_a.style.display = "none";
+                            td_slider_c.style.display = "contents";
+                        }
+                        if(document.getElementById("td_slider_a_selain_home")){
+                            td_slider_a_selain_home.style.display = "none";
+                            td_slider_c_selain_home.style.display = "contents";
+                        }
+                        kiri_b = "hide";
+                        kanan_b = "show";
+                    }
+                    else if(kanan_b === "show"){
+                        if(document.getElementById("td_slider_a")){
+                            td_slider_a.style.display = "contents";
+                            td_slider_c.style.display = "none";
+                        }
+                        if(document.getElementById("td_slider_a_selain_home")){
+                            td_slider_a_selain_home.style.display = "contents";
+                            td_slider_c_selain_home.style.display = "none";
+                        }
+                        kiri_b = "show";
+                        kanan_b = "hide";
                     }
                 };
                 window.addEventListener('resize', function() {
