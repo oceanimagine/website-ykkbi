@@ -105,7 +105,7 @@
                 <div class="row">
                     <?php 
                     
-                    $query_artikel_ = mysqli_query($connect, "SELECT * FROM `tbl_artikel` order by jumlah_view desc limit 0, 3");
+                    $query_artikel_ = mysqli_query($connect, "SELECT * FROM `tbl_artikel` order by jumlah_view desc limit 0, 2");
                     $jumlah_artikel_ = mysqli_num_rows($query_artikel_);
                     if($jumlah_artikel_ > 0){
                         if($jumlah_artikel_ == 4){
