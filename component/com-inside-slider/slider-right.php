@@ -21,7 +21,7 @@
     </div>
     <?php 
     
-    $default_height = isset($_GET['module']) && $_GET['module'] != "" ? "63vh" : "450px";
+    $default_height = isset($_GET['module']) && $_GET['module'] != "" ? "63vh" : "90vh";
     if((isset($_GET['module']) && $_GET['module'] != "") && (isset($logo_mode_right) && !$logo_mode_right)){
         $default_height = "90vh";
     }

@@ -1,4 +1,4 @@
-<div align="center" style="width: 100%; overflow: hidden; box-shadow: 0 8px 10px rgb(182 182 182 / 75%); z-index: 2; position: relative; margin-top: 10px; background-color: #fafafa;">
+<div align="center" style="width: 100%; overflow: hidden; /* box-shadow: 0 8px 10px rgb(182 182 182 / 75%); */ z-index: 2; position: relative; margin-top: 10px; background-color: #fafafa;">
     <!-- https://getbootstrap.com/docs/4.0/components/collapse/ -->
     <!-- https://colorlib.com/wp/template/accordion-02/ -->
     <!-- https://freefrontend.com/bootstrap-accordions/ -->

@@ -3,7 +3,7 @@
         min-height: 380px;
     }
 </style>
-<section id="article" style="padding-bottom: 50px; position: relative; z-index: 1; width: 60%; margin: auto;">
+<section id="article" style="padding-bottom: 50px; position: relative; z-index: 99;">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 mb-3">
@@ -18,7 +18,7 @@
                 <div class="row">
                     <?php 
                     
-                    $query_artikel = mysqli_query($connect, "SELECT * FROM `tbl_artikel` order by timestamp desc limit 0, 2");
+                    $query_artikel = mysqli_query($connect, "SELECT * FROM `tbl_artikel` order by timestamp desc limit 0, 3");
                     $jumlah_artikel = mysqli_num_rows($query_artikel);
                     if($jumlah_artikel > 0){
                         if($jumlah_artikel == 4){
