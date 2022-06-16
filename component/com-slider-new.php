@@ -15,7 +15,7 @@
             <td id="td_slider_b">
                 <section class="u-align-center u-clearfix u-valign-middle u-section-2" id="sec-33aa" style="height: 448px; width: 100%; min-height: 350px; /* box-shadow: -4px 0 14px 2px grey, 4px 0 14px 2px grey; */ z-index: 99;">
                     <div id="carousel-bd35" data-interval="5000" data-u-ride="carousel" class="u-carousel u-expanded-width u-slider u-slider-1" style="height: 100%;">
-                        <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1" style="width: 100%; bottom: 55px; top: 65vh;">
+                        <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1" style="width: 100%; bottom: 55px; top: 90%;">
                             <?php  
                             $query_slider = mysqli_query($connect, "SELECT * FROM `tbl_slider`");
                             $array_slider = array();
