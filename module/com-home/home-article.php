@@ -3,7 +3,7 @@
         min-height: 380px;
     }
 </style>
-<section id="article" style="padding-bottom: 50px; position: relative; z-index: 1; width: 60%; margin: auto;">
+<section id="article" style="padding-bottom: 50px; position: relative; z-index: 1; width: 60%; margin: auto;" class="article-left">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 mb-3">

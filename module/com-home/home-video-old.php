@@ -3,8 +3,8 @@
         text-align: left;
     }
 </style>
-<section id="video" style="padding-bottom: 50px; position: relative; z-index: 1; width: 60%; margin: auto;" class="video-left">
-    <div class="container">
+<section id="video" style="position: relative; z-index: 99;">
+    <div class="container" style="padding: 0 0; max-width: 80%;">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <h2 class="title-section mb-3">
@@ -16,7 +16,7 @@
         <div class="row">
             <?php 
             
-            $query_video = mysqli_query($connect, "SELECT * FROM `tbl_video` order by timestamp desc limit 0, 2");
+            $query_video = mysqli_query($connect, "SELECT * FROM `tbl_video` order by timestamp desc limit 0, 3");
             $jumlah_video = mysqli_num_rows($query_video);
             if($jumlah_video > 0){
                 if($jumlah_video == 4){
@@ -45,7 +45,7 @@
                         }
                     }
                     ?>
-                    <div class="<?php echo $class_; ?> col-xs-12">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="card" style="min-height: 278px; margin-bottom: 20px;">
                             <div class="card-header" <?php echo $style; ?>>
                                 <div id="iframe_0" class="image-wrapper">

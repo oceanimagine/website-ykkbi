@@ -46,9 +46,10 @@
                                     </a>
                                     <ul class="dropdown-submenu" style="top: 120%; border-top: 2px solid #5c5f9c;">
                                         <li><a href="organisasi" style="border-right: 0.45px solid #fff;">Organisasi</a></li>
-                                        <li><a href="sejarah" style="border-right: 0.45px solid #fff;">Sejarah YKKBI</a></li>
+                                        <li><a href="sejarah" style="border-right: 0.45px solid #fff;">Sejarah</a></li>
+                                        <li><a href="profile-pengurus" style="border-right: 0.45px solid #fff;">Pengurus</a></li>
                                         <li><a href="transformasi" style="border-right: 0.45px solid #fff;">Transformasi YKKBI</a></li>
-                                        <li><a href="profile-pengurus" style="border-right: 0.45px solid #fff;">Profile Pengurus</a></li>
+                                        
                                     </ul>
                                 </li>
                                 <li>
@@ -66,8 +67,8 @@
                                             <ul class="dropdown-submenu" style="top: 0; left: 100%; border-top: 0px solid #5c5f9c;">
                                                 <li><a href="tkht-rawatinap" style="border-right: 0.45px solid #fff;">Rawat Inap</a></li>
                                                 <li><a href="tkht-rawatjalan" style="border-right: 0.45px solid #fff;">Rawat Jalan</a></li>
-                                                <li><a href="tkht-dso" style="border-right: 0.45px solid #fff;">DSO</a></li>
-                                                <li><a href="tkht-provider" style="border-right: 0.45px solid #fff;">Provider</a></li>
+                                                <li><a href="tkht-dso" style="border-right: 0.45px solid #fff;">DSO</a></li><?php /*
+                                                <li><a href="tkht-provider" style="border-right: 0.45px solid #fff;">Provider</a></li> */ ?>
                                             </ul>
                                         </li>
                                         <li>
@@ -78,8 +79,8 @@
                                                 <li><a href="bantuan-pendidikan" style="border-right: 0.45px solid #fff;">Pendidikan</a></li>
                                                 <li><a href="bantuan-pinjaman" style="border-right: 0.45px solid #fff;">Pinjaman</a></li>
                                             </ul>
-                                        </li>
-                                        <li><a href="tkht" style="border-right: 0.45px solid #fff;">Info Lainnya</a></li>
+                                        </li><?php /*
+                                        <li><a href="tkht" style="border-right: 0.45px solid #fff;">Info Lainnya</a></li> */ ?>
                                     </ul>
                                 </li>
                                 <li>
@@ -91,9 +92,26 @@
                                        aria-expanded="true">
                                         Layanan <span class="caret"></span>
                                     </a>
-                                    <ul class="dropdown-submenu" style="top: 120%; border-top: 2px solid #5c5f9c;">
-                                        <li><a href="call-center" style="border-right: 0.45px solid #fff;">Call Center</a></li>
+                                    <ul class="dropdown-submenu" style="top: 120%; border-top: 2px solid #5c5f9c;"><?php /* 
+                                        <li><a href="call-center" style="border-right: 0.45px solid #fff;">Call Center</a></li> */ ?>
+                                        <li><a href="#" style="border-right: 0.45px solid #fff;">WBS</a></li>
                                         <li><a href="pengaduan" style="border-right: 0.45px solid #fff;">Pengaduan</a></li>
+                                        <li><a href="tkht-provider" style="border-right: 0.45px solid #fff;"><div style="margin-bottom: 8px;">Provider Kesehatan</div><div>Pegawai Aktif Pensiunan</div></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                       class="dropdown-toggle uppercase <?php echo set_active("edukasi"); ?>"
+                                       data-toggle="dropdown" 
+                                       role="button" 
+                                       aria-haspopup="true" 
+                                       aria-expanded="true">
+                                        Edukasi <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-submenu" style="top: 120%; border-top: 2px solid #5c5f9c;">
+                                        <li><a href="berita-artikel" style="border-right: 0.45px solid #fff;">Artikel</a></li>
+                                        <li><a href="berita-video" style="border-right: 0.45px solid #fff;">Video</a></li>
+                                        <li><a href="#" style="border-right: 0.45px solid #fff;">Infografis</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -106,6 +124,7 @@
                                         Publikasi <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-submenu" style="top: 120%; border-top: 2px solid #5c5f9c;">
+                                        <?php /*
                                         <li>
                                             <a href="#" style="border-right: 0.45px solid #fff;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Berita Terkini</a>
                                             <ul class="dropdown-submenu" style="top: 0; left: -100%; border-top: 0px solid #5c5f9c;">
@@ -113,10 +132,13 @@
                                                 <li><a href="berita-video" style="border-right: 0.45px solid #fff;">Video</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="dokumentasi-kegiatan" style="border-right: 0.45px solid #fff;">Dokumentasi Kegiatan</a></li>
-                                        <li><a href="galeri" style="border-right: 0.45px solid #fff;">Galeri</a></li>
+                                        
+                                        <li><a href="galeri" style="border-right: 0.45px solid #fff;">Galeri</a></li> */ ?>
                                         <li><a href="peraturan" style="border-right: 0.45px solid #fff;">Peraturan</a></li>
-                                        <li><a href="laporan" style="border-right: 0.45px solid #fff;">Laporan</a></li>
+                                        <li><a href="laporan" style="border-right: 0.45px solid #fff;">Laporan Tahunan</a></li>
+                                        <li><a href="dokumentasi-kegiatan" style="border-right: 0.45px solid #fff;">Dokumentasi Kegiatan</a></li>
+                                        <li><a href="#" style="border-right: 0.45px solid #fff;">Karir</a></li>
+                                        <li><a href="berita-artikel" style="border-right: 0.45px solid #fff;">Berita Terkini</a></li>
                                         <!-- data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" -->
                                     </ul>
                                 </li> 
