@@ -15,7 +15,7 @@ get_home_inside_module("article");
 <!-- Video -->
 <?php 
 
-get_home_inside_module("video");
+// get_home_inside_module("video");
 
 ?>
 <!-- /Video -->

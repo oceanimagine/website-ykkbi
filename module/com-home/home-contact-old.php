@@ -1,9 +1,4 @@
-<style type="text/css">
-    #contact .contact-right input, #contact .contact-right textarea {
-        background-color: white;
-    }
-</style>
-<section id="contact" style="padding-bottom: 50px; position: relative; z-index: 1; width: 60%; margin: auto; background: #ebebec;" class="contact-main-left">
+<section id="contact" style="position: relative; z-index: 99;">
     <div class="container" style="padding: 0 0; max-width: 80%;">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12 contact-left" style="padding-left: 0px;">

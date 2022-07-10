@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="clip-Artboard_1">
+      <rect width="64" height="64"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard – 1" clip-path="url(#clip-Artboard_1)">
+    <rect width="64" height="64" fill="#fff"/>
+    <g id="Group_634" data-name="Group 634" transform="translate(-878 -1326)">
+      <g id="Ellipse_28" data-name="Ellipse 28" transform="translate(878 1326)" fill="#fff" stroke="#065695" stroke-width="2">
+        <circle cx="32" cy="32" r="32" stroke="none"/>
+        <circle cx="32" cy="32" r="31" fill="none"/>
+      </g>
+      <g id="whistle" transform="translate(890.444 1346.444)">
+        <path id="Path_70" data-name="Path 70" d="M28.893,76v2.568H26.3V76h-9.08a11.648,11.648,0,0,0-11.6,10.272,8.778,8.778,0,0,0,0,2.568A11.665,11.665,0,0,0,28.6,89.917l16.034-3.925V76ZM17.218,93.975a6.42,6.42,0,1,1,6.486-6.42A6.46,6.46,0,0,1,17.218,93.975Z" transform="translate(-5.521 -76)" fill="#065695"/>
+        <ellipse id="Ellipse_21" data-name="Ellipse 21" cx="3.506" cy="3.47" rx="3.506" ry="3.47" transform="translate(8.104 8.211)" fill="#065695"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -2,7 +2,7 @@
         <div class="container-fluid" style="height: 100%;">
             <div class="header-bottom" style="padding-top: 0px; height: 100%;">
                 <!-- btn mobile -->
-                <a href="#menu" class="btn_mobile" style="top: 24px;">
+                <a href="#menu" class="btn_mobile" style="top: 30% !important;">
                     <div class="hamburger hamburger--spin" id="hamburger">
                         <div class="hamburger-box">
                             <div class="hamburger-inner"></div>
@@ -16,10 +16,10 @@
                         <div id="logo_home" style="height: 100%;">
                             <table border="0" style="height: 100%;">
                                 <tr>
-                                    <td>
+                                    <td id="td_background_logo_menu_a">
                                         <h2 style="margin-bottom: 0px;"><a href="#" title="YKKBI" id="href_h2">YKKBI</a></h2>
                                     </td>
-                                    <td>
+                                    <td id="td_background_logo_menu">
                                         <h1><a href="#" title="YKKBI" style="height: 56px;" id="href_h1">YKKBI</a></h1>
                                     </td>
                                 </tr>
@@ -94,7 +94,7 @@
                                     </a>
                                     <ul class="dropdown-submenu" style="top: 120%; border-top: 2px solid #5c5f9c;"><?php /* 
                                         <li><a href="call-center" style="border-right: 0.45px solid #fff;">Call Center</a></li> */ ?>
-                                        <li><a href="#" style="border-right: 0.45px solid #fff;">WBS</a></li>
+                                        <li><a href="https://www.bi.go.id/wbsbi/add_wbs2.aspx" target="_blank" style="border-right: 0.45px solid #fff;">WBS</a></li>
                                         <li><a href="pengaduan" style="border-right: 0.45px solid #fff;">Pengaduan</a></li>
                                         <li><a href="tkht-provider" style="border-right: 0.45px solid #fff;"><div style="margin-bottom: 8px;">Provider Kesehatan</div><div>Pegawai Aktif Pensiunan</div></a></li>
                                     </ul>
@@ -111,7 +111,7 @@
                                     <ul class="dropdown-submenu" style="top: 120%; border-top: 2px solid #5c5f9c;">
                                         <li><a href="berita-artikel" style="border-right: 0.45px solid #fff;">Artikel</a></li>
                                         <li><a href="berita-video" style="border-right: 0.45px solid #fff;">Video</a></li>
-                                        <li><a href="#" style="border-right: 0.45px solid #fff;">Infografis</a></li>
+                                        <li><a href="https://www.google.co.id/maps/place/Yayasan+Kesejahteraan+Karyawan+Bank+Indonesia/@-6.241752,106.8399915,17z/data=!3m1!4b1!4m5!3m4!1s0x2e69f3bf5f44e4e7:0xcdece62daa1ed69a!8m2!3d-6.2417573!4d106.8421802" target="_blank" style="border-right: 0.45px solid #fff;">Infografis</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -137,8 +137,8 @@
                                         <li><a href="peraturan" style="border-right: 0.45px solid #fff;">Peraturan</a></li>
                                         <li><a href="laporan" style="border-right: 0.45px solid #fff;">Laporan Tahunan</a></li>
                                         <li><a href="dokumentasi-kegiatan" style="border-right: 0.45px solid #fff;">Dokumentasi Kegiatan</a></li>
-                                        <li><a href="#" style="border-right: 0.45px solid #fff;">Karir</a></li>
-                                        <li><a href="berita-artikel" style="border-right: 0.45px solid #fff;">Berita Terkini</a></li>
+                                        <li><a href="https://www.bi.go.id/id/karier/default.aspx" target="_blank" style="border-right: 0.45px solid #fff;">Karir</a></li>
+                                        <li><a href="https://www.bi.go.id/id/publikasi/ruang-media/news-release/Default.aspx" target="_blank" style="border-right: 0.45px solid #fff;">Berita Terkini</a></li>
                                         <!-- data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" -->
                                     </ul>
                                 </li> 

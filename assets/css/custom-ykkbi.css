@@ -206,7 +206,17 @@ p {
         width: 36px !important;
     }
     .btn_mobile {
-        top: 18px !important;
+        top: 24px !important;
+    }
+}
+@media (max-width: 1100px) and (min-width: 990px){
+    #td_background_logo_menu {
+        display: none;
+    }
+}
+@media (max-width: 1024px) and (min-width: 990px){
+    #td_background_logo_menu_a {
+        opacity: 0.2;
     }
 }
 @media (max-width: 1100px){
@@ -237,6 +247,14 @@ p {
         margin-left: 25% !important;
     }
     .video-right {
+        width: 75% !important;
+        margin-right: 25% !important;
+    }
+    .contact-main-left {
+        width: 75% !important;
+        margin-left: 25% !important;
+    }
+    .contact-main-right {
         width: 75% !important;
         margin-right: 25% !important;
     }
@@ -337,6 +355,12 @@ p {
         margin: auto !important;
     }
     #video {
+        width: 100% !important;
+        margin: auto !important;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #contact {
         width: 100% !important;
         margin: auto !important;
         padding-left: 10%;

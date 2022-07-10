@@ -55,8 +55,10 @@ function adapt() {
         if (document.getElementById("article")) {
             var article_section = document.getElementById("article");
             article_section.setAttribute("class", "article-left");
-            var video_section = document.getElementById("video");
-            video_section.setAttribute("class", "video-left");
+            // var video_section = document.getElementById("video");
+            // video_section.setAttribute("class", "video-left");
+            var contact_section = document.getElementById("contact");
+            contact_section.setAttribute("class", "contact-main-left");
         }
     }
 };
@@ -86,8 +88,10 @@ function load_js() {
                 td_slider_c.style.display = "contents";
                 var article_section = document.getElementById("article");
                 article_section.setAttribute("class", "article-right");
-                var video_section = document.getElementById("video");
-                video_section.setAttribute("class", "video-right");
+                // var video_section = document.getElementById("video");
+                // video_section.setAttribute("class", "video-right");
+                var contact_section = document.getElementById("contact");
+                contact_section.setAttribute("class", "contact-main-right");
             }
             if (document.getElementById("td_slider_a_selain_home")) {
                 td_slider_a_selain_home.style.display = "none";
@@ -101,8 +105,10 @@ function load_js() {
                 td_slider_c.style.display = "none";
                 var article_section = document.getElementById("article");
                 article_section.setAttribute("class", "article-left");
-                var video_section = document.getElementById("video");
-                video_section.setAttribute("class", "video-left");
+                // var video_section = document.getElementById("video");
+                // video_section.setAttribute("class", "video-left");
+                var contact_section = document.getElementById("contact");
+                contact_section.setAttribute("class", "contact-main-left");
             }
             if (document.getElementById("td_slider_a_selain_home")) {
                 td_slider_a_selain_home.style.display = "contents";
