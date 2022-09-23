@@ -40,7 +40,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-control" for="file_bukti">Upload Photo Bukti</label>
-                                <input id="file_bukti" name="file_bukti" type="file" style="display: none;" onchange="readURL(this);" />
+                                <input id="file_bukti" name="file_bukti" type="file" style="display: none;" onchange="readURL(this);" accept="image/png, image/jpeg" />
                             </div>
                             <div class="form-group">
                                 <select name="kategoriPengaduan" id="kategoriPengaduan" class="form-control">

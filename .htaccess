@@ -47,6 +47,7 @@ RewriteRule ^kewajiban-penerima-tkht index.php?module=tkht-kewajiban-penerima&pa
 RewriteRule ^sanksi-penyalahgunaan-tkht index.php?module=tkht-sanksi-penyalahgunaan&panelrightleft=true
 RewriteRule ^ketentuan-peralihan-tkht index.php?module=tkht-ketentuan-peralihan&panelrightleft=true
 RewriteRule ^penjelasan-tkht-menyeluruh index.php?module=tkht-penjelasan-menyeluruh&panelrightleft=true
+RewriteRule ^berita-terkini index.php?module=berita-terkini&panelrightleft=true
 RewriteRule ^dokumen-detail-([0-9]+) index.php?module=dokumen-detail&panelrightleft=true&iddokumen=$1
 RewriteRule ^artikel-(.*) index.php?module=artikel-detail&panelrightleft=true&judulartikel=$1
 RewriteRule ^video-(.*) index.php?module=video-detail&panelrightleft=true&judulvideo=$1

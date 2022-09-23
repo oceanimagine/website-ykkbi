@@ -57,8 +57,10 @@ function adapt() {
             article_section.setAttribute("class", "article-left");
             // var video_section = document.getElementById("video");
             // video_section.setAttribute("class", "video-left");
-            var contact_section = document.getElementById("contact");
-            contact_section.setAttribute("class", "contact-main-left");
+            if(document.getElementById("contact")){
+                var contact_section = document.getElementById("contact");
+                contact_section.setAttribute("class", "contact-main-left");
+            }
         }
     }
 };

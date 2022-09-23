@@ -85,7 +85,19 @@ check_url_index_php();
                     include_once "module/mod-" . $module . ".php";
                 }
             }
-
+            
+            if($module != "home"){
+                ?>
+            <style type="text/css">
+                @media (max-width: 800px){
+                    footer {
+                        top: 6.5vh;
+                    }
+                }
+            </style>
+                <?php 
+            }
+            
             get_home_inside_module("alert");
             ?>
             

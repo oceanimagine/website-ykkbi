@@ -15,7 +15,7 @@
 </div>
 
 <!-- alert success contact us -->
-<div style="display: none;" id='alert-success-contact-us' class="alert alert-dismissible show fade pb-4 pl-4">
+<div style="display: none; overflow: hidden;" id='alert-success-contact-us' class="alert alert-dismissible show fade pb-4 pl-4">
     <h1 class="alert-heading" id="alert-heading-id">Terima kasih!</h1>
     <div class="alert-body">
         <button class="close">

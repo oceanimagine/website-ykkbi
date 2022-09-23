@@ -93,9 +93,9 @@
                                         Layanan <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-submenu" style="top: 120%; border-top: 2px solid #5c5f9c;"><?php /* 
-                                        <li><a href="call-center" style="border-right: 0.45px solid #fff;">Call Center</a></li> */ ?>
-                                        <li><a href="https://www.bi.go.id/wbsbi/add_wbs2.aspx" target="_blank" style="border-right: 0.45px solid #fff;">WBS</a></li>
-                                        <li><a href="pengaduan" style="border-right: 0.45px solid #fff;">Pengaduan</a></li>
+                                        <li><a href="call-center" style="border-right: 0.45px solid #fff;">Call Center</a></li>
+                                        <li><a href="https://www.bi.go.id/wbsbi/add_wbs2.aspx" target="_blank" style="border-right: 0.45px solid #fff;">WBS</a></li> */ ?>
+                                        <li><a href="pengaduan" style="border-right: 0.45px solid #fff;">Whistleblowing System</a></li>
                                         <li><a href="tkht-provider" style="border-right: 0.45px solid #fff;"><div style="margin-bottom: 8px;">Provider Kesehatan</div><div>Pegawai Aktif Pensiunan</div></a></li>
                                     </ul>
                                 </li>
@@ -136,9 +136,9 @@
                                         <li><a href="galeri" style="border-right: 0.45px solid #fff;">Galeri</a></li> */ ?>
                                         <li><a href="peraturan" style="border-right: 0.45px solid #fff;">Peraturan</a></li>
                                         <li><a href="laporan" style="border-right: 0.45px solid #fff;">Laporan Tahunan</a></li>
-                                        <li><a href="dokumentasi-kegiatan" style="border-right: 0.45px solid #fff;">Dokumentasi Kegiatan</a></li>
-                                        <li><a href="https://www.bi.go.id/id/karier/default.aspx" target="_blank" style="border-right: 0.45px solid #fff;">Karir</a></li>
-                                        <li><a href="https://www.bi.go.id/id/publikasi/ruang-media/news-release/Default.aspx" target="_blank" style="border-right: 0.45px solid #fff;">Berita Terkini</a></li>
+                                        <li><a href="dokumentasi-kegiatan" style="border-right: 0.45px solid #fff;">Dokumentasi Kegiatan</a></li><?php /*
+                                        <li><a href="https://www.bi.go.id/id/karier/default.aspx" target="_blank" style="border-right: 0.45px solid #fff;">Karir</a></li> */ ?>
+                                        <li><a href="berita-terkini" style="border-right: 0.45px solid #fff;">Berita Terkini</a></li>
                                         <!-- data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" -->
                                     </ul>
                                 </li> 

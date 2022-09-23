@@ -409,6 +409,13 @@ p {
         width: 0px !important;
         display: none;
     }
+    .header_sticky {
+        position: fixed !important;
+        top: 0px;
+    }
+    #td_slider_b_selain_home .container {
+        top: 10vh;
+    }
 }
 #logo_home h2 a {
     width: 55px;

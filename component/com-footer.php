@@ -5,14 +5,19 @@
                 <h4>Tentang Kami</h4>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#">Galeri</a>
+                        <a href="organisasi">Organisasi</a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"
-                           rel="noopener">Video</a>
+                        <a href="sejarah" <?php /* rel="noopener" */ ?>>Sejarah</a>
                     </li>
                     <li>
-                        <a href="#">Kontak Kami</a>
+                        <a href="profile-pengurus">Pengurus</a>
+                    </li>
+                    <li>
+                        <a href="transformasi">Transformasi YKKBI</a>
+                    </li>
+                    <li>
+                        <a href="home#contact">Kontak Kami</a>
                     </li>
                 </ul>
             </div>
