@@ -64,7 +64,10 @@ RewriteRule ^dokumentasi-kegiatan index.php?module=dokumentasi-kegiatan&panelrig
 RewriteRule ^galeri index.php?module=galeri&panelrightleft=true
 
 RewriteRule ^captcha other/captcha.php
+RewriteRule ^kirim-pesan other/info-pesan.php
+RewriteRule ^kirim-pengaduan other/info-pengaduan.php
 RewriteRule ^javascript-testing other/test-js.php
+
 
 ErrorDocument 404 /project-ykkbi-website/index.php?module=404&panelrightleft=true
 

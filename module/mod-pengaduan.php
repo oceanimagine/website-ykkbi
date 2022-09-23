@@ -26,7 +26,7 @@
                         </ul>
                     </div>
                     <div class="col-md-8 col-sm-8 col-xs-12 contact-right">
-                        <form id="contact-us">
+                        <form id="form-pengaduan" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                                 <input id="name" type="text" class="form-control" placeholder="Masukan Nama">
                                 <div class="ntf_err err_name text-danger"></div>
@@ -35,9 +35,26 @@
                                 <input id="emailContactUs" type="text" class="form-control" placeholder="Masukan Email">
                                 <div class="ntf_err err_email text-danger"></div>
                             </div>
+                            <div class="form-group" id="tempat_gambar" style="display: none;">
+                                <img id="tag_gambar" src="" style="width: 100%; border-radius: 1rem;">
+                            </div>
                             <div class="form-group">
-                                <label class="form-control" for="file_bukti">Upload File Bukti</label>
-                                <input id="file_bukti" name="file_bukti" type="file" style="display: none;" />
+                                <label class="form-control" for="file_bukti">Upload Photo Bukti</label>
+                                <input id="file_bukti" name="file_bukti" type="file" style="display: none;" onchange="readURL(this);" />
+                            </div>
+                            <div class="form-group">
+                                <select name="kategoriPengaduan" id="kategoriPengaduan" class="form-control">
+                                    <option value="">PILIH KATEGORI PENGADUAN</option>
+                                    <?php 
+                                    $query_kategori = mysqli_query($connect, "select id, judul_kategori from tbl_pengaduan_kategori");
+                                    if(mysqli_num_rows($query_kategori) > 0){
+                                        while($hasil_kategori = mysqli_fetch_array($query_kategori)){
+                                            echo "<option value='".$hasil_kategori['id']."'>".$hasil_kategori['judul_kategori']."</option>";
+                                        }
+                                    }
+                                    ?>
+                                </select>
+                                <div class="ntf_err err_message text-danger"></div>
                             </div>
                             <div class="form-group">
                                 <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Tulis Pesanmu"></textarea>

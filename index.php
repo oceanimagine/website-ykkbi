@@ -85,7 +85,8 @@ check_url_index_php();
                     include_once "module/mod-" . $module . ".php";
                 }
             }
-            
+
+            get_home_inside_module("alert");
             ?>
             
             <!-- footer -->

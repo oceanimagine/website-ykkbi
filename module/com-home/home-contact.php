@@ -18,7 +18,7 @@
                 </ul>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12 contact-right" style="padding-left: 0px; padding-right: 0px;">
-                <form id="contact-us">
+                <form id="contact-us" method="POST">
                     <div class="form-group">
                         <input id="name" type="text" class="form-control" placeholder="Masukan Nama">
                         <div class="ntf_err err_name text-danger"></div>

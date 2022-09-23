@@ -24,7 +24,7 @@ class get_hubungi_kami extends CI_Model {
         $clouse = "";
 
         if ($sSearch != '') {
-            $clouse = " where nama_lengkap_pengirim like '%" . $sSearch . "%' ";
+            $clouse = " where (nama_lengkap_pengirim like '%" . $sSearch . "%' or email_pengirim like '%" . $sSearch . "%') ";
         }
 
         $sql_total = "select id, nama_lengkap_pengirim, email_pengirim, isi_pesan_pengirim from tbl_hubungi_kami" . $clouse . "";
@@ -32,7 +32,7 @@ class get_hubungi_kami extends CI_Model {
         $query_total = $this->db->query($sql_total);
         $total = $query_total->num_rows();
 
-        $sql = "select id, nama_lengkap_pengirim, email_pengirim, isi_pesan_pengirim from tbl_hubungi_kami".$clouse." order by id asc limit $iDisplayStart , $iDisplayLength";
+        $sql = "select id, nama_lengkap_pengirim, email_pengirim, isi_pesan_pengirim from tbl_hubungi_kami".$clouse." order by timestamp desc limit $iDisplayStart , $iDisplayLength";
 
         $page = ($iDisplayStart / $iDisplayLength);
 

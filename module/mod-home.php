@@ -29,6 +29,3 @@ get_home_inside_module("contact");
 <!-- /Content -->
 
 <!-- Video -->
-<?php 
-
-get_home_inside_module("alert");		
