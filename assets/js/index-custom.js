@@ -65,6 +65,18 @@ function adapt() {
     }
 };
 
+function set_element_src(url, el){
+    if(url.substr(0,"http".length) === "http"){
+        $.post(
+            "administrator/index.php/checker",
+            {"url" : url},
+            function(){
+                el.style.backgroundImage = "url('"+el.getAttribute("url_active")+"')";
+            }
+        );
+    }
+}
+
 window.addEventListener('resize', adapt);
 
 function load_js() {

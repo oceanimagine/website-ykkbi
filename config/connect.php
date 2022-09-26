@@ -33,6 +33,30 @@ $GLOBALS['tinymce_base'] = $GLOBALS['base_administrator'] . "application/layout/
 $logo_mode_right = false;
 $logo_mode_left  = true;
 
+function contains($str, $word) {
+    if (preg_match('/(?<=[\s,.:;"\']|^)' . $word . '(?=[\s,.:;"\']|$)/', $str)){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function image_urlexists($url) {
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL,$url);
+    // don't download content
+    curl_setopt($ch, CURLOPT_NOBODY, 1);
+    curl_setopt($ch, CURLOPT_FAILONERROR, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    if($result !== FALSE){
+        return true;
+    } else {
+        return false;
+    }
+}
+
 /* Code for Relative Path for Tinymce */
 $key_post = array_keys($_POST);
 for($i = 0; $i < sizeof($key_post); $i++){

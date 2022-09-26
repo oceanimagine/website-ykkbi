@@ -1,8 +1,48 @@
 <?php
 
 /* Code for Replace and Search URL */
-$GLOBALS['search'] = array("#","-"," ");
-$GLOBALS['replace'] = array("TP","TS","-");
+$GLOBALS['search'] = array("<",">","#","-"," ");
+$GLOBALS['replace'] = array("LK","LB","TP","TS","-");
+
+if(isset($_POST['cari_artikel'])){
+    if($_POST['cari_artikel'] != ""){
+        header("location: berita-search-artikel-" . str_replace($GLOBALS['search'], $GLOBALS['replace'], strtolower(strip_tags($_POST['cari_artikel']))));
+    }
+    if($_POST['cari_artikel'] == ""){
+        header("location: berita-artikel");
+    }
+    exit();
+}
+
+if(isset($_POST['cari_video'])){
+    if($_POST['cari_video'] != ""){
+        header("location: berita-search-video-" . str_replace($GLOBALS['search'], $GLOBALS['replace'], strtolower(strip_tags($_POST['cari_video']))));
+    }
+    if($_POST['cari_video'] == ""){
+        header("location: berita-video");
+    }
+    exit();
+}
+
+if(isset($_POST['cari_berita_terkini'])){
+    if($_POST['cari_berita_terkini'] != ""){
+        header("location: berita-search-terkini-" . str_replace($GLOBALS['search'], $GLOBALS['replace'], strtolower(strip_tags($_POST['cari_berita_terkini']))));
+    }
+    if($_POST['cari_berita_terkini'] == ""){
+        header("location: berita-terkini");
+    }
+    exit();
+}
+
+if(isset($_POST['cari_dokumentasi'])){
+    if($_POST['cari_dokumentasi'] != ""){
+        header("location: dokumentasi-search-kegiatan-" . str_replace($GLOBALS['search'], $GLOBALS['replace'], strtolower(strip_tags($_POST['cari_dokumentasi']))));
+    }
+    if($_POST['cari_dokumentasi'] == ""){
+        header("location: dokumentasi-kegiatan");
+    }
+    exit();
+}
 
 /* Redaksi Lainnya */
 $query_redaksi = mysqli_query($connect, "select * from tbl_informasi_lainnya");

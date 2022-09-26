@@ -12,28 +12,35 @@
                         </div>
                         <div class="row" style="padding-bottom: 4px;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
-                                    <tr>
-                                        <td style="width: 90%;">
-                                            <input placeholder="Cari Dokumentasi" type="text" style="height: 38px; padding: 10px; width: 100%; border-bottom-right-radius: 0px; border-top-right-radius: 0px; border-bottom-left-radius: 12px; border-top-left-radius: 12px;" class="form-control" />
-                                        </td>
-                                        <td style="width: 10%;">
-                                            <button style="height: 38px; background-color: #3b3c8c; width: 100%; padding: 5px !important; border-bottom-right-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 0px; border-top-left-radius: 0px;" type="button" class="btn btn-info pull-right bg-light-blue-gradient">
-                                                <span>
-                                                    <i class="fa fa-search"></i>
-                                                </span>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </table>
-                                
+                                <form method="POST">
+                                    <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                                        <tr>
+                                            <td style="width: 90%;">
+                                                <input placeholder="Cari Dokumentasi" name="cari_dokumentasi" type="text" style="height: 38px; padding: 10px; width: 100%; border-bottom-right-radius: 0px; border-top-right-radius: 0px; border-bottom-left-radius: 12px; border-top-left-radius: 12px;" class="form-control" value="<?php echo isset($_GET['search']) ? strtolower(str_replace(array_reverse($GLOBALS['replace']),array_reverse($GLOBALS['search']), strip_tags($_GET['search']))) : ""; ?>" />
+                                            </td>
+                                            <td style="width: 10%;">
+                                                <button style="height: 38px; background-color: #3b3c8c; width: 100%; padding: 5px !important; border-bottom-right-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 0px; border-top-left-radius: 0px;" type="submit" class="btn btn-info pull-right bg-light-blue-gradient">
+                                                    <span>
+                                                        <i class="fa fa-search"></i>
+                                                    </span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
                             </div>
                         </div>
                         <section id="article" style="background-color: #f1f1f1; padding-bottom: 0px; padding-top: 16px; position: relative; z-index: 99;">
                             <div class="row">
                                 <?php 
-
-                                $query_dokumentasi_header = mysqli_query($connect, "SELECT * FROM `tbl_dokumentasi_header` order by timestamp desc limit 0, 30");
+                                
+                                $where_search = "";
+                                if(isset($_GET['search']) && $_GET['search'] != ""){
+                                    $search = mysqli_real_escape_string($connect, $_GET['search']);
+                                    $where_search = " where judul_event like '%" . strtolower(str_replace(array_reverse($GLOBALS['replace']),array_reverse($GLOBALS['search']), strip_tags($search))) . "%' or deskripsi_singkat like '%" . strtolower(str_replace(array_reverse($GLOBALS['replace']),array_reverse($GLOBALS['search']), strip_tags($search))) . "%'";
+                                }
+                                
+                                $query_dokumentasi_header = mysqli_query($connect, "SELECT * FROM `tbl_dokumentasi_header` ".$where_search." order by timestamp desc limit 0, 30");
                                 $jumlah_dokumentasi_header = mysqli_num_rows($query_dokumentasi_header);
                                 if($jumlah_dokumentasi_header > 0){
                                     $limit_dokumentasi_header_row = 3;
@@ -118,7 +125,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="card-body">
-                                                        <div class="title-article">
+                                                        <div class="title-article" style="white-space: nowrap;">
                                                             <span>
                                                                 Dokumentasi Kegiatan                                 
                                                             </span>
@@ -147,6 +154,12 @@
                                             $data_count++;
                                         }
                                     }
+                                } else {
+                                    ?>
+                                    <div class="col-xs-12" style="width: 100%; padding-right: 15px; padding-left: 15px;">
+                                        <img src="assets/img/NOTFOUND.png" style="width: 100%; border-radius: 12px;" />
+                                    </div>
+                                    <?php
                                 }
 
                                 ?>

@@ -98,6 +98,23 @@ check_url_index_php();
                 <?php 
             }
             
+            if($module == "home"){
+                ?>
+            <style type="text/css">
+                @media (max-width: 1100px){
+                    .article-left {
+                        width: 75% !important;
+                        margin-left: 25% !important;
+                    }
+                    .article-right {
+                        width: 75% !important;
+                        margin-right: 25% !important;
+                    }
+                }
+            </style>
+                <?php
+            }
+            
             get_home_inside_module("alert");
             ?>
             
