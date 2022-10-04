@@ -45,7 +45,7 @@ function refresh_captcha() {
 var kiri_b = "show";
 var kanan_b = "hide";
 function adapt() {
-    console.log("HALLO");
+    // console.log("HALLO");
     if (window.innerWidth <= 800) {
         if (document.getElementById("td_slider_b_selain_home")) {
             document.getElementById("td_slider_b_selain_home").removeAttribute("style");
@@ -70,8 +70,18 @@ function set_element_src(url, el){
         $.post(
             "administrator/index.php/checker",
             {"url" : url},
-            function(){
-                el.style.backgroundImage = "url('"+el.getAttribute("url_active")+"')";
+            function(data){
+                if(data === "../../../index.php/checker/failed_show"){
+                    console.log(data);
+                    el.style.backgroundImage = "url('assets/img/NOTFOUND.webp')";
+                } else {
+                    var img =  new Image();
+                    img.src = el.getAttribute("url_active").trim();
+                    img.onload = function(){
+                        el.style.backgroundImage = "url('"+el.getAttribute("url_active").trim()+"')";
+                    };
+                    el.style.backgroundImage = "url('assets/img/NOTFOUND.webp')";
+                }
             }
         );
     }
@@ -177,7 +187,7 @@ function load_js() {
         kiri = "show";
         kanan = "hide";
     }, true);
-
+    
 };
 
 window.addEventListener("load", load_js);
