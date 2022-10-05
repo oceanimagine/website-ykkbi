@@ -1,3 +1,9 @@
+<style type="text/css">
+    hr {
+        margin: 15px 0 15px 0;
+        border-color: #000;
+    }
+</style>
 <div class="container" style="padding-right: 0px; padding-left: 0px; z-index: 0; position: relative; min-height: 80vh;">
     <div class="row" style="margin-right: 0px; margin-left: 0px;">
         <div class="col-md-12 col-sm-12 col-xs-12" style="padding-right: 0px; padding-left: 0px;">
