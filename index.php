@@ -48,7 +48,7 @@ check_url_index_php();
         <link href="assets/css/custom-ykkbi.css" rel="stylesheet">
 
     </head>
-    <body style="visibility: hidden;">
+    <body style="visibility: hidden; user-select: none; -moz-user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; -ms-user-select: none;">
         
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
