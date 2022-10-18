@@ -87,8 +87,8 @@ class process_table {
                 if ($i == 0) {
                     $result[$ad][$i] = ($page * $limit) + $no;
                 } else {
-                    if(substr($this->hasil_keyss[($i - 1)],0,strlen("photo")) == "photo"){
-                        $result[$ad][$i] = show_photo_table($this->hasil_keyss[($i - 1)], $row[($i - 1)]);
+                    if(substr($this->hasil_keyss[($i - 1)],0,strlen("photo")) == "photo" || $this->hasil_keyss[($i - 1)] == "kejadian_bukti"){
+                        $result[$ad][$i] = show_photo_table($this->hasil_keyss[($i - 1)], $row[($i - 1)], ($this->hasil_keyss[($i - 1)] == "kejadian_bukti" ? "photo_pengaduan_isi" : ""));
                     } else {
                         $result[$ad][$i] = $row[($i - 1)];
                     }

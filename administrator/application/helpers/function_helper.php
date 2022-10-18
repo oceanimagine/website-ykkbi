@@ -33,7 +33,7 @@ function rename_file($name_file){
     return $name_file;
 }
 
-function upload_file($key_folder){
+function upload_file($key_folder, $name_table_custom = "", $name_kolom_custom = ""){
     $CI =& get_instance();
     $CI->name_file = "";
     $CI->name_file_upload = "";
@@ -43,9 +43,9 @@ function upload_file($key_folder){
         for($i = 1; $i < sizeof($explode_key); $i++){
             $rest_name_ = $rest_name_ . "_" . $explode_key[$i];
         }
-        $name_table = "tbl" . $rest_name_;
+        $name_table = $name_table_custom == "" ? "tbl" . $rest_name_ : $name_table_custom;
         $id_data = isset($_GET['id']) ? $_GET['id'] : "";
-        $name_kolom = $key_folder;
+        $name_kolom = $name_kolom_custom == "" ? $key_folder : $name_kolom_custom;
         $db = $CI->db->conn_id;
         $query_data = mysqli_query($db, "select ".$name_kolom." from ".$name_table." where id = '".$id_data."'");
         if(mysqli_num_rows($query_data) > 0){
@@ -72,6 +72,11 @@ function upload_file($key_folder){
     }
 }
 
+function SYNTAX($param){
+    $GLOBALS['SYNTAX'] = $param;
+    return $param;
+}
+
 function &get_instance_loader(){
     return CI_Loader::get_instance();
 }
@@ -85,7 +90,7 @@ function initialize_upload_dir(){
         
 }
 
-function delete_photo($key_folder){
+function delete_photo($key_folder, $name_table_custom = "", $name_kolom_custom = ""){
     $CI =& get_instance();
     $explode_key = explode("_", $key_folder);
     $folder = dir_upload($key_folder);
@@ -94,9 +99,9 @@ function delete_photo($key_folder){
         for($i = 1; $i < sizeof($explode_key); $i++){
             $rest_name_ = $rest_name_ . "_" . $explode_key[$i];
         }
-        $name_table = "tbl" . $rest_name_;
+        $name_table = $name_table_custom == "" ? "tbl" . $rest_name_ : $name_table_custom;
         $id_data = isset($_GET['id']) ? $_GET['id'] : "";
-        $name_kolom = $key_folder;
+        $name_kolom = $name_kolom_custom == "" ? $key_folder : $name_kolom_custom;
         $db = $CI->db->conn_id;
         $query_data = mysqli_query($db, "select ".$name_kolom." from ".$name_table." where id = '".$id_data."'");
         if(mysqli_num_rows($query_data) > 0){
@@ -109,11 +114,11 @@ function delete_photo($key_folder){
     }
 }
 
-function show_photo_table($name_active, $file_name){
-    if($file_name != "" && file_exists(dir_upload($name_active) . "/" . $file_name) && @exif_imagetype(dir_upload($name_active) . "/" . $file_name)){
-        $image = "<img src=\"../../../../upload/".$name_active."/".$file_name."\" style=\"width: 200px;\" />";
+function show_photo_table($name_active, $file_name, $folder_name = ""){
+    if($file_name != "" && file_exists(dir_upload($folder_name == "" ? $name_active : $folder_name) . "/" . $file_name) && @exif_imagetype(dir_upload($folder_name == "" ? $name_active : $folder_name) . "/" . $file_name)){
+        $image = "<img src=\"../../../../upload/".($folder_name == "" ? $name_active : $folder_name)."/".$file_name."\" style=\"width: 200px;\" />";
     } else {
-        $image = "(NOIMAGE)";
+        $image = $file_name;
     }
     return $image;
 }
@@ -130,9 +135,15 @@ function show_photo($name_active, $file_name){
                 <img src="../../../../upload/<?php echo $name_active; ?>/<?php echo $file_name; ?>" style="width: 250px;" />
             </div>
             <?php } else { ?>
+            <?php if($file_name != ""){ ?>
+            <div id="tampil_gambar" style="width: 100%; margin-top: 4px; border-top: #d0d0d0 1px solid; border-right: #d0d0d0 1px solid; border-left: #d0d0d0 1px solid; padding: 5px;" align="center">
+                <a href="../../../../upload/<?php echo $name_active; ?>/<?php echo $file_name; ?>" target="_blank"><?php echo $file_name; ?></a>                  
+            </div>
+            <?php } else { ?>
             <div id="tampil_gambar" style="display: none; width: 100%; margin-top: 4px; border-top: #d0d0d0 1px solid; border-right: #d0d0d0 1px solid; border-left: #d0d0d0 1px solid; padding: 5px;" align="center">
                 <img src="" style="display: none;">                    
             </div>
+            <?php } ?>
             <?php } ?>
             <input onchange="readURL(this);" type="file" id="<?php echo $name_active; ?>" class="form-control" name="<?php echo $name_active; ?>" />
         </div>

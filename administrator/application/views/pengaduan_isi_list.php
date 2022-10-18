@@ -60,11 +60,17 @@
                                 <th>No</th>
                                                                                                 
                                 <th>Id</th>                                                                                                
-                                <th>Pengaduan Kategori</th>                                                                                                
-                                <th>Photo Pengaduan Isi</th>                                                                                                
-                                <th>Nama Lengkap</th>                                                                                                
-                                <th>Email</th>                                                                                                
-                                <th>Pesan Pengaduan</th>                                                                                                                                
+                                <th>Nomor Laporan</th>                                                                                                
+                                <th>Tanggal Laporan</th>                                                                                                
+                                <th>Jam Laporan</th>   
+                                <th>Nama Pelapor</th>  
+                                <th>Telepon Pelapor</th>                                                                                                
+                                <th>Email Pelapor</th> 
+                                <th>Nama Yang Dilaporkan</th>
+                                <th>Pelanggaran Yang Dilaporkan</th>
+                                <th>Tanggal Kejadian</th>
+                                <th>Lokasi Kejadian</th>
+                                <th>Bukti Kejadian</th>
                                 <th>Action</th>
                             </tr>
                         </thead>

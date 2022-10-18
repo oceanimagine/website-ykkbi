@@ -42,7 +42,7 @@ check_url_index_php();
         <link href="assets/css/style.css?v=1635742746" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/nicepage-core.css" media="screen">
         <link rel="stylesheet" href="assets/css/nicepage-extend.css" media="screen">
-
+        <link href="administrator/application/libs_client/jqueryui.css" rel="stylesheet"  type="text/css" />
         <!-- YOUR CUSTOM CSS -->
         <link href="assets/css/custom.css" rel="stylesheet">
         <link href="assets/css/custom-ykkbi.css" rel="stylesheet">
@@ -54,6 +54,7 @@ check_url_index_php();
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/nicepage.js"></script>
+        <script src="administrator/application/layout/lite/js/jquery-ui.min.js"></script>
         <div id="page">
             <!--Header  -->
             <?php 

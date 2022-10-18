@@ -25,9 +25,16 @@ class process_param {
         $result_values = "";
         for($i = 0; $i < sizeof($keyss); $i++){
             $result_column = $result_column . $comma . $keyss[$i];
-            $result_values = $result_values . $comma . "'" . $this->CI->test->db->escape_str($param['column_value'][$keyss[$i]]) . "'";
+            if(isset($GLOBALS['SYNTAX']) && $GLOBALS['SYNTAX'] == $param['column_value'][$keyss[$i]]){
+                $result_values = $result_values . $comma . $param['column_value'][$keyss[$i]];
+                $GLOBALS['SYNTAX'] = "";
+                unset($GLOBALS['SYNTAX']);
+            } else {
+                $result_values = $result_values . $comma . "'" . $this->CI->test->db->escape_str($param['column_value'][$keyss[$i]]) . "'";
+            }
             $comma = ",";
         }
+        
         $query = "insert into " . $table . "(".$result_column.") values (".$result_values.")";
         $this->call_debug($query);
         $this->model->db->query($query);

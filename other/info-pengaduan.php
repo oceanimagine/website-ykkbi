@@ -6,13 +6,16 @@ $connect = mysqli_connect($host, $user, $pass, $data);
 
 header('Content-Type: application/json; charset=utf-8');
 
-if(isset($_POST['name']) && $_POST['name'] != "" && ($_POST['email'] != "" && $_POST['message'] != "")){
+if(isset($_POST['nama_pelapor']) && $_POST['nama_pelapor'] != "" && ($_POST['nama_dilaporkan'] != "" && $_POST['pelanggaran_dilaporkan'] != "" && $_POST['tanggal_kejadian'] != "" && $_POST['lokasi_kejadian'] != "")){
     $hasil = array("return" => "noparam");
-    $name = mysqli_real_escape_string($connect, $_POST['name']);
-    $email = mysqli_real_escape_string($connect, $_POST['email']);
-    $message = mysqli_real_escape_string($connect, $_POST['message']);
+    $nama_pelapor = mysqli_real_escape_string($connect, $_POST['nama_pelapor']);
+    $nomor_telepon = mysqli_real_escape_string($connect, $_POST['nomor_telepon']);
+    $alamat_email = mysqli_real_escape_string($connect, $_POST['alamat_email']);
+    $nama_dilaporkan = mysqli_real_escape_string($connect, $_POST['nama_dilaporkan']);
+    $pelanggaran_dilaporkan = mysqli_real_escape_string($connect, $_POST['pelanggaran_dilaporkan']);
+    $tanggal_kejadian = mysqli_real_escape_string($connect, $_POST['tanggal_kejadian']);
+    $lokasi_kejadian = mysqli_real_escape_string($connect, $_POST['lokasi_kejadian']);
     $captchaContactUs = mysqli_real_escape_string($connect, $_POST['captchaContactUs']);
-    $kategoriPengaduan = mysqli_real_escape_string($connect, $_POST['kategoriPengaduan']);
     $name_file = "";
     
     if(isset($_SESSION["Captcha"]) && $_SESSION["Captcha"] == $captchaContactUs){
@@ -28,17 +31,24 @@ if(isset($_POST['name']) && $_POST['name'] != "" && ($_POST['email'] != "" && $_
         }
         mysqli_query($connect, "
             insert into tbl_pengaduan_isi set 
-                id_pengaduan_kategori = '".$kategoriPengaduan."',
-                photo_pengaduan_isi = '".$name_file."',
-                nama_lengkap = '".$name."',
-                email = '".$email."',
-                pesan_pengaduan = '".$message."'
+                laporan_no = CONCAT(LPAD((SELECT (COUNT(b.id) + 1) next_num FROM `tbl_pengaduan_isi` b where SUBSTR(b.laporan_no, 5, 4) = YEAR(CURDATE())), 3, '0'), '-', YEAR(CURDATE()), '-', 'WBS'),
+                laporan_tgl = '".date("Ymd")."',
+                laporan_jam = '".date("H:i:s")."',
+                pelapor_nama = '".$nama_pelapor."',
+                pelapor_tlp = '".$nomor_telepon."',
+                pelapor_email = '".$alamat_email."',
+                dilaporkan_nama = '".$nama_dilaporkan."',
+                dilaporkan_pelanggaran = '".$pelanggaran_dilaporkan."',
+                kejadian_tgl = '".str_replace("-", "", $tanggal_kejadian)."',
+                kejadian_lokasi = '".$lokasi_kejadian."',
+                kejadian_bukti = '".$name_file."'
         ");
         if(mysqli_affected_rows($connect)){
             $hasil["return"] = "success insert";
         } else {
             $hasil["return"] = "failed insert";
         }
+        unset($_SESSION["Captcha"]);
     } else {
         $hasil["return"] = "captcha salah";
     }

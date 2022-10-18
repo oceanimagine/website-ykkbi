@@ -24,15 +24,15 @@ class get_pengaduan_isi extends CI_Model {
         $clouse = "";
 
         if ($sSearch != '') {
-            $clouse = " where (email like '%" . $sSearch . "%' or nama_lengkap like '%" . $sSearch . "%') ";
+            $clouse = " where (pelapor_email like '%" . $sSearch . "%' or pelapor_nama like '%" . $sSearch . "%') ";
         }
 
-        $sql_total = "select id, (select a.judul_kategori from tbl_pengaduan_kategori a where a.id = id_pengaduan_kategori), photo_pengaduan_isi, nama_lengkap, email, pesan_pengaduan from tbl_pengaduan_isi" . $clouse . "";
+        $sql_total = "select id from tbl_pengaduan_isi" . $clouse . "";
 
         $query_total = $this->db->query($sql_total);
         $total = $query_total->num_rows();
 
-        $sql = "select id, (select a.judul_kategori from tbl_pengaduan_kategori a where a.id = id_pengaduan_kategori), photo_pengaduan_isi, nama_lengkap, email, pesan_pengaduan from tbl_pengaduan_isi".$clouse." order by timestamp desc limit $iDisplayStart , $iDisplayLength";
+        $sql = "select id, laporan_no, laporan_tgl, laporan_jam, pelapor_nama, pelapor_tlp, pelapor_email, dilaporkan_nama, dilaporkan_pelanggaran, kejadian_tgl, kejadian_lokasi, kejadian_bukti from tbl_pengaduan_isi".$clouse." order by timestamp desc limit $iDisplayStart , $iDisplayLength";
 
         $page = ($iDisplayStart / $iDisplayLength);
 

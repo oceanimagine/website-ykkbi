@@ -26,6 +26,7 @@ if(isset($_POST['name']) && $_POST['name'] != "" && ($_POST['email'] != "" && $_
         } else {
             $hasil["return"] = "failed insert";
         }
+        unset($_SESSION["Captcha"]);
     } else {
         $hasil["return"] = "captcha salah";
     }

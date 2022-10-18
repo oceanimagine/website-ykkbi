@@ -28,38 +28,53 @@
                     <div class="col-md-8 col-sm-8 col-xs-12 contact-right">
                         <form id="form-pengaduan" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
-                                <input id="name" type="text" class="form-control" placeholder="Masukan Nama">
+                                <input id="nama_pelapor" type="text" class="form-control" placeholder="Masukkan Nama Pelapor">
                                 <div class="ntf_err err_name text-danger"></div>
-                            </div>
+                            </div><!-- 
+                            <hr style="margin-bottom: 14px; margin-top: 14px; margin-right: 4px; margin-left: 4px; border-color: #c2bfbf70;" /> -->
                             <div class="form-group">
-                                <input id="emailContactUs" type="text" class="form-control" placeholder="Masukan Email">
+                                <input id="nomor_telepon" type="text" class="form-control" placeholder="Nomor Telepon">
                                 <div class="ntf_err err_email text-danger"></div>
                             </div>
+                            
+                            <div class="form-group">
+                                <input id="alamat_email" type="text" class="form-control" placeholder="Alamat Email">
+                                <div class="ntf_err err_email text-danger"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input id="nama_dilaporkan" type="text" class="form-control" placeholder="Nama Yang Dilaporkan">
+                                <div class="ntf_err err_email text-danger"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea name="pelanggaran_dilaporkan" id="pelanggaran_dilaporkan" cols="30" rows="10" class="form-control" placeholder="Pelanggaran Yang Dilaporkan"></textarea>
+                                <div class="ntf_err err_email text-danger"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input id="tanggal_kejadian" type="text" class="form-control tanggal_pilih" placeholder="Tanggal Kejadian">
+                                <div class="ntf_err err_email text-danger"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input id="lokasi_kejadian" type="text" class="form-control" placeholder="Lokasi Kejadian">
+                                <div class="ntf_err err_email text-danger"></div>
+                            </div>
+                            
                             <div class="form-group" id="tempat_gambar" style="display: none;">
                                 <img id="tag_gambar" src="" style="width: 100%; border-radius: 1rem;">
                             </div>
-                            <div class="form-group">
-                                <label class="form-control" for="file_bukti">Upload Photo Bukti</label>
-                                <input id="file_bukti" name="file_bukti" type="file" style="display: none;" onchange="readURL(this);" accept="image/png, image/jpeg" />
+                            
+                            <div class="form-group" id="tempat_nama_dokumen" style="display: none;">
+                                <label class="form-control" style="white-space: nowrap; overflow: hidden;">Nama File</label>
                             </div>
+                            
                             <div class="form-group">
-                                <select name="kategoriPengaduan" id="kategoriPengaduan" class="form-control">
-                                    <option value="">PILIH KATEGORI PENGADUAN</option>
-                                    <?php 
-                                    $query_kategori = mysqli_query($connect, "select id, judul_kategori from tbl_pengaduan_kategori");
-                                    if(mysqli_num_rows($query_kategori) > 0){
-                                        while($hasil_kategori = mysqli_fetch_array($query_kategori)){
-                                            echo "<option value='".$hasil_kategori['id']."'>".$hasil_kategori['judul_kategori']."</option>";
-                                        }
-                                    }
-                                    ?>
-                                </select>
-                                <div class="ntf_err err_message text-danger"></div>
+                                <label class="form-control" for="file_bukti" style="white-space: nowrap; overflow: hidden;">Upload Dokumen Bukti Berupa Photo atau PDF</label>
+                                <input id="file_bukti" name="file_bukti" type="file" style="display: none;" onchange="readURL(this);" accept="image/png, image/jpeg, application/pdf" />
                             </div>
-                            <div class="form-group">
-                                <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Tulis Pesanmu"></textarea>
-                                <div class="ntf_err err_message text-danger"></div>
-                            </div>
+                            
                             <div class="form-group">
                                 <div class="d-flex">
                                     <div class="mr-1" id="captchaImage" style="padding-top: 2px;"><img src="captcha" id="tempat_captcha" /></div>
@@ -71,12 +86,12 @@
                                     <input id="kodeCaptchaContactUs" type="hidden" value="msk9p"
                                            autocomplete="off">
                                     <div class="d-flex flex-column w-100">
-                                        <input id="captchaContactUs" type="text" class="form-control"
-                                               placeholder="Masukan kode captcha">
+                                        <input id="captchaContactUs" type="text" class="form-control" placeholder="Masukan kode captcha">
                                         <div class="ntf_err err_captchaContactUs text-danger"></div>
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="form-group text-center ">
                                 <button class="btn btn-theme position-relative" style="width: 100%; padding: 10px">
                                     KIRIM ADUAN

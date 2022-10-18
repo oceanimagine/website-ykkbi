@@ -161,7 +161,8 @@ function readURL(input) {
                     gambar_photo.style.display = "none";
                     gambar_photo.style.marginTop = "";
                     gambar_photo.style.width = "";
-                    tampil_gambar.style.display = "none";
+                    tampil_gambar.style.display = "";
+                    tampil_gambar.innerHTML = input.files[0]['name'];
                 }
                 base_image_64 = "";
             };
