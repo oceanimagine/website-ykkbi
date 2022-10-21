@@ -107,7 +107,15 @@ class process_table {
                 $slash = "";
                 if ($module_edit != "") {
 		    if(isset($GLOBALS['PRIV_ACTIVE']) && isset($_SESSION['PRI']) && isset($GLOBALS['PRIV_ACTIVE'][$_SESSION['PRI']]) && $GLOBALS['PRIV_ACTIVE'][$_SESSION['PRI']]){
-			$module[$count] = "<a href='" . $module_edit . "/" . $result[$ad][1] . "'>Edit</a>";
+                        $hasil_data = array();
+                        if(isset($GLOBALS['COBA']) && $GLOBALS['COBA']){
+                            for ($i = 0; $i < sizeof($row); $i++) {
+                                $hasil_data[] = $row[$i];
+                            }
+                            $module[$count] = "<a href=\"#\" onclick=\"$('#modal-default').modal('show'); get_data_into_modal(event,this);\" data='". json_encode($hasil_data)."'>Edit</a>";
+                        } else {
+                            $module[$count] = "<a href='" . $module_edit . "/" . $result[$ad][1] . "'>Edit</a>";
+                        }
 			$count++;
 		    } else {
 			if(isset($_SESSION['PRI']) && $_SESSION['PRI'] == "Pimpinan"){

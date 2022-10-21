@@ -16,6 +16,7 @@ class slider extends CI_Controller {
     }
 
     public function get_slider() {
+        $GLOBALS['COBA'] = false;
         $this->get_slider->get_data();
     }
 

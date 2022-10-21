@@ -226,6 +226,21 @@ $(function () {
     }
 });
 
+function get_data_into_modal(event,ahref_object){
+    event.preventDefault();
+    var getAttributeData = ahref_object.getAttribute("data");
+    var json_data = JSON.parse(getAttributeData);
+    var isi_data_testing = document.getElementById("isi_data_testing");
+    isi_data_testing.innerHTML = "";
+    for(var i = 0; i < json_data.length; i++){
+        if(json_data[i].substr(0,"FILE".length) === "FILE"){
+            isi_data_testing.innerHTML = isi_data_testing.innerHTML + "<img src='../../../../upload/photo_slider/" + json_data[i] + "' style='width: 200px;' />" + "<br />\n";
+        } else {
+            isi_data_testing.innerHTML = isi_data_testing.innerHTML + json_data[i] + "<br />\n";
+        }
+    }
+}
+
 function checker(get_src, iframe_all, urutan){
     $.post(
         "../../../index.php/checker",

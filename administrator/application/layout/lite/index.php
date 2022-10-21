@@ -333,7 +333,7 @@ function get_url($param){
                                 </button>
                                 <h4 class="modal-title">WARNING !!!!</h4>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body" id="isi_data_testing">
                                 <p>Are you sure&hellip;?</p>
                             </div>
                             <div class="modal-footer">

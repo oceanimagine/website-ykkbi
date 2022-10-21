@@ -74,6 +74,8 @@ RewriteRule ^kirim-pesan other/info-pesan.php
 RewriteRule ^kirim-pengaduan other/info-pengaduan.php
 RewriteRule ^javascript-testing other/test-js.php
 
+RewriteRule ^api-(.*) index-api.php?module=$1
+
 
 ErrorDocument 404 /project-ykkbi-website/index.php?module=404&panelrightleft=true
 

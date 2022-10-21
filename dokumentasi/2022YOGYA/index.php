@@ -28,6 +28,14 @@
         <link rel="stylesheet" href="css/flaticon.css">
         <link rel="stylesheet" href="css/icomoon.css">
         <link rel="stylesheet" href="css/style.css">
+        <style type="text/css">
+        #colorlib-aside #colorlib-main-menu ul li {
+                margin: 0 0 8px 0;	
+        }
+        #colorlib-aside .colorlib-footer {
+                bottom: 22px;
+        }
+        </style>
     </head>
     <body>
 
@@ -37,10 +45,10 @@
                 <h1 id="colorlib-logo"><a href="index.php"><span class="flaticon-camera"></span>Gathering Yogya YKKBI 2022</a></h1>
                 <nav id="colorlib-main-menu" role="navigation">
                     <ul>
-                        <li class="colorlib-active"><a href="index.php?day=1">Day 1</a></li>
-			<li class="colorlib-active"><a href="index.php?day=2">Day 2</a></li>
-			<li class="colorlib-active"><a href="index.php?day=3">Day 3</a></li>
-                        <li class="colorlib-active"><a href="index.php?day=ALL">Compilation</a></li>
+                        <li class="colorlib-active"><a href="index.php?day=1">Photo Day 1</a></li>
+			<li class="colorlib-active"><a href="index.php?day=2">Photo Day 2</a></li>
+			<li class="colorlib-active"><a href="index.php?day=3">Photo Day 3</a></li>
+                        <li class="colorlib-active"><a href="index.php?day=ALL">Photo Compilation</a></li>
                     </ul>
                 </nav>
 
