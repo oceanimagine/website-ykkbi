@@ -66,6 +66,8 @@ RewriteRule ^berita-search-terkini-(.*) index.php?module=berita-terkini&panelrig
 RewriteRule ^dokumentasi-kegiatan index.php?module=dokumentasi-kegiatan&panelrightleft=true
 RewriteRule ^dokumentasi-search-kegiatan-(.*) index.php?module=dokumentasi-kegiatan&panelrightleft=true&search=$1
 
+RewriteRule ^photo-event-gathering-yogyakarta-2022-(.*) /project-ykkbi-website/dokumentasi/KEGIATANYOGYA2022/index.php?day=$1
+
 # Galeri
 RewriteRule ^galeri index.php?module=galeri&panelrightleft=true
 

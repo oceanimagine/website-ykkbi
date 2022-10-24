@@ -117,7 +117,7 @@
                                         ?>
                                         <!--  -->
                                         <div class="<?php echo $class_; ?> col-xs-12">
-                                            <a href="#" style="pointer-events: none; cursor: default;">
+                                            <a href="<?php echo "photo-" . str_replace(" ", "-", strtolower($hasil_dokumentasi_header['judul_event'])) . "-ALL"; ?>" style="/* pointer-events: none; */ cursor: pointer;">
                                                 <div class="card" style="height: 435px;">
                                                     <div class="card-header" <?php echo $style; ?>>
                                                         <div class="image-wrapper" style="text-align: center;">

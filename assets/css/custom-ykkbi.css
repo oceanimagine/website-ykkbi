@@ -388,6 +388,9 @@ p {
         display: initial !important;
         cursor: pointer;
     }
+    footer {
+        z-index: 0 !important;	
+    }
 }
 @media (max-width: 800px){
     #td_slider_a_selain_home {

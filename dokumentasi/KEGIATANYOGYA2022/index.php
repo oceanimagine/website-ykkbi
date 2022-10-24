@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
 	
-        <base href="http://localhost/project-ykkbi-website/dokumentasi/2022YOGYA\" />
+        <base href="http://localhost/project-ykkbi-website/dokumentasi/KEGIATANYOGYA2022/" />
         <title>Kegiatan YKKBI</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -45,10 +45,11 @@
                 <h1 id="colorlib-logo"><a href="index.php"><span class="flaticon-camera"></span>Gathering Yogya YKKBI 2022</a></h1>
                 <nav id="colorlib-main-menu" role="navigation">
                     <ul>
-                        <li class="colorlib-active"><a href="index.php?day=1">Photo Day 1</a></li>
-			<li class="colorlib-active"><a href="index.php?day=2">Photo Day 2</a></li>
-			<li class="colorlib-active"><a href="index.php?day=3">Photo Day 3</a></li>
-                        <li class="colorlib-active"><a href="index.php?day=ALL">Photo Compilation</a></li>
+                        <li class="colorlib-active"><a href="/project-ykkbi-website/photo-event-gathering-yogyakarta-2022-1">Photo Day 1</a></li>
+			<li class="colorlib-active"><a href="/project-ykkbi-website/photo-event-gathering-yogyakarta-2022-2">Photo Day 2</a></li>
+			<li class="colorlib-active"><a href="/project-ykkbi-website/photo-event-gathering-yogyakarta-2022-3">Photo Day 3</a></li>
+                        <li class="colorlib-active"><a href="/project-ykkbi-website/photo-event-gathering-yogyakarta-2022-ALL">Photo Compilation</a></li>
+                        <li class="colorlib-active"><a href="/project-ykkbi-website/dokumentasi-kegiatan">Back to Website</a></li>
                     </ul>
                 </nav>
 
