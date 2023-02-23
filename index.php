@@ -64,7 +64,7 @@ if(date("m-d") == "02-24"){
     </head>
     <body style="visibility: hidden; user-select: none; -moz-user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; -ms-user-select: none;">
         
-        <?php if(date("m-d") == "02-24"){ ?>
+        <?php if(date("m-d") == "02-23"){ ?>
         <?php 
         
         $date1 = new DateTime("1992-02-24");
@@ -73,7 +73,7 @@ if(date("m-d") == "02-24"){
         
         ?>
         <div style="width: 100%; position: fixed; bottom: 0px; z-index: 999999; background-color: #3b3c8c !important; color: white; padding-top: 4px;">
-            <marquee onmouseover="this.stop();" onmouseout="this.start();">Hari ini adalah HUT YKKBI ke <?php echo $interval->y; ?> <a href="birthday/" style='color: #d0d0d0;'>Lihat Kemeriahannya</a>.</marquee>
+            <marquee onmouseover="this.stop();" onmouseout="this.start();" behavior="scroll" direction="left"><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /> Hari ini adalah HUT YKKBI ke <?php echo $interval->y; ?> <a href="birthday/" style='color: #d0d0d0;'>Lihat Kemeriahannya</a>. <img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /></marquee>
         </div>
         <?php } ?>
         <script src="assets/js/jquery.min.js"></script>
