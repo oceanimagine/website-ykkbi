@@ -7,6 +7,17 @@ session_start();
 $connect = mysqli_connect($host, $user, $pass, $data);
 include_once __DIR__ . "/config/connect-redaksi.php";
 check_url_index_php();
+
+if(session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+if(date("m-d") == "02-24"){
+    if(!isset($_SESSION['ultah'])){
+        header("location: birthday/");
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,10 +57,25 @@ check_url_index_php();
         <!-- YOUR CUSTOM CSS -->
         <link href="assets/css/custom.css" rel="stylesheet">
         <link href="assets/css/custom-ykkbi.css" rel="stylesheet">
-
+        <style type="text/css">
+            
+        </style>
+        
     </head>
     <body style="visibility: hidden; user-select: none; -moz-user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; -ms-user-select: none;">
         
+        <?php if(date("m-d") == "02-24"){ ?>
+        <?php 
+        
+        $date1 = new DateTime("1992-02-24");
+        $date2 = new DateTime(date("Y-m-d"));
+        $interval = $date1->diff($date2);
+        
+        ?>
+        <div style="width: 100%; position: fixed; bottom: 0px; z-index: 999999; background-color: #3b3c8c !important; color: white; padding-top: 4px;">
+            <marquee onmouseover="this.stop();" onmouseout="this.start();">Hari ini adalah HUT YKKBI ke <?php echo $interval->y; ?> <a href="birthday/" style='color: #d0d0d0;'>Lihat Kemeriahannya</a>.</marquee>
+        </div>
+        <?php } ?>
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
