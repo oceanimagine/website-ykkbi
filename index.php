@@ -64,7 +64,7 @@ if(date("m-d") == "02-24"){
     </head>
     <body style="visibility: hidden; user-select: none; -moz-user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; -ms-user-select: none;">
         
-        <?php if(date("m-d") == "02-23"){ ?>
+        <?php if(date("m-d") == "02-24"){ ?>
         <?php 
         
         $date1 = new DateTime("1992-02-24");
