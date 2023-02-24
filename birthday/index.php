@@ -480,7 +480,7 @@ $_SESSION['ultah'] = 'ultah';
 
             </div>
             <?php
-            $date1 = new DateTime("1992-02-24");
+            $date1 = new DateTime("1992-02-23");
             $date2 = new DateTime(date("Y-m-d"));
             $interval = $date1->diff($date2);
             ?>
