@@ -3,7 +3,14 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-if (date("m-d") != "02-24") {
+function range_not_equal(){
+    $returns = false;
+    if(date("m-d") != "02-23" && date("m-d") != "02-24" && date("m-d") != "02-25" && date("m-d") != "02-26" && date("m-d") != "02-27" && date("m-d") != "02-28" && date("m-d") != "02-29"){
+        $returns = true;
+    }
+}
+
+if (range_not_equal()) {
     header("location: ../");
 }
 

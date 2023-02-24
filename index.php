@@ -12,7 +12,33 @@ if(session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-if(date("m-d") == "02-24"){
+function range_equal(){
+    $returns = false;
+    if(date("m-d") == "02-23"){
+        $returns = true;
+    }
+    if(date("m-d") == "02-24"){
+        $returns = true;
+    }
+    if(date("m-d") == "02-25"){
+        $returns = true;
+    }
+    if(date("m-d") == "02-26"){
+        $returns = true;
+    }
+    if(date("m-d") == "02-27"){
+        $returns = true;
+    }
+    if(date("m-d") == "02-28"){
+        $returns = true;
+    }
+    if(date("m-d") == "02-29"){
+        $returns = true;
+    }
+    return $returns;
+}
+
+if(range_equal()){
     if(!isset($_SESSION['ultah'])){
         header("location: birthday/");
     }
@@ -64,16 +90,16 @@ if(date("m-d") == "02-24"){
     </head>
     <body style="visibility: hidden; user-select: none; -moz-user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; -ms-user-select: none;">
         
-        <?php if(date("m-d") == "02-24"){ ?>
+        <?php if(range_equal()){ ?>
         <?php 
         
-        $date1 = new DateTime("1992-02-24");
+        $date1 = new DateTime("1992-02-23");
         $date2 = new DateTime(date("Y-m-d"));
         $interval = $date1->diff($date2);
         
         ?>
         <div style="width: 100%; position: fixed; bottom: 0px; z-index: 999999; background-color: #3b3c8c !important; color: white; padding-top: 4px;">
-            <marquee onmouseover="this.stop();" onmouseout="this.start();" behavior="scroll" direction="left"><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /> Hari ini adalah HUT YKKBI ke <?php echo $interval->y; ?> <a href="birthday/" style='color: #d0d0d0;'>Lihat Kemeriahannya</a>. <img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /></marquee>
+            <marquee onmouseover="this.stop();" onmouseout="this.start();" behavior="scroll" direction="left"><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /> Sedang Merayakan HUT YKKBI ke <?php echo $interval->y; ?> <a href="birthday/" style='color: #d0d0d0;'>Lihat Kemeriahannya</a>. <img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /><img src="assets/img/BALLOON.png" width="20" /></marquee>
         </div>
         <?php } ?>
         <script src="assets/js/jquery.min.js"></script>
